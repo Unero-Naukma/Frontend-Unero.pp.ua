@@ -151,7 +151,7 @@ gulp.task("build", gulp.series(
 
 gulp.task("watch", function () {
   browsersync.init({
-    server: "./dist/",
+    server: "./markup/dist/",
     port: 4001,
     notify: true
   });
