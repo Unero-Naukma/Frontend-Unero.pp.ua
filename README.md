@@ -2,7 +2,7 @@
 ---
 
 _Не видаляйте та не змінюйте файли:_
-_`.gitignore`, `package.json`._
+_`.gitignore`, `package.json`, `package-lock.json`, `gulpfile.js`._
 
 ---
 
