@@ -126,10 +126,10 @@ gulp.task("optimize-symbols", function () {
 
 gulp.task("copy-assets", () => {
   return gulp.src([
-      "./src/assets/fonts/**/*.{woff,woff2}",
-      "./src/assets/img/**",
+      "./markup/src/assets/fonts/**/*.{woff,woff2}",
+      "./markup/src/assets/img/**",
     ], {
-      base: "./src/assets"
+      base: "./markup/src/assets"
     })
     .pipe(gulp.dest(dist + "/assets"))
     .on("end", browsersync.reload);
