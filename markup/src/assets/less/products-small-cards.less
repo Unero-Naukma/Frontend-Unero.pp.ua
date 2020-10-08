@@ -21,25 +21,34 @@
         flex-basis: 23%;
     }
 }
-.products-small-cards__item-image {
+.products-small-cards__item-image {//product image
     width: 100%;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 
-.products-small-cards__item-image:hover {
+.products-small-cards__item-image:hover {//product image hover
     transform: scale(1.03);
+    
 }
-
-.products-small-cards__item:last-child {
-    @media @tablet-widths {
-    margin-right: auto;
-    margin-left: 2.8%;
+@media @tablet-widths {
+    .products-small-cards__item:last-child:not(:nth-child(3n)):not(:nth-child(3n-2)) {//fixing space-between
+        margin-right: auto;
+        margin-left: 3.2%;
     }
 }
-
-.products-small-cards__item:nth-last-child(2){
-    @media @desktop-widths {
+@media @desktop-widths {
+    .products-small-cards__item:last-child:not(:nth-child(4n)):not(:nth-child(4n-3)) {//for 2 elements (second)
+        margin-right: auto;
+        margin-left: 2.6%;
+    }
+    .products-small-cards__item:last-child:not(:nth-child(4n)):not(:nth-child(4n-1)):not(:nth-child(4n-2)):not(:nth-child(4n-3)) {//for 3 elements (third)
+        margin-right: auto;
         margin-left: 2.8%;
+    }
+    
+    .products-small-cards__item:nth-last-child(2):not(:nth-child(4n)):not(:nth-child(4n-1)):not(:nth-child(4n-3)){ //for 3 elements (second)
+        margin-left: 2.6%;
     }
 }
 
@@ -75,7 +84,9 @@
         font-size: 18px;
     }
 }
-
+.products-small-cards__item-title:hover {
+    text-decoration: underline;
+}
 .products-small-cards__item-title:visited { //name:visited
     color: black;
 }
@@ -96,7 +107,7 @@
     color: @product-price-color;
 }
 
-.products-small-cards__item-text-block-discount {
+.products-small-cards__item-text-block-discount {//discount conteiner
     display: flex;
 }
 
@@ -156,8 +167,9 @@
 }
 
 .products-small-cards__item-wishlist-btn:hover,
-.products-small-cards__item-wishlist-btn-filled:hover{
+.products-small-cards__item-wishlist-btn-filled:hover{//heart hover
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 .products-small-cards__item-wishlist-btn--active {//active heart
@@ -179,6 +191,7 @@
     font-weight: 800;
     letter-spacing: 0.1ch;
     width: 22%;
+    text-align: center;
     @media @tablet-widths {
         margin-top: 70px;
         margin-bottom: 100px;
@@ -194,5 +207,5 @@
 }
 
 .best-products__show-all-link:hover {
-    text-shadow: 0 0 15px @categories-inactive-color;
+    font-weight: 900;
 }
