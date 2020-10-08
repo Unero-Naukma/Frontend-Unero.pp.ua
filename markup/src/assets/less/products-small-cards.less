@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.products-small-cards {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media @tablet-widths {
+        
+    }
+}
+
+.products-small-cards__item {//product
+    flex-basis: 47%;
+    transition-duration: 0.5s;
+    font-family: 'Poppins', sans-serif;
+    @media @tablet-widths {
+        flex-basis: 31%;
+    }
+    @media @desktop-widths {
+        flex-basis: 23%;
+    }
+}
+.products-small-cards__item-image {
+    width: 100%;
+    transition-duration: 0.3s;
+}
+
+.products-small-cards__item-image:hover {
+    transform: scale(1.03);
+}
+
+.products-small-cards__item:last-child {
+    @media @tablet-widths {
+    margin-right: auto;
+    margin-left: 2.8%;
+    }
+}
+
+.products-small-cards__item:nth-last-child(2){
+    @media @desktop-widths {
+        margin-left: 2.8%;
+    }
+}
+
+.products-small-cards__item-all-info {//block with info
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    @media @desktop-widths {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+.products-small-cards__item-text-block {//block with name and price
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.products-small-cards__item-title { //name
+    flex-basis: 80%;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: -0.05ch;
+    margin-right: 30px;
+    @media @tablet-widths {
+        font-size: 15px;
+    }
+    @media @desktop-widths {
+        font-size: 18px;
+    }
+}
+
+.products-small-cards__item-title:visited { //name:visited
+    color: black;
+}
+
+.products-small-cards__stars {//stars container
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+.products-small-cards__stars-yellow-star,
+.products-small-cards__stars-grey-star {//stars
+    width: 15px;
+}
+
+.products-small-cards__stars-count {//number of comments
+    margin-left: 5px;
+    margin-top: 1px;
+    color: @product-price-color;
+}
+
+.products-small-cards__item-text-block-discount {
+    display: flex;
+}
+
+
+
+.products-small-cards__item-discount {//discount
+    color: @categories-active-color;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-right: 8px;
+    @media @tablet-widths {
+        font-size: 15px;
+    }
+    @media @desktop-widths {
+        font-size: 18px;
+    }
+}
+
+
+.products-small-cards__item-price {//price
+    margin-top: 5px;
+    color: @product-price-color;
+    font-weight: 300;
+    @media @tablet-widths {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    @media @desktop-widths {
+        font-size: 17px;
+    }
+}
+
+.products-small-cards__item-price--discount {//discount modifier
+    font-size: 11px;
+    text-decoration: line-through;
+    margin-top: 6px !important;
+    @media @tablet-widths {
+        font-size: 14px;
+    }
+    @media @desktop-widths {
+        font-size: 18px;
+        
+    }
+}
+
+.products-small-cards__item-wishlist-btn,
+.products-small-cards__item-wishlist-btn-filled{ // heart
+    width: 15px;
+    display: none;
+    transition-duration: 0.1s;
+    @media @tablet-widths {
+        width: 17px;
+    }
+    @media @desktop-widths {
+        width: 19px;
+    }
+}
+
+.products-small-cards__item-wishlist-btn:hover,
+.products-small-cards__item-wishlist-btn-filled:hover{
+    transform: scale(1.2);
+}
+
+.products-small-cards__item-wishlist-btn--active {//active heart
+    display: block;
+}
+
+.products-small-cards__item-title--active {//active name
+   text-decoration: underline;
+}
+
+.best-products__show-all-link {//show all
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    color: #000;
+    margin: 50px auto;
+    margin-bottom: 70px;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.1ch;
+    width: 22%;
+    @media @tablet-widths {
+        margin-top: 70px;
+        margin-bottom: 100px;
+        font-size: 15px;
+        width: 15%;
+    }
+    @media @desktop-widths {
+        font-size: 18px;
+        width: 10%;
+        margin-top: 100px;
+        margin-bottom: 150px;
+    }
+}
+
+.best-products__show-all-link:hover {
+    text-shadow: 0 0 15px @categories-inactive-color;
+}
