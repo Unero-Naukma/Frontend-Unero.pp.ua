@@ -1,14 +1,47 @@
 .store-descr{
-    text-align: center;
-    color: black;
-    margin: 20px;
-    margin-bottom: 50px;
-
+    margin: 80px 0;
 }
-.store-descr_text{
-    color: #a0a0a0;
-    font-size: 60%;
-    word-spacing: 0.2em;
-    line-height: 18px;
 
+.store-descr__content-wrapper {
+    max-width: 470px;
+    margin: 0 auto;
+
+    @media @desktop-widths {
+        max-width: 600px;
+    }
+}
+
+.store-descr__title {
+    margin-bottom: 18px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+    @media @tablet-widths {
+        margin-top: 70px;
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+
+    @media @desktop-widths {
+        margin-top: 200px;
+        margin-bottom: 40px;
+        font-size: 40px;
+    }
+}
+
+.store-descr__text {
+    padding: 0 8.6%;
+    text-align: center;
+    color: #a0a0a0;
+    line-height: 25px;
+    font-size: 14px;
+
+    @media @tablet-widths {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    @media @desktop-widths {
+        font-size: 18px;
+    }
 }

@@ -19,25 +19,30 @@
     border-top-style: none;
     border-left-style: none;
     cursor: pointer;
+
     @media @desktop-widths {
         display: flex;
+        position: absolute;
+        z-index: 1500;
     }
 }
 
 .slider__arrow-left {
+    transition: all .3s ease-out;
     transform: rotate(135deg);
     left: 5%;
-}
 
-.slider__arrow-left:hover {
-    border-color: black;
+    &:hover {
+        border-color: black;
+    }
 }
 
 .slider__arrow-right {
+    transition: all .3s ease-out;
     transform: rotate(-45deg);
     right: 5%;
-}
 
-.slider__arrow-right:hover {
-    border-color: black;
+    &:hover {
+        border-color: black;
+    }
 }
