@@ -1,8 +1,6 @@
 'use strict';
 const bestSellingProducts = require(`./bestSellingProducts`);
+const headerMobileMenu = require(`./headerMobileMenu`);
 
-<<<<<<< HEAD
 bestSellingProducts();
-=======
-bestSellingProducts();
->>>>>>> 4c7cb6e4ad76fb636647e0402f4cd43f73d51b37
+headerMobileMenu();
