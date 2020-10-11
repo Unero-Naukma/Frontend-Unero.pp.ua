@@ -49,7 +49,7 @@
           </li>
           <li class="main-header__item">
             <a href="#">Contacts</a>
-          </li>
+            </li>
           <li class="main-header__item">
             <a href="#">Login</a>
           </li>
@@ -59,24 +59,31 @@
   </header>
   <main>
     <section class="intro">
-      <div class="main-wrapper">
-        <ul class="intro__collections-list">
+      <input type="radio" class="intro__radio-button" id="btn-1" name="field" checked>
+      <input type="radio" class="intro__radio-button" id="btn-2" name="field">
+      <input type="radio" class="intro__radio-button" id="btn-3" name="field">
+      <div class="intro__collection-wrapper">
+        <div class="slider">
+          <div class="slider__arrow  slider__arrow-left"></div>
+          <div class="slider__arrow  slider__arrow-right"></div>
+        </div>
+        <ul class="intro__collection-list">
           <li class="intro__collection-item">
-            <a href="#"><img src="" alt="Collection 1"></a>
+            <a href="#"><img src="assets/img/collections/collection.png" alt="Collection 1"></a>
           </li>
           <li class="intro__collection-item">
-            <a href="#"><img src="" alt="Collection 2"></a>
+            <a href="#"><img src="assets/img/TempProduct.png" alt="Collection 2"></a>
           </li>
           <li class="intro__collection-item">
-            <a href="#"><img src="" alt="Collection 3"></a>
+            <a href="#"><img src="assets/img/collections/collection.png" alt="Collection 3"></a>
           </li>
         </ul>
-        <ol class="intro__dots">
-          <li class="intro__dots-item"></li>
-          <li class="intro__dots-item"></li>
-          <li class="intro__dots-item"></li>
-        </ol>
       </div>
+      <div class="intro__dots">
+      <label class="intro__dots-item" for="btn-1"></label>
+      <label class="intro__dots-item" for="btn-2"></label>
+      <label class="intro__dots-item" for="btn-3"></label>
+    </div>
     </section>
     <section class="store-descr">
       <div class="main-wrapper">
