@@ -187,31 +187,39 @@
     </div>
   </header>
   <main>
-    <section class="intro" style="margin-top: 200px;">
-      <div class="main-wrapper">
-        <ul class="intro__collections-list">
+    <section class="intro">
+      <input type="radio" class="intro__radio-button" id="btn-1" name="field" checked>
+      <input type="radio" class="intro__radio-button" id="btn-2" name="field">
+      <input type="radio" class="intro__radio-button" id="btn-3" name="field">
+      <div class="intro__collection-wrapper">
+        <div class="slider">
+          <div class="slider__arrow  slider__arrow-left"></div>
+          <div class="slider__arrow  slider__arrow-right"></div>
+        </div>
+        <ul class="intro__collection-list">
+
           <li class="intro__collection-item">
-            <a href="#"><img src="" alt="Collection 1"></a>
+            <a href="#"><img src="assets/img/collections/collection.png" alt="Collection 1"></a>
           </li>
           <li class="intro__collection-item">
-            <a href="#"><img src="" alt="Collection 2"></a>
+            <a href="#"><img src="assets/img/TempProduct.png" alt="Collection 2"></a>
           </li>
           <li class="intro__collection-item">
-            <a href="#"><img src="" alt="Collection 3"></a>
+            <a href="#"><img src="assets/img/collections/collection.png" alt="Collection 3"></a>
           </li>
         </ul>
-        <ol class="intro__dots">
-          <li class="intro__dots-item"></li>
-          <li class="intro__dots-item"></li>
-          <li class="intro__dots-item"></li>
-        </ol>
       </div>
+      <div class="intro__dots">
+      <label class="intro__dots-item" for="btn-1"></label>
+      <label class="intro__dots-item" for="btn-2"></label>
+      <label class="intro__dots-item" for="btn-3"></label>
+    </div>
     </section>
     <section class="store-descr">
       <div class="main-wrapper">
         <h1 class="visually-hidden">Unero is the online store of the minimalist style goods</h1>
-        <h2>Simple & minimalist</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi tenetur excepturi sed unde vitae
+        <h2 >Simple & minimalist</h2>
+        <p class="store-descr_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi tenetur excepturi sed unde vitae
           quibusdam cupiditate dicta, illum quaerat expedita magnam nihil placeat voluptate quasi maiores repudiandae
           libero facere!</p>
       </div>
@@ -423,44 +431,51 @@
   <footer class="main-footer">
     <div class="main-wrapper">
       <div class="main-footer__first-part">
-        <img src="" alt="Unero logo" class="store-logo">
-        <ul class="social-list">
-          <li class="social-list__item">
-            <a href="#" class="social-list__link">
-              <img src="" alt="Insta logo">
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a href="#" class="social-list__link">
-              <img src="" alt="Twitter logo">
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a href="#" class="social-list__link">
-              <img src="" alt="Facebook logo">
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a href="#" class="social-list__link">
-              <img src="" alt="Youtube logo">
-            </a>
-          </li>
-        </ul>
+        <div class="main-footer__first-part-wrapper">
+          <img src="assets/img/icons/unero-logo.svg" alt="Unero logo" class="store-logo">
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">
+                <img src="assets/img/icons/inst-logo.svg" alt="Insta logo" >
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">
+                <img src="assets/img/icons/twitter-logo.svg" alt="Twitter logo">
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">
+                <img src="assets/img/icons/facebook-logo.svg" alt="Facebook logo">
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">
+                <img src="assets/img/icons/youtube-logo.svg" alt="Youtube logo">
+              </a>
+            </li>
+          </ul>
+         </div>
       </div>
       <hr class="footer__division-line" noshade>
       <div class="main-footer__second-part">
-        <p class="main-footer__copyright">© 2016 Unero. All rights reserved</p>
-        <ul class="main-footer__additional-links-list">
-          <li class="main-footer__additional-links-list-item">
-            <a href="#">Policy</a>
-          </li>
-          <li class="main-footer__additional-links-list-item">
-            <a href="#">Term & Conditions</a>
-          </li>
-          <li class="main-footer__additional-links-list-item">
-            <a href="#">Help</a>
-          </li>
-        </ul>
+        <div class="main-footer__second-part-wrapper">
+          <p class="main-footer__copyright">© 2020 <span class="main-footer__copyright-unero">Unero</span>. All rights reserved</p>
+          <ul class="main-footer__additional-links-list">
+            <li class="main-footer__additional-links-list-item">
+              <a href="#">Policy</a>
+            </li>
+            <li class="main-footer__additional-links-list-item">
+              <a href="#">Term & Conditions</a>
+            </li>
+            <li class="main-footer__additional-links-list-item">
+              <a href="#">Affiliate</a>
+            </li>
+            <li class="main-footer__additional-links-list-item">
+              <a href="#">Help</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>
