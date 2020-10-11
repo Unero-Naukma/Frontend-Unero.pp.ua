@@ -1,7 +1,6 @@
 module.exports = () => {
     const hearts = document.querySelectorAll(".products-small-cards__item-wishlist-btn");
     const filledHearts = document.querySelectorAll(".products-small-cards__item-wishlist-btn-filled");
-    const texts = document.querySelectorAll(".products-small-cards__item-title");
     
 
       for(let i = 0; i < hearts.length; i++) {
