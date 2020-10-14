@@ -1,38 +1,36 @@
-module.exports = () => {
-    const hearts = document.querySelectorAll(".products-small-cards__item-wishlist-btn");
-    const filledHearts = document.querySelectorAll(".products-small-cards__item-wishlist-btn-filled");
-    const texts = document.querySelectorAll(".products-small-cards__item-title");
-    
+'use strict';
 
-      for(let i = 0; i < hearts.length; i++) {
-        hearts[i].addEventListener("click", function() {
-        if(changeFlag[i]) {
-            fill(i);
-        } else {
-            unfill(i);
-        }
-    });
-        filledHearts[i].addEventListener("click", function() {
-        if(changeFlag[i]) {
-            fill(i);
-        } else {
-            unfill(i);
-        }
-    });
-      }
-    
-    let changeFlag = [16];
-    for(let i = 0; i < hearts.length; i++) {
-      changeFlag[i] = true;
+export function bestSellingProducts() {
+  const unfilledhearts = document.querySelectorAll(".products-small-cards__item-wishlist-btn--unfilled");
+  const filledHearts = document.querySelectorAll(".products-small-cards__item-wishlist-btn--filled");
+
+  let changeFlag = [];
+  for (let i = 0; i < unfilledhearts.length; i++) {
+    changeFlag[i] = true;
+  }
+
+  const handleClick = (i) => {
+    if (changeFlag[i]) {
+      fill(i);
+    } else {
+      unfill(i);
     }
-    function fill(i) {
-      filledHearts[i].classList.add('products-small-cards__item-wishlist-btn--active');
-      hearts[i].classList.remove('products-small-cards__item-wishlist-btn--active');
-      changeFlag[i] = false;
-    }
-    function unfill(i) {
-      hearts[i].classList.add('products-small-cards__item-wishlist-btn--active');
-      filledHearts[i].classList.remove('products-small-cards__item-wishlist-btn--active');
-      changeFlag[i] = true;
-    }
+  }
+
+  for (let i = 0; i < unfilledhearts.length; i++) {
+    unfilledhearts[i].addEventListener("click", () => (handleClick(i)));
+    filledHearts[i].addEventListener("click", () => (handleClick(i)));
+  }
+
+  function fill(i) {
+    filledHearts[i].classList.toggle('products-small-cards__item-wishlist-btn--active');
+    unfilledhearts[i].classList.toggle('products-small-cards__item-wishlist-btn--active');
+    changeFlag[i] = false;
+  }
+
+  function unfill(i) {
+    unfilledhearts[i].classList.toggle('products-small-cards__item-wishlist-btn--active');
+    filledHearts[i].classList.toggle('products-small-cards__item-wishlist-btn--active');
+    changeFlag[i] = true;
+  }
 }

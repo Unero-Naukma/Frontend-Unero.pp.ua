@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = () => {
+export function headerMobileMenu() {
     const mainHeader = document.querySelector(`.main-header`);
     const mainHeaderToggle = document.querySelector(`.main-header__toggle`);
     const mainHeaderLineSeparator = document.querySelector(`.main-header__line-separator`);
