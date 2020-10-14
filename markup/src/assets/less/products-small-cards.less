@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .products-small-cards {
-    margin-top: 30px;
+    margin-top: 45px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.products-small-cards__item {//product
+.products-small-cards__item {
+    margin-bottom: 20px;
     flex-basis: 47%;
     transition-duration: 0.5s;
     font-family: 'Poppins', sans-serif;
@@ -71,7 +72,7 @@
     flex-basis: 80%;
     text-decoration: none;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: -0.05ch;
     margin-right: 30px;
     @media @tablet-widths {
@@ -128,8 +129,8 @@
     margin-top: 5px;
     color: @product-price-color;
     font-weight: 300;
+    font-size: 14px;
     @media @tablet-widths {
-        font-size: 14px;
         margin-top: 8px;
     }
     @media @desktop-widths {
@@ -138,12 +139,9 @@
 }
 
 .products-small-cards__item-price--discount {//discount modifier
-    font-size: 11px;
+    font-size: 14px;
     text-decoration: line-through;
     margin-top: 6px !important;
-    @media @tablet-widths {
-        font-size: 14px;
-    }
     @media @desktop-widths {
         font-size: 18px;
         
@@ -175,31 +173,5 @@
 
 .products-small-cards__item-title--active {//active name
    text-decoration: underline;
-}
-
-.best-products__show-all-link {//show all
-    display: block;
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    color: #000;
-    margin: 50px auto;
-    margin-bottom: 70px;
-    text-decoration: none;
-    font-weight: 800;
-    letter-spacing: 0.1ch;
-    width: 22%;
-    text-align: center;
-    @media @tablet-widths {
-        margin-top: 70px;
-        margin-bottom: 100px;
-        font-size: 15px;
-        width: 15%;
-    }
-    @media @desktop-widths {
-        font-size: 18px;
-        width: 10%;
-        margin-top: 100px;
-        margin-bottom: 150px;
-    }
 }
 
