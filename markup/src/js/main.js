@@ -1,6 +1,7 @@
 'use strict';
-const bestSellingProducts = require(`./bestSellingProducts`);
-const headerMobileMenu = require(`./headerMobileMenu`);
+
+import {bestSellingProducts} from './bestSellingProducts';
+import {headerMobileMenu} from './headerMobileMenu';
 
 bestSellingProducts();
 headerMobileMenu();
