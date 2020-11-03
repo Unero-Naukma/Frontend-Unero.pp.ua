@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+  <title>Unero</title>
+  <script src="js/script.js" defer>
+  </script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="main-wrapper">
+      <div class="main-header__main-nav">
+        <div class="main-header__toggle"></div>
+        <img class="store-logo" src="#" alt="Unero logo">
+        <div class="main-header__pages-icons">
+          <a href="#" class="main-header__search-page-link">
+            <img src="#" alt="Search page icon">
+          </a>
+          <a href="#" class="main-header__user-profile-link">
+            <img src="#" alt="User profile page icon">
+          </a>
+          <a href="#" class="main-header__wishlist-link">
+            <img src="#" alt="Wishlist page icon">
+          </a>
+          <a href="#" class="main-header__cart-link">
+            <img src="#" alt="Cart page icon">
+          </a>
+        </div>
+        <nav class="main-header__list">
+          <li>
+            <form method="get" action="" class="search  main-header__search">
+              <input type="search" name="search" placeholder="Search">
+            </form>
+          </li>
+          <li class="main-header__item">
+            <a>Home</a>
+          </li>
+          <li class="main-header__item">
+            <a href="#">Shop</a>
+          </li>
+          <li class="main-header__item">
+            <a href="#">Collections</a>
+          </li>
+          <li class="main-header__item">
+            <a href="#">About us</a>
+          </li>
+          <li class="main-header__item">
+            <a href="#">Contacts</a>
+            </li>
+          <li class="main-header__item">
+            <a href="#">Login</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="intro">
+      <input type="radio" class="intro__radio-button" id="btn-1" name="field" checked>
+      <input type="radio" class="intro__radio-button" id="btn-2" name="field">
+      <input type="radio" class="intro__radio-button" id="btn-3" name="field">
+      <div class="intro__collection-wrapper">
+        <div class="slider">
+          <div class="slider__arrow  slider__arrow-left"></div>
+          <div class="slider__arrow  slider__arrow-right"></div>
+        </div>
+        <ul class="intro__collection-list">
+          <li class="intro__collection-item">
+            <a href="#"><img src="assets/img/collections/collection.png" alt="Collection 1"></a>
+          </li>
+          <li class="intro__collection-item">
+            <a href="#"><img src="assets/img/TempProduct.png" alt="Collection 2"></a>
+          </li>
+          <li class="intro__collection-item">
+            <a href="#"><img src="assets/img/collections/collection.png" alt="Collection 3"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="intro__dots">
+      <label class="intro__dots-item" for="btn-1"></label>
+      <label class="intro__dots-item" for="btn-2"></label>
+      <label class="intro__dots-item" for="btn-3"></label>
+    </div>
+    </section>
+    <section class="store-descr">
+      <div class="main-wrapper">
+        <h1 class="visually-hidden">Unero is the online store of the minimalist style goods</h1>
+        <h2 >Simple & minimalist</h2>
+        <p class="store-descr_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi tenetur excepturi sed unde vitae
+          quibusdam cupiditate dicta, illum quaerat expedita magnam nihil placeat voluptate quasi maiores repudiandae
+          libero facere!</p>
+      </div>
+    </section>
+    <section class="best-products"><!--------------------------------------------------------------------------->
+      <div class="main-wrapper">
+        <h2 class="best-products__title">Best selling products</h2>
+        <h3 class="best-products__categories-title">Categories</h3>
+        <ul class="best-products__categories-list">
+          <li class="best-products__categories-item best-products__categories-item--active">All</li>
+          <li class="best-products__categories-item">Furnitures</li>
+          <li class="best-products__categories-item">Bags</a></li>
+          <li class="best-products__categories-item">Shoes</li>
+          <li class="best-products__categories-item">Decoration</li>
+        </ul>
+        <ul class="products-small-cards">
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <div class="products-small-cards__stars">
+                  <img src="assets/img/icons/yellowStar.svg" alt="yellowStar" class="products-small-cards__stars-yellow-star">
+                  <img src="assets/img/icons/yellowStar.svg" alt="yellowStar" class="products-small-cards__stars-yellow-star">
+                  <img src="assets/img/icons/yellowStar.svg" alt="yellowStar" class="products-small-cards__stars-yellow-star">
+                  <img src="assets/img/icons/yellowStar.svg" alt="yellowStar" class="products-small-cards__stars-yellow-star">
+                  <img src="assets/img/icons/greyStar.svg" alt="greyStar" class="products-small-cards__stars-grey-star">
+                  <span class="products-small-cards__stars-count">4</span>
+                </div>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist active button" class="products-small-cards__item-wishlist-btn-filled  
+              products-small-cards__item-wishlist-btn-filled--active">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <div class="products-small-cards__stars">
+                  <img src="assets/img/icons/yellowStar.svg" alt="yellowStar" class="products-small-cards__stars-yellow-star">
+                  <img src="assets/img/icons/yellowStar.svg" alt="yellowStar" class="products-small-cards__stars-yellow-star">
+                  <img src="assets/img/icons/yellowStar.svg" alt="yellowStar" class="products-small-cards__stars-yellow-star">
+                  <img src="assets/img/icons/greyStar.svg" alt="greyStar" class="products-small-cards__stars-grey-star">
+                  <img src="assets/img/icons/greyStar.svg" alt="greyStar" class="products-small-cards__stars-grey-star">
+                  <span class="products-small-cards__stars-count">7</span>
+                </div>
+                <div class="products-small-cards__item-text-block-discount">
+                  <p class="products-small-cards__item-discount">$36.00</p>
+                  <p class="products-small-cards__item-price  products-small-cards__item-price--discount">$47.50</p>
+                </div>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <div class="products-small-cards__item-text-block-discount">
+                  <p class="products-small-cards__item-discount">$50.00</p>
+                  <p class="products-small-cards__item-price  products-small-cards__item-price--discount">$80.00</p>
+                </div>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn 
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li>
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li> 
+          <li class="products-small-cards__item">
+            <img src="assets/img/TempProduct.png" alt="Product image" class="products-small-cards__item-image">
+            <div class="products-small-cards__item-all-info">
+              <div class="products-small-cards__item-text-block">
+                <a href="" class="products-small-cards__item-title">Miliraty Backpack</a>
+                <p class="products-small-cards__item-price">$36.00</p>
+              </div>
+              <img src="assets/img/icons/heart-outline.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn  
+              products-small-cards__item-wishlist-btn--active">
+              <img src="assets/img/icons/heart.svg" alt="Wishlist button" class="products-small-cards__item-wishlist-btn-filled">
+            </div>
+          </li> 
+        </ul>
+        <a href="#" class="best-products__show-all-link">SHOW ALL</a>
+      </div>
+    </section><!--------------------------------------------------------------------------------->
+  </main>
+  <footer class="main-footer">
+    <div class="main-wrapper">
+      <div class="main-footer__first-part">
+        <div class="main-footer__first-part-wrapper">
+          <img src="assets/img/icons/unero-logo.svg" alt="Unero logo" class="store-logo">
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">
+                <img src="assets/img/icons/inst-logo.svg" alt="Insta logo" >
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">
+                <img src="assets/img/icons/twitter-logo.svg" alt="Twitter logo">
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">
+                <img src="assets/img/icons/facebook-logo.svg" alt="Facebook logo">
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#" class="social-list__link">
+                <img src="assets/img/icons/youtube-logo.svg" alt="Youtube logo">
+              </a>
+            </li>
+          </ul>
+         </div>
+      </div>
+      <hr class="footer__division-line" noshade>
+      <div class="main-footer__second-part">
+        <div class="main-footer__second-part-wrapper">
+          <p class="main-footer__copyright">© 2020 <span class="main-footer__copyright-unero">Unero</span>. All rights reserved</p>
+          <ul class="main-footer__additional-links-list">
+            <li class="main-footer__additional-links-list-item">
+              <a href="#">Policy</a>
+            </li>
+            <li class="main-footer__additional-links-list-item">
+              <a href="#">Term & Conditions</a>
+            </li>
+            <li class="main-footer__additional-links-list-item">
+              <a href="#">Affiliate</a>
+            </li>
+            <li class="main-footer__additional-links-list-item">
+              <a href="#">Help</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
