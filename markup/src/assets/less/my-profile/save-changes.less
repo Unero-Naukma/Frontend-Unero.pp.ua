@@ -1,0 +1,28 @@
+.save-changes {
+    display: flex;
+    justify-content: center;
+}
+
+.save-changes__button {
+    box-sizing: border-box;
+    border: solid @edit-shipping-address-button-border-color 1px; 
+    background-color: @edit-shipping-address-button-bg-color;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    cursor: pointer;
+    color: @edit-shipping-address-button-color;
+    max-width: 630px;
+    transition: 
+    background-color 0.4s,
+    color 0.4s;
+}
+
+.save-changes__button:hover {
+    background-color: @edit-shipping-address-button-bg-color-hover;
+    color: @edit-shipping-address-button-color-hover;
+}
+
+.save-changes__button:focus {
+    border-color: @edit-shipping-address-button-border-color;
+}
