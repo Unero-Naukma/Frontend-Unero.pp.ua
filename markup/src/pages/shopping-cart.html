@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.min.css">
+  <title>Shopping cart</title>
+  <script src="../js/script.js" defer>
+  </script>
+</head>
+<body>
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <style>
+        .cls-1 {
+          fill-rule: evenodd
+        }
+      </style>
+      <style>
+        .cls-1 {
+          fill-rule: evenodd
+        }
+      </style>
+      <style>
+        .cls-1 {
+          fill-rule: evenodd
+        }
+      </style>
+    </defs>
+    <symbol id="cart-icon" viewBox="0 0 343 317">
+      <path class="cls-1"
+        d="M-391.97 295.1s6.862-1 7.86-6.987.468-21.521-9.606-36.679c-5.258-10.37-24.69-34.751-72.486-40.172-6-2.075-57.711-6.072-82.965 2.619-20.237 5.192-40.458 17.807-57.639 42.793-7.452 12.99-19.373 38.8 7.86 37.553 90.611 1.355 206.976.873 206.976.873zM-382 316c16.1-.1 24.147-3.992 29-18 1.7-8.219 1.469-21.785-8-44-7.791-13.142-20.279-47.73-86-64-30.757-6.987-78.231-7.3-114 2-36.755 10.431-61.386 33.679-77 66-10.814 19.2-17.8 52.933 13 57 36.352 2.429 230.5 1.5 243 1zM-500 25.191A58.809 58.809 0 01-441.191 84 58.809 58.809 0 01-500 142.809 58.809 58.809 0 01-558.809 84 58.809 58.809 0 01-500 25.191zm0-25.3A84.107 84.107 0 01-415.893 84 84.107 84.107 0 01-500 168.107 84.107 84.107 0 01-584.107 84 84.107 84.107 0 01-500-.107zM-230.33 0c73.139-1.014 139.154 61.127 122.854 140.487A124.725 124.725 0 01-125.7 185.2c-3.773 4.875-3.53 5.924-7.3 10.8 25.4 28.15 59.6 65.85 85 94 4.448 5.306 14.26 17.1 2.089 26.026-8.57 5.191-17.152-3.041-22.089-8.026-25.12-27.966-59.88-66.034-85-94-4.509 3.128-5.459 3.676-9.968 6.8-12.249 7.433-26.728 12.79-43.344 15.733-87.538 15.5-162.383-73.79-130.308-158.151 13.32-35.032 39.638-61.709 76.473-73.138C-251.046 2.42-241.113.062-230.33 0zm-.265 26.1a74.794 74.794 0 00-24.3 4.808c-27.8 10.147-47.565 29.9-57.714 57.7-22.568 61.811 32.119 131.378 94.67 122.989 38.8-5.2 64.846-24.307 78.217-54.662 30.431-69.083-23.051-131.19-90.873-130.835zM15.141 100.67l1.411-19.755s.038-9.562 11.289-8.467c12.662-.051 30.78.265 32.455 0 3.088-.5 5.036 1.012 11.289-5.644 19.788-19.831 63.543-63.464 63.5-63.5 0 0 5.2-3.087 7.055-2.822a53.786 53.786 0 015.645 0s3.715.139 5.644 2.818 63.5 62.089 63.5 62.089A17.554 17.554 0 00231 73c4.958-.012 11.438.042 13 0 2.111.127 6.167-.978 0-8-13.341-13.158-32.862-31.822-32-31-7.232-8.908-10-2.893-16.238-1.063-6.835 1.632-15.548.029-13.762-9.937 1.944-7.092 15.616-13.644 18.73-15.626C205.2 4.03 213 6 213 6c5.418 3.547 37.914 38.914 56 57 4.321 5.2 11.649 9.912 15 10s22.622-.64 30.3-.552c10.848-.441 11.024 9.172 11.289 9.878s1.751 76.007 16.933 218.721c.882 8.29 3.374 15.2-7.055 15.522-4.771.479-318.028 1.058-325.966 1.411s-10.282-4.4-9.878-11.289c.34-5.871 15.518-206.021 15.518-206.021zm18.928 193.942c-4.711-.205-10.48 1.481-9.177-9.177C26.359 274.245 38 100.589 38 100.589s-.32-9.621 10.488-9.176c10.808.936 242.528 0 242.528 0s10.652-1.065 10.488 7.866c-.164 7.211 12.782 171 14.421 184.846-.082 5.9 1.564 8.65-7.866 10.488-133.812-.098-271.512-.022-273.99-.001zm71.478-165.788c1.75 10.625 3.589 31.733 10.81 48.648 4.758 12.95 25.054 40.933 56.757 39.189C193.065 216.638 215.1 204.734 226 178c6.347-18.872 8-33.579 8-51 .442-3.814-4.59-5.967-10-6-5.279-.032-11.61 1.919-12 6-2.7 18.006-2.928 48.345-22 62-12.812 7.16-21.253 7.773-34 1-10.29-6.711-21.963-14.963-28-63 1.255-3.2-6.516-6.881-11-6-6.691-.566-10.453 2.2-11.453 7.824zM120.63 72.17s-8.256-.018-11.537 0c-6.706.252-12.552-1.037-5.769-9.23 2.773-3 29.863-28.28 35.766-34.612 3.49-3.575 10.787-2.879 12.691 0 21.609 21.127 32.4 30.82 36.874 35.716 4.36 4.424 1.7 7.844-3.416 8.126-6.929.283-18.459 0-18.459 0h-46.15z" />
+    </symbol>
+    <symbol id="profile-icon" viewBox="0 0 295 317">
+      <path
+        d="M255.03 295.1s6.862-1 7.86-6.987.468-21.521-9.606-36.679c-5.258-10.37-24.69-34.751-72.486-40.172-6-2.075-57.711-6.072-82.965 2.619-20.237 5.192-40.458 17.807-57.639 42.793-7.453 12.99-19.373 38.8 7.86 37.553 90.611 1.355 206.976.873 206.976.873zM265 316c16.1-.1 24.147-3.992 29-18 1.7-8.219 1.469-21.785-8-44-7.791-13.142-20.279-47.73-86-64-30.757-6.987-78.231-7.3-114 2-36.755 10.431-61.386 33.679-77 66-10.814 19.2-17.8 52.933 13 57 36.352 2.429 230.5 1.5 243 1zM147 25.191A58.809 58.809 0 1188.191 84 58.809 58.809 0 01147 25.191zm0-25.3A84.107 84.107 0 1162.893 84 84.107 84.107 0 01147-.107z"
+        fill-rule="evenodd" />
+    </symbol>
+    <symbol id="search-icon" viewBox="0 0 303 317">
+      <path class="cls-1"
+        d="M-47.97 295.1s6.862-1 7.86-6.987.468-21.521-9.606-36.679c-5.257-10.37-24.69-34.751-72.486-40.172-6-2.075-57.711-6.072-82.965 2.619-20.237 5.192-40.458 17.807-57.639 42.793-7.452 12.99-19.373 38.8 7.86 37.553 90.611 1.355 206.976.873 206.976.873zM-38 316c16.1-.1 24.147-3.992 29-18 1.7-8.219 1.469-21.785-8-44-7.791-13.142-20.279-47.73-86-64-30.757-6.987-78.231-7.3-114 2-36.755 10.431-61.386 33.679-77 66-10.814 19.2-17.8 52.933 13 57 36.352 2.429 230.5 1.5 243 1zM-156 25.191A58.809 58.809 0 01-97.191 84 58.809 58.809 0 01-156 142.809 58.809 58.809 0 01-214.809 84 58.809 58.809 0 01-156 25.191zm0-25.3A84.107 84.107 0 01-71.893 84 84.107 84.107 0 01-156 168.107 84.107 84.107 0 01-240.107 84 84.107 84.107 0 01-156-.107zM113.239 0C186.1-1.01 251.866 60.9 235.627 139.955a124.218 124.218 0 01-18.152 44.545c-3.758 4.858-3.516 5.9-7.274 10.76 25.3 28.043 59.377 65.6 84.678 93.644 4.431 5.286 14.2 17.036 2.08 25.928-8.537 5.171-17.086-3.029-22-8-25.025-27.86-59.652-65.784-84.678-93.644-4.491 3.116-5.438 3.662-9.93 6.778-12.2 7.405-26.627 12.742-43.18 15.673C49.959 251.086-24.6 162.13 7.352 78.089 20.622 43.186 46.84 16.61 83.535 5.224 92.6 2.411 102.5.062 113.239 0zm-.264 26a74.515 74.515 0 00-24.208 4.79C61.071 40.9 41.382 60.586 31.272 88.275c-22.483 61.576 32 130.881 94.311 122.523 38.656-5.184 64.6-24.215 77.921-54.455C233.82 87.52 180.54 25.647 112.975 26zM359.141 100.67l1.411-19.755s.038-9.562 11.289-8.467c12.662-.051 30.78.265 32.455 0 3.088-.5 5.036 1.012 11.289-5.644 19.788-19.831 63.543-63.464 63.5-63.5 0 0 5.2-3.087 7.055-2.822a53.786 53.786 0 015.645 0s3.715.139 5.644 2.818 63.5 62.089 63.5 62.089A17.554 17.554 0 00575 73c4.958-.012 11.438.042 13 0 2.111.127 6.167-.978 0-8-13.341-13.158-32.862-31.822-32-31-7.232-8.908-10-2.893-16.238-1.063-6.835 1.632-15.548.029-13.762-9.937 1.944-7.092 15.616-13.644 18.73-15.626C549.2 4.03 557 6 557 6c5.418 3.547 37.914 38.914 56 57 4.321 5.2 11.649 9.912 15 10s22.622-.64 30.295-.552c10.848-.441 11.024 9.172 11.289 9.878s1.751 76.007 16.933 218.721c.882 8.29 3.374 15.2-7.055 15.522-4.771.479-318.028 1.058-325.966 1.411s-10.281-4.4-9.877-11.289c.344-5.871 15.522-206.021 15.522-206.021zm18.928 193.942c-4.711-.205-10.48 1.481-9.177-9.177C370.359 274.245 382 100.589 382 100.589s-.32-9.621 10.487-9.176c10.808.936 242.528 0 242.528 0s10.652-1.065 10.488 7.866c-.164 7.211 12.782 171 14.421 184.846-.082 5.9 1.564 8.65-7.866 10.488-133.811-.098-271.511-.022-273.989-.001zm71.478-165.788c1.75 10.625 3.589 31.733 10.81 48.648 4.758 12.95 25.054 40.933 56.757 39.189C537.065 216.638 559.1 204.734 570 178c6.347-18.872 8-33.579 8-51 .442-3.814-4.59-5.967-10-6-5.279-.032-11.61 1.919-12 6-2.7 18.006-2.928 48.345-22 62-12.812 7.16-21.253 7.773-34 1-10.29-6.711-21.963-14.963-28-63 1.255-3.2-6.516-6.881-11-6-6.691-.566-10.453 2.2-11.453 7.824zM464.63 72.17s-8.256-.018-11.537 0c-6.706.252-12.551-1.037-5.769-9.23 2.773-3 29.863-28.28 35.766-34.612 3.49-3.575 10.787-2.879 12.691 0 21.609 21.127 32.4 30.82 36.874 35.716 4.36 4.424 1.7 7.844-3.416 8.126-6.929.283-18.459 0-18.459 0h-46.15z" />
+    </symbol>
+    <symbol id="wishlist-icon" viewBox="48 64 416 384">
+      <path
+        d="M349.6 64c-36.4 0-70.718 16.742-93.6 43.947C233.117 80.742 198.8 64 162.4 64 97.918 64 48 114.221 48 179.095c0 79.516 70.718 143.348 177.836 241.694L256 448l30.164-27.211C393.281 322.442 464 258.61 464 179.095 464 114.221 414.082 64 349.6 64zm-80.764 329.257l-4.219 3.873-8.617 7.773-8.616-7.772-4.214-3.869c-50.418-46.282-93.961-86.254-122.746-121.994C92.467 236.555 80 208.128 80 179.095c0-22.865 8.422-43.931 23.715-59.316C118.957 104.445 139.798 96 162.4 96c26.134 0 51.97 12.167 69.11 32.545L256 157.661l24.489-29.116C297.63 108.167 323.465 96 349.6 96c22.603 0 43.443 8.445 58.686 23.778C423.578 135.164 432 156.229 432 179.095c0 29.033-12.467 57.459-40.422 92.171-28.784 35.74-72.325 75.709-122.742 121.991z" />
+    </symbol>
+    <symbol id="wishlist-filled-icon" viewBox="0 0 500 462">
+      <path
+            d="M126.732 0c41.947-.563 69.3 12.081 92.668 29.993 2.925 2.242 10.739 9.517 18.187 16.727 7.59 8.786 10.7 10.829 12.966 10.576 4.16.446 7.53-5.244 11.9-9.817 3.712-3.884 7.26-7.847 9.487-9.7 8.761-8.521 18.018-14.523 28.291-20.476C355.894-14.948 415.977 1.51 456.12 34.9c45.376 37.738 55.16 115.173 31.467 183.993-29.23 84.9-90.711 142.811-155.6 192.355-14.829 11.323-29.868 22.291-45.323 33.165-8.086 5.689-15.806 12.073-26.27 15.862-19.186 5.586-32.468-6.04-42.726-13.266-26.271-18.508-51.244-37.589-75.923-57.39C85.985 344.878 34.357 288.3 10.681 211.966-8.08 151.475-2.141 92.241 29.446 51.045 45.576 30.008 69.07 13.45 97.575 4.9A108.091 108.091 0 01126.732 0z"
+            fill-rule="evenodd" />
+    </symbol>
+    <symbol id="star-icon" viewBox="0 0 960 911">
+      <path d="M479 0l113 347h368L664 563q56 173.982 112 348L482 696 184 911q56-173.982 112-348L0 347h368z"
+        fill-rule="evenodd" />
+    </symbol>
+    <symbol id="facebook-icon" viewBox="0 0 543 1000">
+      <path
+        d="M364 359h116c14.31 0 33.82-1.653 47 3 11.091 7.157 9 24.714 9 43v108c0 14.864 2.5 36.176-4 45-7.066 9.588-28.511 7-45 7H364v391c-.666 12.717 1.43 28.356-4 36-7.592 10.69-28.849 8-47 8H168c-5.9-1.655-12.928-7.51-15-13-1.871-7.273-1-21-1-30V565H52c-10.665 0-31.078 2.846-38-2-16.742-5.361-14-31.17-14-53v-96c0-13.449-1.464-32.86 3-43 2.439-5.541 7.359-10.807 16-11 43.728-1.8 87.621-.978 133-1v-83c0-14.027-1.661-31.741 1-44v-16c2-9.084 1.577-19.444 4-29 18.476-72.855 49.6-121.668 106-156 22.968-13.981 49.52-23.552 81-28 17.9-3.164 45.63-3 66-3h78c11.5 0 32.285-1.266 42 2 14.639 4.737 13 22.619 13 42v94c0 12.667.818 28.679-1 42-5.532 15.5-22.824 14-44 14-32.53 0-74.833-4.675-101 4-11.191 3.71-21.908 12.116-27 22-6.726 13.056-6 32.458-6 52v87z"
+        fill-rule="evenodd" />
+    </symbol>
+    <symbol id="instagram-icon" viewBox="0 0 256 256">
+      <path
+        d="M128 23.064c34.177 0 38.225.13 51.722.745 12.48.57 19.258 2.655 23.769 4.408 5.974 2.322 10.238 5.096 14.717 9.575 4.48 4.479 7.253 8.743 9.575 14.717 1.753 4.511 3.838 11.289 4.408 23.768.615 13.498.745 17.546.745 51.723 0 34.178-.13 38.226-.745 51.723-.57 12.48-2.655 19.257-4.408 23.768-2.322 5.974-5.096 10.239-9.575 14.718-4.479 4.479-8.743 7.253-14.717 9.574-4.511 1.753-11.289 3.839-23.769 4.408-13.495.616-17.543.746-51.722.746-34.18 0-38.228-.13-51.723-.746-12.48-.57-19.257-2.655-23.768-4.408-5.974-2.321-10.239-5.095-14.718-9.574-4.479-4.48-7.253-8.744-9.574-14.718-1.753-4.51-3.839-11.288-4.408-23.768-.616-13.497-.746-17.545-.746-51.723 0-34.177.13-38.225.746-51.722.57-12.48 2.655-19.258 4.408-23.769 2.321-5.974 5.095-10.238 9.574-14.717 4.48-4.48 8.744-7.253 14.718-9.575 4.51-1.753 11.288-3.838 23.768-4.408 13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95-8.418 3.271-15.556 7.648-22.672 14.764C14.367 28.6 9.991 35.738 6.72 44.155 3.555 52.297 1.392 61.602.77 75.226.147 88.878 0 93.237 0 128c0 34.763.147 39.122.77 52.774.622 13.625 2.785 22.93 5.95 31.071 3.27 8.417 7.647 15.556 14.763 22.672 7.116 7.116 14.254 11.492 22.672 14.763 8.142 3.165 17.446 5.328 31.07 5.95 13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95 8.418-3.27 15.556-7.647 22.672-14.763 7.116-7.116 11.493-14.254 14.764-22.672 3.164-8.142 5.328-17.446 5.95-31.07.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07-3.271-8.418-7.648-15.556-14.764-22.672C227.4 14.368 220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0zm0 62.27C91.698 62.27 62.27 91.7 62.27 128c0 36.302 29.428 65.73 65.73 65.73 36.301 0 65.73-29.428 65.73-65.73 0-36.301-29.429-65.73-65.73-65.73zm0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667-19.103 42.667-42.667 42.667zm83.686-110.994c0 8.484-6.876 15.36-15.36 15.36-8.483 0-15.36-6.876-15.36-15.36 0-8.483 6.877-15.36 15.36-15.36 8.484 0 15.36 6.877 15.36 15.36z" />
+    </symbol>
+    <symbol id="twitter-icon" viewBox="0 0 256 209">
+      <path
+        d="M256 25.45c-9.42 4.177-19.542 7-30.166 8.27 10.845-6.5 19.172-16.793 23.093-29.057a105.183 105.183 0 01-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52 0 4.117.465 8.125 1.36 11.97-43.65-2.191-82.35-23.1-108.255-54.876-4.52 7.757-7.11 16.78-7.11 26.404 0 18.222 9.273 34.297 23.365 43.716a52.312 52.312 0 01-23.79-6.57c-.003.22-.003.44-.003.661 0 25.447 18.104 46.675 42.13 51.5a52.592 52.592 0 01-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475-17.975 14.086-40.622 22.483-65.228 22.483-4.24 0-8.42-.249-12.529-.734 23.243 14.902 50.85 23.597 80.51 23.597 96.607 0 149.434-80.031 149.434-149.435 0-2.278-.05-4.543-.152-6.795A106.748 106.748 0 00256 25.45" />
+    </symbol>
+    <symbol id="youtube-icon" viewBox="0 0 500 345">
+      <path
+        d="M107.7 0h270.158c14.523 0 26.239-.427 40.915 2.4 19.778 4.97 33.955 13.748 47.533 24.643 16.66 13.369 26.862 34.8 31.889 59.8 1.573 12.021 1.2 24.777 1.2 36.964 0 24.34 1.034 51.035.3 76.634.083 10.345-.162 22.538 0 33.358a149.24 149.24 0 01-1.5 24.342c-3.941 20.333-11.129 35.469-21.661 48.985-13.347 17.129-33.451 29.335-57.761 35.462-13.184 3.323-30.641 2.4-46.932 2.4h-210.89l-67.088-.3c-28.869-4.886-52.422-14.754-67.389-33.358-11.215-13.93-20.048-28.444-24.669-49.274-2.637-11.888-1.5-27.488-1.5-41.472v-75.131c0-37.516-1.422-69.1 12.335-92.561C25.654 30.689 44.182 15.076 69.8 5.409 84.388-.712 107.7 0 107.7 0zm78.219 101.577c-5.106.662-5.267 5.165-5.115 12.922.012 6.585.186 13.3.3 19.234v77.835c0 4.8.126 11.134 0 17.13.118 5.61-.29 12.354 2.708 14.124 3.262 2.787 9.562-1.231 16.546-4.808 5.679-2.909 11.5-5.732 14.44-7.213 27.274-12.72 55.158-25.145 82.431-37.865 3.015-1.5 9.737-4.872 16.847-7.814 8.273-3.878 16.033-6.205 14.441-11.72-.164-3.259-6.719-5.876-13.839-9.317-8.471-4.094-18.095-8.263-20.457-9.616l-74.007-36.664c-4.736-2.408-14.2-7.272-21.962-11.119-5.137-2.547-8.903-4.764-12.331-5.109z"
+        fill-rule="evenodd" />
+    </symbol>
+  </svg>
+  <header class="main-header">
+    <div class="main-wrapper  main-header__wrapper">
+      <nav class="main-header__main-nav">
+        <div class="main-header__toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="store-logo  main-header__store-logo  unselectable">Unero</p>
+        <ul class="main-header__list  main-header__list--desktop-list">
+          <li class="main-header__search-form-item">
+            <form method="get" action="" class="main-header__search">
+              <input type="search" class="main-header__search-input" name="search" placeholder="Search">
+              <input type="submit" class="main-header__search-submit-btn" value="">
+            </form>
+          </li>
+          <li class="main-header__item  main-header__item--active">
+            <a>Home</a>
+          </li>
+          <li class="main-header__item">
+            <a href="#">Shop</a>
+          </li>
+          <li class="main-header__item">
+            <a href="#">Collections</a>
+          </li>
+          <li class="main-header__item">
+            <a href="#">About us</a>
+          </li>
+          <li class="main-header__item  main-header__item--no-border">
+            <a href="#">Contacts</a>
+          </li>
+          <li class="main-header__item  main-header__login-item  main-header__item--no-border">
+            <a href="#">Login</a>
+          </li>
+        </ul>
+        <div class="main-header__pages-icons">
+          <a href="#" class="main-header__search-page-link">
+            <svg width="24" height="25">
+              <use xlink:href="#search-icon"></use>
+            </svg>
+          </a>
+          <a href="#" class="main-header__user-profile-link">
+            <svg width="23" height="25">
+              <use xlink:href="#profile-icon"></use>
+            </svg>
+          </a>
+          <a href="#" class="main-header__wishlist-link">
+            <svg width="27" height="25">
+              <use xlink:href="#wishlist-icon"></use>
+            </svg>
+          </a>
+          <a href="#" class="main-header__cart-link">
+            <svg width="27" height="25">
+              <use xlink:href="#cart-icon"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <hr class="main-header__line-separator" noshade>
+    <div class="main-wrapper  main-header__nav-wrapper">
+      <ul class="main-header__list  main-header__list--mob-tab-list">
+        <li class="main-header__search-form-item">
+          <form method="get" action="" class="main-header__search">
+            <input type="search" class="main-header__search-input" name="search" placeholder="Search">
+            <input type="submit" class="main-header__search-submit-btn" value="">
+          </form>
+        </li>
+        <li class="main-header__item  main-header__item--active">
+          <a>Home</a>
+        </li>
+        <li class="main-header__item">
+          <a href="#">Shop</a>
+        </li>
+        <li class="main-header__item">
+          <a href="#">Collections</a>
+        </li>
+        <li class="main-header__item">
+          <a href="#">About us</a>
+        </li>
+        <li class="main-header__item  main-header__item--no-border">
+          <a href="#">Contacts</a>
+        </li>
+        <li class="main-header__item  main-header__login-item  main-header__item--no-border">
+          <a href="#">Login</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  
+  <div class="shopping-cart-header">
+    <div class="main-wrapper">
+      <div class="shopping-cart-header__text">Shopping cart</div>
+    </div>
+  </div>
+
+  <div class="cart-items">
+    <div class="main-wrapper">
+      <div class="cart-items__table-wrapper">
+        <div class="cart-items__header">Your cart items</div>
+        <ul class="cart-items__columns">
+          <li class="cart-items__column  cart-items__column-product-info"></li>
+          <li class="cart-items__column  cart-items__column-product-image"></li>
+          <li class="cart-items__column  cart-items__column-product-name"></li>
+          <li class="cart-items__column  cart-items__column-price"></li>
+          <li class="cart-items__column  cart-items__column-quantity"></li>
+          <li class="cart-items__column  cart-items__column-total"></li>
+          <li class="cart-items__column  cart-items__column-delete-button"></li>
+        </ul>
+        <div class="cart-items__column-headers">
+          <div class="cart-items__column-header  cart-items__column-header-product-info">Product</div>
+          <div class="cart-items__column-header  cart-items__column-header-product-image"></div>
+          <div class="cart-items__column-header  cart-items__column-header-product-name">Product name</div>
+          <div class="cart-items__column-header  cart-items__column-header-price">Price</div>
+          <div class="cart-items__column-header  cart-items__column-header-quantity">Quantity</div>
+          <div class="cart-items__column-header  cart-items__column-header-total">Total</div>
+          <div class="cart-items__column-header  cart-items__column-header-delete-button"></div>
+        </div>
+        <ul class="cart-items__list">
+          <li class="cart-items__item">
+            <div class="cart-items__cell  cart-items__product-info">
+              <image  class="cart-items__product-info-image" src="../assets/img/wishlist/product-icon-100x100.png"></image>
+              <div class="cart-items__product-info-name">BO&Play Wireless Speake</div>
+              <div class="cart-items__product-info-price-wrapper">
+                <div class="cart-items__product-info-price">
+                  <span class="cart-items__product-info-title">Price:</span>
+                  <span class="cart-items__product-info-value  cart-items__product-info-price-value">$205.00</span>
+                </div>
+                <div class="cart-items__product-info-total-price">
+                  <span class="cart-items__product-info-title">Total price:</span>
+                  <span class="cart-items__product-info-value  cart-items__product-info-total-price-value">$205.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="cart-items__cell  cart-items__name">BO&Play Wireless Speake</div>
+            <div class="cart-items__cell  cart-items__price">$205.00</div>
+            <div class="cart-items__cell  cart-items__quantity-wrapper">
+              <div class="cart-items__quantity">
+                <button class="cart-items__quantity-button  cart-items__quantity-add-button">+</button>
+                <span class="cart-items__quantity-value">1</span>
+                <button class="cart-items__quantity-button  cart-items__quantity-remove-button">-</button>
+              </div>
+            </div>
+            <div class="cart-items__cell  cart-items__total-price">$205.00</div>
+            <div class="cart-items__cell  cart-items__delete-button-wrapper">
+              <button class="cart-items__delete-button">+</button>
+            </div>  
+          </li>
+          <li class="cart-items__item">
+            <div class="cart-items__cell  cart-items__product-info">
+              <image src="../assets/img/wishlist/product-icon-100x100.png" class="cart-items__product-image"></image>
+              <div class="cart-items__product-info-name">Simple Fabric Chair</div>
+              <div class="cart-items__product-info-price-wrapper">
+                <div class="cart-items__product-info-price">
+                  <span class="cart-items__product-info-title">Price:</span>
+                  <span class="cart-items__product-info-value  cart-items__product-info-price-value">$65.00</span>
+                </div>
+                <div class="cart-items__product-info-total-price">
+                  <span class="cart-items__product-info-title">Total price:</span>
+                  <span class="cart-items__product-info-value  cart-items__product-info-total-price-value">$65.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="cart-items__cell  cart-items__name">Simple Fabric Chair</div>
+            <div class="cart-items__cell  cart-items__price">$65.00</div>
+            <div class="cart-items__cell  cart-items__quantity-wrapper">
+              <div class="cart-items__quantity">
+                <button class="cart-items__quantity-button  cart-items__quantity-add-button">+</button>
+                <span class="cart-items__quantity-value">1</span>
+                <button class="cart-items__quantity-button  cart-items__quantity-remove-button">-</button>
+              </div>
+            </div>
+            <div class="cart-items__cell  cart-items__total-price">$65.00</div>
+            <div class="cart-items__cell  cart-items__delete-button-wrapper">
+              <button class="cart-items__delete-button">+</button>
+            </div>  
+          </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+
+  <div class="cart-buttons">
+    <div class="main-wrapper">
+      <div class="cart-buttons__wrapper">
+        <button class="cart-buttons__button  cart-buttons__clear-all-button">
+          <span class="cart-buttons__icon  cart-buttons__clear-all-icon">+</span>
+          Clear All
+        </button>
+        <button class="cart-buttons__button  cart-buttons__back-to-shop-button">
+          <image  class="cart-buttons__icon  cart-buttons__back-top-shop-button-icon" src="../assets/img/shopping-cart/left-arrow.png"></image>
+          Back To Shop
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="calculate-shipping">
+    <div class="main-wrapper">
+      <div class="calculate-shipping__wrapper">
+        <div class="calculate-shipping__header-input-wrapper">
+          <div class="calculate-shipping__header">Calculate Shipping</div>
+          <ul class="calculate-shipping__all-inputs">
+            <select name="country" class="calculate-shipping__input  calculate-shipping__select" >
+              <option value="Ukraine"  class="calculate-shipping__input-option">Ukraine</option>
+              <option value="Finland"  class="calculate-shipping__input-option">Finland</option>
+              <option value="Greenland"  class="calculate-shipping__input-option">Greenland</option>
+            </select>
+            <select name="state" class="calculate-shipping__input  calculate-shipping__select" >
+              <option value="Nevada" class="calculate-shipping__input-option">Nevada</option>
+              <option value="Texas" class="calculate-shipping__input-option">Texas</option>
+              <option value="Alaska" class="calculate-shipping__input-option">Alaska</option>
+            </select> 
+            <input type="text" placeholder="City" class="calculate-shipping__input">
+            <input type="text" placeholder="Postcode / Zip"  class="calculate-shipping__input">
+          </ul>
+        </div>
+        <div class="calculate-shipping__output-proceed-button-wrapper">
+          <div class="calculate-shipping__output">
+            <div class="calculate-shipping__subtotal">
+              <div class="calculate-shipping__subtotal-header">Subtotal</div>
+              <div class="calculate-shipping__subtotal-value">$270.00</div>
+            </div>
+            <hr class="shopping-cart-line">
+            <div class="calculate-shipping__shipping">
+              <div class="calculate-shipping__shipping-title">Shipping</div>
+              <div class="calculate-shipping__shipping-type">
+                <label class="calculate-shipping__shipping-type-header">
+                  <input class="calculate-shipping__shipping-radio" type="radio" name="shipping-type" value="standard" checked>
+                  Standard
+                </label>  
+                <div class="calculate-shipping__shipping-type-price">+ $10.00</div>
+              </div>
+              <div class="calculate-shipping__shipping-type  calculate-shipping__shipping-type--unactive">
+                <label class="calculate-shipping__shipping-type-header">
+                  <input type="radio" name="shipping-type" value="standard" class="calculate-shipping__radio">
+                  Express
+                </label>  
+                <div class="calculate-shipping__shipping-type-price  calculate-shipping__shipping-type-price--unactive">+ $19.00</div>
+              </div>
+            </div>
+            <hr class="shopping-cart-line">
+            <div class="calculate-shipping__total">
+              <div class="calculate-shipping__total-header">Total</div>
+              <div class="calculate-shipping__total-value">$280.00</div>
+            </div>
+          </div>
+          <button class="calculate-shipping__proceed-button">Proceed To Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <div class="main-wrapper  main-footer__main-wrapper">
+      <div class="main-footer__first-part">
+        <p class="store-logo  unselectable">Unero</p>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a href="#" class="social-list__link">
+              <svg class="social-list__instagram-logo">
+                <use xlink:href="#instagram-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link">
+              <svg class="social-list__twitter-logo">
+                <use xlink:href="#twitter-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link">
+              <svg class="social-list__facebook-logo">
+                <use xlink:href="#facebook-icon"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link">
+              <svg class="social-list__youtube-logo">
+                <use xlink:href="#youtube-icon"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr class="footer__division-line" noshade>
+      <div class="main-footer__second-part">
+        <p class="main-footer__copyright">© 2020 <span class="main-footer__copyright-unero">Unero</span>. All rights
+          reserved</p>
+        <ul class="main-footer__additional-links-list">
+          <li class="main-footer__additional-links-list-item">
+            <a href="#">Policy</a>
+          </li>
+          <li class="main-footer__additional-links-list-item">
+            <a href="#">Term & Conditions</a>
+          </li>
+          <li class="main-footer__additional-links-list-item">
+            <a href="#">Affiliate</a>
+          </li>
+          <li class="main-footer__additional-links-list-item">
+            <a href="#">Help</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

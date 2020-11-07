@@ -168,7 +168,7 @@ gulp.task("watch", function () {
   gulp.watch("./markup/src/assets/less/*.less", gulp.parallel("build-styles"));
   gulp.watch("./markup/src/assets/less/home/*.less", gulp.parallel("build-styles"));
   gulp.watch("./markup/src/assets/less/my-profile/*.less", gulp.parallel("build-styles"));
-  //gulp.watch("./markup/src/assets/less/shopping-cart/*.less", gulp.parallel("build-styles"));
+  gulp.watch("./markup/src/assets/less/shopping-cart/*.less", gulp.parallel("build-styles"));
   gulp.watch("./markup/src/assets/less/wishlist/*.less", gulp.parallel("build-styles"));
   gulp.watch("./markup/src/js/**/*.js", gulp.parallel("build-js"));
 });

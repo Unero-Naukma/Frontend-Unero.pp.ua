@@ -55,7 +55,7 @@
     color: @dashboard-item-value-color;
 }
 
-.dashboard__edit-profile-button {
+.dashboard__edit-profile-link {
     background: none;
     border: none;
     margin: 0 0 70px;
@@ -64,13 +64,21 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    
+    &:hover {
+        color: black;
+    }
+    &:visited {
+        color: black;
+    }
 }
 
-.dashboard__edit-profile-button-image {
+.dashboard__edit-profile-link-image {
     transform: scale(0.75);
     margin-right: 4px;
 }
 
-.dashboard__edit-profile-button-text {
+.dashboard__edit-profile-link-text {
     font-size: 17px;
 }

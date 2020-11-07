@@ -5,8 +5,8 @@
 @orders-status-pending-color: #4ea7d3;
 @orders-status-delivered-color: #999999;
 @orders-status-cancel-color: #d32222;
-@orders-button-bg-color: white;
-@orders-button-color: #0099cc;
+@orders-link-bg-color: white;
+@orders-link-color: #0099cc;
 
 .orders {
     margin-top: 60px;
@@ -199,7 +199,7 @@
     color: @orders-status-cancel-color;
 }
 
-.orders__button-wrapper {
+.orders__link-wrapper {
     display: flex;
     justify-content: center;
     @media @tablet-widths {
@@ -207,7 +207,8 @@
     }
 }
 
-.orders__all-orders-button {
+.orders__all-orders-link {
+    text-decoration: none;
     padding: 0;
     border: none;
     margin-top: 30px;
@@ -215,6 +216,13 @@
     font-weight: 500;
     font-style: italic;
     cursor: pointer;
-    background-color: @orders-button-bg-color;
-    color: @orders-button-color;
+    background-color: @orders-link-bg-color;
+    color: @orders-link-color;
+    
+    &:hover {
+        color: @orders-link-color;
+    }
+    &:visited {
+        color: @orders-link-color;
+    }
 }

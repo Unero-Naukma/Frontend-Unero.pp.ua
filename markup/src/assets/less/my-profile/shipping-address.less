@@ -50,7 +50,7 @@
     font-weight: 600;
 }
 
-.shipping-address__edit-button-wrapper {
+.shipping-address__edit-link-wrapper {
     margin-top: 35px;
     display: flex;
     justify-content: center;
@@ -59,7 +59,7 @@
     }
 }
 
-.shipping-address__edit-button {
+.shipping-address__edit-link {
     border: none;
     background-color: @shipping-address-button-background-color;
     padding: 0;
@@ -68,4 +68,12 @@
     font-weight: 500;
     display: flex;
     cursor: pointer;
+    text-decoration: none;
+    
+    &:hover {
+        color: @shipping-address-button-color;
+    }
+    &:visited {
+        color: @shipping-address-button-color;
+    }
 }
