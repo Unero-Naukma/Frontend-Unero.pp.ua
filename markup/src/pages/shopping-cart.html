@@ -276,16 +276,20 @@
         <div class="calculate-shipping__header-input-wrapper">
           <div class="calculate-shipping__header">Calculate Shipping</div>
           <ul class="calculate-shipping__all-inputs">
-            <select name="country" class="calculate-shipping__input  calculate-shipping__select" >
-              <option value="Ukraine"  class="calculate-shipping__input-option">Ukraine</option>
-              <option value="Finland"  class="calculate-shipping__input-option">Finland</option>
-              <option value="Greenland"  class="calculate-shipping__input-option">Greenland</option>
-            </select>
-            <select name="state" class="calculate-shipping__input  calculate-shipping__select" >
-              <option value="Nevada" class="calculate-shipping__input-option">Nevada</option>
-              <option value="Texas" class="calculate-shipping__input-option">Texas</option>
-              <option value="Alaska" class="calculate-shipping__input-option">Alaska</option>
-            </select> 
+            <div class="calculate-shipping__select-wrapper">
+              <select name="country" class="calculate-shipping__input  calculate-shipping__select" >
+                <option value="Ukraine"  class="calculate-shipping__input-option">Ukraine</option>
+                <option value="Finland"  class="calculate-shipping__input-option">Finland</option>
+                <option value="Greenland"  class="calculate-shipping__input-option">Greenland</option>
+              </select>
+            </div>
+            <div class="calculate-shipping__select-wrapper">
+              <select name="state" class="calculate-shipping__input  calculate-shipping__select" >
+                <option value="Nevada" class="calculate-shipping__input-option">Nevada</option>
+                <option value="Texas" class="calculate-shipping__input-option">Texas</option>
+                <option value="Alaska" class="calculate-shipping__input-option">Alaska</option>
+              </select> 
+            </div>
             <input type="text" placeholder="City" class="calculate-shipping__input">
             <input type="text" placeholder="Postcode / Zip"  class="calculate-shipping__input">
           </ul>

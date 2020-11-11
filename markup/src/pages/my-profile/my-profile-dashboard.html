@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.min.css">
     <title>My Profile</title>
     <script src="../js/script.js" defer>
     </script>
@@ -170,13 +170,13 @@
   <div class="main-wrapper">
     <section class="page-navigation">
       <ul class="page-navigation__list">
-        <li class="page-navigation__item">
-          <a class="page-navigation__link" href="my-profile-dashboard.html"> Dashboard</a>
-        </li>
-        <li class="page-navigation__item">
-          <a class="page-navigation__link" href="my-profile-orders.html">Orders</a>
         <li class="page-navigation__item  page-navigation__item--active">
-          Shipping Address
+          Dashboard
+        </li>
+        <li class="page-navigation__item  page-navigation__item--active">
+          <a class="page-navigation__link" href="my-profile-orders.html">Orders</a>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link" href="my-profile-shipping-address.html">Shipping Address</a>
         </li>
         <li class="page-navigation__item">
           <a class="page-navigation__link" href="my-profile-account-details.html">Account Details</a>
@@ -187,92 +187,131 @@
       </ul>
     </section>
   </div>
+
+  <div class="main-wrapper">
+    <div class="dashboard-orders-address-wrapper">
+      <section class="dashboard">
+        <div class="dashboard__profile-photo">
+          <img src="../../assets/img/my-profile/user-photo.png" alt="Profile photo">
+        </div>
+        <div class="dashboard__greeting">Hello, Logan!</div>
+        <hr class="dashboard__profile-line">
+        <ul class="dashboard__info-list">
+          <li class="dashboard__item">
+            <span class="dashboard__item-name">Full Name:</span>
+            <span class="dashboard__item-value">Logan Cee</span></li>
+          <li class="dashboard__info-item">
+            <span class="dashboard__item-name">Email:</span>
+            <span class="dashboard__item-value">martist1639@gmail.com</span></li>
+          <li class="dashboard__info-item">
+            <span class="dashboard__item-name">Phone:</span>
+            <span class="dashboard__item-value">(+84) 943 123 456</span></li>
+        </ul>
+        <a class="dashboard__edit-profile-link" href="my-profile-account-details.html">
+          <img class="dashboard__edit-profile-link-image" src="../../assets/img/my-profile/pencil.png" alt="Pencil">
+          <span class="dashboard__edit-profile-link-text">Edit Profile</span>
+        </a>
+      </section>
+
+    <div class="orders-address-wrapper">
+      <section class="orders">
+          <div class="orders__header">Recent Orders</div>
+          <hr class="orders__line">
+          <div class="orders__column-headers">
+            <div class="orders__column-header  orders__column-header-date  orders__upper-column-header-date">DATE</div>
+            <div class="orders__column-header  orders__column-header-item  orders__upper-column-header-item">ITEMS</div>
+            <div class="orders__column-header  orders__column-header-status  orders__upper-column-header-status">STATUS</div>
+          </div>
+          <ul class="orders__list">
+            <hr class="orders__line  orders__line-list-start">
+            <li class="orders__item">
+              <div class="orders__item-date  orders__upper-item-date">Jan 25th, 2017</div>
+              <div class="orders__item-body  orders__upper-item-body">
+                <div class="orders__item-image">
+                  <img src="../../assets/img/my-profile/item.png" alt="item image">
+                </div>
+                <div class="orders__item-info">
+                  <div class="orders__item-name">B&O Play Wireless SPeaker</div>
+                  <div class="orders__item-qty-wrapper">
+                    <span class="orders__item-qty">QTY:</span>
+                    <span class="orders__item-qty-number">01</span>
+                  </div>
+                </div>
+              </div>
+              <div class="orders__item-status  orders__upper-item-status  orders__item-status-pending">Pending</div>
+            </li>
+            <hr class="orders__line">
+            <li class="orders__item">
+              <div class="orders__item-date  orders__upper-item-date">Jan 18th, 2017</div>
+              <div class="orders__item-body  orders__upper-item-body">
+                <div class="orders__item-image">
+                  <img src="../../assets/img/my-profile/item.png" alt="item image">
+                </div>
+                <div class="orders__item-info">
+                  <div class="orders__item-name">Liquid Unero Ginger Lily</div>
+                  <div class="orders__item-qty-wrapper">
+                    <span class="orders__item-qty">QTY:</span>
+                    <span class="orders__item-qty-number">02</span>
+                  </div>
+                </div>
+              </div>
+              <div class="orders__item-status  orders__upper-item-status  orders__item-status-delivered">Delivered</div>
+            </li>
+            <hr class="orders__line">
+            <li class="orders__item">
+              <div class="orders__item-date  orders__upper-item-date">Dec 24th, 2016</div>
+              <div class="orders__item-body  orders__upper-item-body">
+                <div class="orders__item-image">
+                  <img src="../../assets/img/my-profile/item.png" alt="item image">
+                </div>
+                <div class="orders__item-info">
+                  <div class="orders__item-name">'Simple Fabric Bag'</div>
+                  <div class="orders__item-qty-wrapper">
+                    <span class="orders__item-qty">QTY:</span>
+                    <span class="orders__item-qty-number">01</span>
+                  </div>
+                </div>
+              </div>
+              <div class="orders__item-status  orders__upper-item-status  orders__item-status-cancel">Cancel</div>
+            </li>
+            <hr class="orders__line">
+          </ul>
+          <div class="orders__link-wrapper">
+            <a class="orders__all-orders-link" href="my-profile-orders.html">View All Orders History</a>
+          </div>
+        </section>
   
-  <section class="edit-shipping-address">
-    <div class="main-wrapper">
-      <div class="edit-shipping-address__header">Shipping Address</div>
-      <hr class="edit-shipping-address__line">
-      <ul class="profile-list">
-        <li class="profile-list__item">
-          <div class="profile-list__item-name">
-            First Name
-            <span class="profile-list__star">*</span>
+      <section class="shipping-address">
+        <div class="main-wrapper">
+          <div class="shipping-address__header">Shipping Address</div>
+          <hr class="orders__line">
+          <div class="shipping-address__info">The following address will be used on the checkout page by default</div>
+          <ul class="shipping-address__list">
+            <li class="shipping-address__item">
+              <span class="shipping-address__item-name">Name:</span>
+              <span class="shipping-address__item-value">Logan Cee</span>
+            </li>
+            <li class="shipping-address__item">
+              <span class="shipping-address__item-name">Country:</span>
+              <span class="shipping-address__item-value">Vietnam</span>
+            </li>
+            <li class="shipping-address__item">
+              <span class="shipping-address__item-name">Address:</span>
+              <span class="shipping-address__item-value">789 Orchard St, Melbourne, Vic 1020</span>
+            </li>
+            <li class="shipping-address__item">
+              <span class="shipping-address__item-name">Postal Code:</span>
+              <span class="shipping-address__item-value">100000</span>
+            </li>
+          </ul>
+          <div class="shipping-address__edit-link-wrapper">
+            <a class="shipping-address__edit-link" href="my-profile-shipping-address.html">Edit your shipping address</a>
           </div>
-          <input type="text" class="profile-list__item-input">
-        </li>
-        <li class="profile-list__item">
-          <div class="profile-list__item-name">
-            Last Name
-            <span class="profile-list__star">*</span>
-          </div>
-          <input type="text" class="profile-list__item-input">
-        </li>
-        <li class="profile-list__item">
-          <div class="profile-list__item-name  profile-list__drop-down-list-input">
-            Country
-            <span class="profile-list__star">*</span>
-          </div>
-          <select name="country" class="profile-list__item-input  profile-list__item-select" >
-            <option value="Ukraine"  class="profile-list__item-input-option">Ukraine</option>
-            <option value="Finland"  class="profile-list__item-input-option">Finland</option>
-            <option value="Greenland"  class="profile-list__item-input-option">Greenland</option>
-          </select>
-        </li>
-        <li class="profile-list__item">
-          <div class="profile-list__item-name  profile-list__drop-down-list-input">
-            State 
-            <span class="profile-list__star">*</span>
-          </div>
-          <select name="state" class="profile-list__item-input  profile-list__item-select" >
-            <option value="Nevada" class="profile-list__item-input-option">Nevada</option>
-            <option value="Texas" class="profile-list__item-input-option">Texas</option>
-            <option value="Alaska" class="profile-list__item-input-option">Alaska</option>
-          </select>
-        </li>
-        <li class="profile-list__item">
-          <div class="profile-list__item-name">
-            City / Town
-            <span class="profile-list__star">*</span>
-          </div>
-          <input type="text" class="profile-list__item-input">
-        </li>
-        <li class="profile-list__item">
-          <div class="profile-list__item-name">
-            Address
-            <span class="profile-list__star">*</span>
-          </div>
-          <div class="profile-list__multiple-items">
-            <input type="text" placeholder="House number and street name" class="profile-list__item-input">
-            <input type="text" placeholder="Apartment, suite, unit, etc (optinal)" class="profile-list__item-input">
-          </div>
-        </li>
-        <li class="profile-list__item">
-          <div class="profile-list__item-name">
-            Postcode / ZIP
-            <span class="profile-list__star">*</span>
-          </div>
-          <input type="text" class="profile-list__item-input">
-        </li>
-        <li class="profile-list__item">
-          <div class="profile-list__item-name">
-            Email
-            <span class="profile-list__star">*</span>
-          </div>
-          <input type="text" class="profile-list__item-input">
-        </li>
-        <li class="profile-list__item">
-          <div class="profile-list__item-name">
-            Phone
-            <span class="profile-list__star">*</span>
-          </div>
-          <input type="text" class="profile-list__item-input">
-        </li>
-      </ul>
-      <div class="save-changes">
-        <button class="edit-shipping-address__button  save-changes__button">Save Changes</button>
-      </div>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
+  </div>
 
   <footer class="main-footer">
     <div class="main-wrapper  main-footer__main-wrapper">

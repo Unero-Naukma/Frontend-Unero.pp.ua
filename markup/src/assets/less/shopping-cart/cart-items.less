@@ -178,10 +178,6 @@
   margin: 0;
   display: table-row;
   justify-content: space-between;
-  height: 260px;
-  @media @tablet-widths {
-    height: 165px;
-  }
 }
 
 .cart-items__cell {
@@ -194,6 +190,9 @@
 .cart-items__product-info {
   font-size: 16px;
   font-weight: 500;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
   @media @tablet-widths {
     text-align: center;
     padding-left: 30px;
@@ -299,6 +298,7 @@
 }
 
 .cart-items__delete-button {
+  cursor: pointer;
   font-size: 28px;
   font-weight: 200;
   padding: 0;

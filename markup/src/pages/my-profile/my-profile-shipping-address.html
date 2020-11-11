@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.min.css">
     <title>My Profile</title>
     <script src="../js/script.js" defer>
     </script>
@@ -175,11 +175,11 @@
         </li>
         <li class="page-navigation__item">
           <a class="page-navigation__link" href="my-profile-orders.html">Orders</a>
-        <li class="page-navigation__item">
-          <a class="page-navigation__link" href="my-profile-shipping-address.html">Shipping Address</a>
-        </li>
         <li class="page-navigation__item  page-navigation__item--active">
-          Account Details
+          Shipping Address
+        </li>
+        <li class="page-navigation__item">
+          <a class="page-navigation__link" href="my-profile-account-details.html">Account Details</a>
         </li>
         <li class="page-navigation__item">
           <a class="page-navigation__link" href="">Logout</a>
@@ -187,50 +187,93 @@
       </ul>
     </section>
   </div>
-
-  <section class="account-details">
+  
+  <section class="edit-shipping-address">
     <div class="main-wrapper">
-      <div class="account-details__greeting">Hello, Logan!</div>
-      <hr class="account-details__line">
-      <div class="account-details__profile-photo">
-        <img src="../assets/img/my-profile/user-photo.png" alt="Profile photo">
-      </div>
-      <div class="account-details__buttons">
-        <button class="account-details__button  account-details__upload-photo-button">Upload new picture</button>
-        <button class="account-details__button  account-details__delete-photo-button">Delete</button>
-      </div>
+      <div class="edit-shipping-address__header">Shipping Address</div>
+      <hr class="edit-shipping-address__line">
       <ul class="profile-list">
         <li class="profile-list__item">
-          <div class="profile-list__item-name">First Name</div>
+          <div class="profile-list__item-name">
+            First Name
+            <span class="profile-list__star">*</span>
+          </div>
           <input type="text" class="profile-list__item-input">
         </li>
         <li class="profile-list__item">
-          <div class="profile-list__item-name">Last Name</div>
+          <div class="profile-list__item-name">
+            Last Name
+            <span class="profile-list__star">*</span>
+          </div>
           <input type="text" class="profile-list__item-input">
         </li>
         <li class="profile-list__item">
-          <div class="profile-list__item-name">Display Name</div>
+          <div class="profile-list__item-name  profile-list__drop-down-list-input">
+            Country
+            <span class="profile-list__star">*</span>
+          </div>
+          <div class="profile-list__select-wrapper">
+            <select name="country" class="profile-list__item-input  profile-list__item-select" >
+              <option value="Ukraine"  class="profile-list__item-input-option">Ukraine</option>
+              <option value="Finland"  class="profile-list__item-input-option">Finland</option>
+              <option value="Greenland"  class="profile-list__item-input-option">Greenland</option>
+            </select>
+          </div>
+        </li>
+        <li class="profile-list__item">
+          <div class="profile-list__item-name  profile-list__drop-down-list-input">
+            State 
+            <span class="profile-list__star">*</span>
+          </div>
+          <div class="profile-list__select-wrapper">
+            <select name="state" class="profile-list__item-input  profile-list__item-select" >
+              <option value="Nevada" class="profile-list__item-input-option">Nevada</option>
+              <option value="Texas" class="profile-list__item-input-option">Texas</option>
+              <option value="Alaska" class="profile-list__item-input-option">Alaska</option>
+            </select>
+          </div>
+        </li>
+        <li class="profile-list__item">
+          <div class="profile-list__item-name">
+            City / Town
+            <span class="profile-list__star">*</span>
+          </div>
           <input type="text" class="profile-list__item-input">
         </li>
         <li class="profile-list__item">
-          <div class="profile-list__item-name">Email</div>
+          <div class="profile-list__item-name">
+            Address
+            <span class="profile-list__star">*</span>
+          </div>
+          <div class="profile-list__multiple-items">
+            <input type="text" placeholder="House number and street name" class="profile-list__item-input">
+            <input type="text" placeholder="Apartment, suite, unit, etc (optinal)" class="profile-list__item-input">
+          </div>
+        </li>
+        <li class="profile-list__item">
+          <div class="profile-list__item-name">
+            Postcode / ZIP
+            <span class="profile-list__star">*</span>
+          </div>
           <input type="text" class="profile-list__item-input">
         </li>
         <li class="profile-list__item">
-          <div class="profile-list__item-name">Current Password</div>
+          <div class="profile-list__item-name">
+            Email
+            <span class="profile-list__star">*</span>
+          </div>
           <input type="text" class="profile-list__item-input">
         </li>
         <li class="profile-list__item">
-          <div class="profile-list__item-name">New Password</div>
-          <input type="text" class="profile-list__item-input">
-        </li>
-        <li class="profile-list__item">
-          <div class="profile-list__item-name">Confirm New Password</div>
+          <div class="profile-list__item-name">
+            Phone
+            <span class="profile-list__star">*</span>
+          </div>
           <input type="text" class="profile-list__item-input">
         </li>
       </ul>
       <div class="save-changes">
-        <button class="account-details__button  save-changes__button">Save Changes</button>
+        <button class="edit-shipping-address__button  save-changes__button">Save Changes</button>
       </div>
     </div>
   </section>

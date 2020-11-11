@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.min.css">
     <title>My Profile</title>
     <script src="../js/script.js" defer>
     </script>
@@ -173,13 +173,13 @@
         <li class="page-navigation__item">
           <a class="page-navigation__link" href="my-profile-dashboard.html"> Dashboard</a>
         </li>
-        <li class="page-navigation__item  page-navigation__item--active">
-          Orders
+        <li class="page-navigation__item">
+          <a class="page-navigation__link" href="my-profile-orders.html">Orders</a>
         <li class="page-navigation__item">
           <a class="page-navigation__link" href="my-profile-shipping-address.html">Shipping Address</a>
         </li>
-        <li class="page-navigation__item">
-          <a class="page-navigation__link" href="my-profile-account-details.html">Account Details</a>
+        <li class="page-navigation__item  page-navigation__item--active">
+          Account Details
         </li>
         <li class="page-navigation__item">
           <a class="page-navigation__link" href="">Logout</a>
@@ -188,69 +188,50 @@
     </section>
   </div>
 
-  <section class="orders-history">
+  <section class="account-details">
     <div class="main-wrapper">
-      <div class="orders__header">Orders History</div>
-      <hr class="orders__line">
-      <div class="orders__column-headers">
-        <div class="orders__column-header  orders__column-header-date">DATE</div>
-        <div class="orders__column-header  orders__column-header-item">ITEMS</div>
-        <div class="orders__column-header  orders__column-header-status">STATUS</div>
+      <div class="account-details__greeting">Hello, Logan!</div>
+      <hr class="account-details__line">
+      <div class="account-details__profile-photo">
+        <img src="../../assets/img/my-profile/user-photo.png" alt="Profile photo">
       </div>
-      <ul class="orders__list">
-        <hr class="orders__line  orders__line-list-start">
-        <li class="orders__item">
-          <div class="orders__item-date">Jan 25th, 2017</div>
-          <div class="orders__item-body">
-            <div class="orders__item-image">
-              <img src="../assets/img/my-profile/item.png" alt="item image">
-            </div>
-            <div class="orders__item-info">
-              <div class="orders__item-name">B&O Play Wireless SPeaker</div>
-              <div class="orders__item-qty-wrapper">
-                <span class="orders__item-qty">QTY:</span>
-                <span class="orders__item-qty-number">01</span>
-              </div>
-            </div>
-          </div>
-          <div class="orders__item-status  orders__item-status-pending">Pending</div>
+      <div class="account-details__buttons">
+        <button class="account-details__button  account-details__upload-photo-button">Upload new picture</button>
+        <button class="account-details__button  account-details__delete-photo-button">Delete</button>
+      </div>
+      <ul class="profile-list">
+        <li class="profile-list__item">
+          <div class="profile-list__item-name">First Name</div>
+          <input type="text" class="profile-list__item-input">
         </li>
-        <hr class="orders__line">
-        <li class="orders__item">
-          <div class="orders__item-date">Jan 18th, 2017</div>
-          <div class="orders__item-body">
-            <div class="orders__item-image">
-              <img src="../assets/img/my-profile/item.png" alt="item image">
-            </div>
-            <div class="orders__item-info">
-              <div class="orders__item-name">Liquid Unero Ginger Lily</div>
-              <div class="orders__item-qty-wrapper">
-                <span class="orders__item-qty">QTY:</span>
-                <span class="orders__item-qty-number">02</span>
-              </div>
-            </div>
-          </div>
-          <div class="orders__item-status  orders__item-status-delivered">Delivered</div>
+        <li class="profile-list__item">
+          <div class="profile-list__item-name">Last Name</div>
+          <input type="text" class="profile-list__item-input">
         </li>
-        <hr class="orders__line">
-        <li class="orders__item">
-          <div class="orders__item-date">Dec 24th, 2016</div>
-          <div class="orders__item-body">
-            <div class="orders__item-image">
-              <img src="../assets/img/my-profile/item.png" alt="item image">
-            </div>
-            <div class="orders__item-info">
-              <div class="orders__item-name">'Simple Fabric Bag'</div>
-              <div class="orders__item-qty-wrapper">
-                <span class="orders__item-qty">QTY:</span>
-                <span class="orders__item-qty-number">01</span>
-              </div>
-            </div>
-          </div>
-          <div class="orders__item-status  orders__item-status-cancel">Cancel</div>
+        <li class="profile-list__item">
+          <div class="profile-list__item-name">Display Name</div>
+          <input type="text" class="profile-list__item-input">
         </li>
-        <hr class="orders__line">
+        <li class="profile-list__item">
+          <div class="profile-list__item-name">Email</div>
+          <input type="text" class="profile-list__item-input">
+        </li>
+        <li class="profile-list__item">
+          <div class="profile-list__item-name">Current Password</div>
+          <input type="text" class="profile-list__item-input">
+        </li>
+        <li class="profile-list__item">
+          <div class="profile-list__item-name">New Password</div>
+          <input type="text" class="profile-list__item-input">
+        </li>
+        <li class="profile-list__item">
+          <div class="profile-list__item-name">Confirm New Password</div>
+          <input type="text" class="profile-list__item-input">
+        </li>
       </ul>
+      <div class="save-changes">
+        <button class="account-details__button  save-changes__button">Save Changes</button>
+      </div>
     </div>
   </section>
 
