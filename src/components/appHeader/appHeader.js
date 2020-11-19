@@ -1,16 +1,16 @@
 import React from 'react';
 import HeaderNav from '../headerNav';
 import HeaderList from '../headerList';
-import './appHeader.scss';
+import './style.scss';
 
 const AppHeader = () => {
   return (
-    <header classList="main-header">
-      <div classList="main-wrapper  main-header__wrapper">
+    <header className="main-header">
+      <div className="main-wrapper  main-header__wrapper">
         <HeaderNav/>
       </div>
-      <hr classList="main-header__line-separator"/>
-      <div classList="main-wrapper  main-header__nav-wrapper">
+      <hr className="main-header__line-separator"/>
+      <div className="main-wrapper  main-header__nav-wrapper">
         <HeaderList device="mobile"/>
       </div>
     </header>

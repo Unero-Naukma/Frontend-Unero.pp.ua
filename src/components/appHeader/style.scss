@@ -1,3 +1,5 @@
+@import '../../assets/baseStyles/variables.scss';
+
 .main-header {
   position: absolute;
   transition: all .5s ease-out;
@@ -15,7 +17,7 @@
       min-height: 490px;
   }
 
-  @media #{$desktop-widths} {
+  @media (min-width: $desktop-width) {
       background-color: transparent;
   }
 }
@@ -47,7 +49,7 @@
       opacity: 1;
   }
 
-  @media #{$desktop-widths} {
+  @media (min-width: $desktop-width) {
       display: none;
   }
 }

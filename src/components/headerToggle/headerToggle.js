@@ -1,8 +1,9 @@
 import React from 'react';
+import './style.scss';
 
 const HeaderToggle = () => {
   return (
-    <div classList="main-header__toggle">
+    <div className="main-header__toggle">
       <span></span>
       <span></span>
       <span></span>

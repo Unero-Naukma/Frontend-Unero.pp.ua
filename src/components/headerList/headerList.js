@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderSearchForm from '../headerSearchForm';
 import {NavLink} from 'react-router-dom';
+import './style.scss';
 
 const HeaderList = ({device}) => {
   let ulClassList = `main-header__list`;
@@ -13,27 +14,27 @@ const HeaderList = ({device}) => {
   }
 
   return (
-    <ul classList={ulClassList}>
-      <li classList="main-header__search-form-item">
+    <ul className={ulClassList}>
+      <li className="main-header__search-form-item">
         <HeaderSearchForm/>
       </li>
-      <li classList="main-header__item  main-header__item--active">
-        <NavLink to="/" activeStyle={{pointerEvents: `none`}}>Home</NavLink>
+      <li className="main-header__item">
+        <NavLink to="/" activeClassName="main-header__active-link">Home</NavLink>
       </li>
-      <li classList="main-header__item">
-        <NavLink to="/shop" activeStyle={{pointerEvents: `none`}}>Shop</NavLink>
+      <li className="main-header__item">
+        <NavLink to="/shop" activeClassName="main-header__active-link">Shop</NavLink>
       </li>
-      <li classList="main-header__item">
-        <NavLink to="/collections" activeStyle={{pointerEvents: `none`}}>Collections</NavLink>
+      <li className="main-header__item">
+        <NavLink to="/collections" activeClassName="main-header__active-link">Collections</NavLink>
       </li>
-      <li classList="main-header__item">
-        <NavLink to="/about-us" activeStyle={{pointerEvents: `none`}}>Abous us</NavLink>
+      <li className="main-header__item">
+        <NavLink to="/about-us" activeClassName="main-header__active-link">Abous us</NavLink>
       </li>
-      <li classList="main-header__item  main-header__item--no-border">
-        <NavLink to="/contacts" activeStyle={{pointerEvents: `none`}}>Contacts</NavLink>
+      <li className="main-header__item  main-header__item--no-border">
+        <NavLink to="/contacts" activeClassName="main-header__active-link">Contacts</NavLink>
       </li>
-      <li classList="main-header__item  main-header__login-item  main-header__item--no-border">
-        <NavLink to="/login" activeStyle={{pointerEvents: `none`}}>Login</NavLink>
+      <li className="main-header__item  main-header__login-item  main-header__item--no-border">
+        <NavLink to="/login" activeClassName="main-header__active-link">Login</NavLink>
       </li>
     </ul>
   );

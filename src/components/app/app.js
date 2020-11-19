@@ -1,19 +1,19 @@
 import React from 'react';
-import {
-  HomePage, ShopPage, ProductPage,
-  CollectionsPage, CollectionPage,
-  AboutUsPage, ContactsPage, WishlistPage,
-  CartPage, LoginPage, MyProfilePage, NotFoundPage
-} from '../pages';
+// import {
+//   HomePage, ShopPage, ProductPage,
+//   CollectionsPage, CollectionPage,
+//   AboutUsPage, ContactsPage, WishlistPage,
+//   CartPage, LoginPage, MyProfilePage, NotFoundPage
+// } from '../pages';
 import AppHeader from '../appHeader';
-import AppFooter from '../appFooter';
-import {Route, Switch} from 'react-router-dom';
+// import AppFooter from '../appFooter';
+// import {Route, Switch} from 'react-router-dom';
 
 const App = () => {
   return (
     <div className="app">
       <AppHeader/>
-      <Switch>
+      {/* <Switch>
         <Route path="/" exact component={HomePage}/>
         <Route path="/shop" exact component={ShopPage}/>
         <Route path="/shop/:id" component={ProductPage}/>
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/my-profile" component={MyProfilePage}/>
         <Route component={NotFoundPage}/>
       </Switch>
-      <AppFooter/>
+      <AppFooter/> */}
     </div>
   );
 };

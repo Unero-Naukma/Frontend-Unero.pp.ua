@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-export default class HeaderSearchForm {
+import './style.scss';
+
+export default class HeaderSearchForm extends Component {
   render() {
-    return (<form classList="main-header__search">
-      <input type="search" classList="main-header__search-input" name="search" placeholder="Search"/>
-      <input type="submit" classList="main-header__search-submit-btn" value=""/>
+    return (<form className="main-header__search">
+      <input type="search" className="main-header__search-input" name="search" placeholder="Search"/>
+      <input type="submit" className="main-header__search-submit-btn" value=""/>
     </form>);
   }
 }

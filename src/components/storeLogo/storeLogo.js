@@ -3,7 +3,7 @@ import React from 'react';
 const StoreLogo = ({classList}) => {
   const classes = `store-logo  unselectable  ${classList}`;
   return (
-    <p classList={classes}>Unero</p>
+    <p className={classes}>Unero</p>
   );
 };
 

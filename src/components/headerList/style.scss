@@ -1,0 +1,65 @@
+@import '../../assets/baseStyles/variables.scss';
+
+.main-header__item {
+  padding: 12px 0;
+  border-bottom: .8px solid #ccc;
+  font-size: 17px;
+
+  &--no-border {
+      border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+      border-bottom: none;
+
+      &:not(:last-child) {
+          margin-right: 30px;
+      }
+  }
+}
+
+.main-header__item a {
+  display: block;
+  transition: all .5s ease-out;
+  width: 100%;
+  text-decoration: none;
+  color: #999;
+
+  &:active {
+      color: #000;
+  }
+
+  &:hover {
+      color: #000;
+  }
+}
+
+.main-header__active-link {
+  color: #000;
+}
+
+.main-header__search-form-item {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: 17px;
+
+  @media (min-width: $desktop-width) {
+      display: none;
+  }
+}
+
+.main-header__login-item {
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.main-header__login-item a {
+  padding: 12px 0;
+  background: url(../../assets/images/profile-icon.svg) no-repeat right center;
+  background-size: 25px 27px;
+
+  @media (min-width: $desktop-width) {
+      display: none;
+  }
+}

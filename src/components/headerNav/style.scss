@@ -1,3 +1,5 @@
+@import '../../assets/baseStyles/variables.scss';
+
 .main-header__main-nav {
   display: flex;
   align-items: center;
@@ -7,7 +9,7 @@
 .main-header__store-logo {
   margin-left: 42px;
 
-  @media #{$desktop-widths} {
+  @media (min-width: $desktop-width) {
       margin-left: 0;
       margin-right: 100px;
   }
