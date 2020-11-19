@@ -19,22 +19,22 @@ const HeaderList = ({device}) => {
         <HeaderSearchForm/>
       </li>
       <li className="main-header__item">
-        <NavLink to="/" activeClassName="main-header__active-link">Home</NavLink>
+        <NavLink to="/" activeClassName="main-header__item-link--active" className="main-header__item-link">Home</NavLink>
       </li>
       <li className="main-header__item">
-        <NavLink to="/shop" activeClassName="main-header__active-link">Shop</NavLink>
+        <NavLink to="/shop" activeClassName="main-header__item-link--active" className="main-header__item-link">Shop</NavLink>
       </li>
       <li className="main-header__item">
-        <NavLink to="/collections" activeClassName="main-header__active-link">Collections</NavLink>
+        <NavLink to="/collections" activeClassName="main-header__item-link--active" className="main-header__item-link">Collections</NavLink>
       </li>
       <li className="main-header__item">
-        <NavLink to="/about-us" activeClassName="main-header__active-link">Abous us</NavLink>
+        <NavLink to="/about-us" activeClassName="main-header__item-link--active" className="main-header__item-link">Abous us</NavLink>
       </li>
       <li className="main-header__item  main-header__item--no-border">
-        <NavLink to="/contacts" activeClassName="main-header__active-link">Contacts</NavLink>
+        <NavLink to="/contacts" activeClassName="main-header__item-link--active" className="main-header__item-link">Contacts</NavLink>
       </li>
       <li className="main-header__item  main-header__login-item  main-header__item--no-border">
-        <NavLink to="/login" activeClassName="main-header__active-link">Login</NavLink>
+        <NavLink to="/login" activeClassName="main-header__item-link--active" className="main-header__item-link">Login</NavLink>
       </li>
     </ul>
   );

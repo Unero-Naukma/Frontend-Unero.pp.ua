@@ -1,7 +1,8 @@
 import React from 'react';
+import './style.scss';
 
-const StoreLogo = ({classList}) => {
-  const classes = `store-logo  unselectable  ${classList}`;
+const StoreLogo = ({className}) => {
+  const classes = `store-logo  unselectable  ${className}`;
   return (
     <p className={classes}>Unero</p>
   );
