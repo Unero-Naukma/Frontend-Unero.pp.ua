@@ -8,6 +8,12 @@ import UneroService from './services/UneroService';
 import UneroServiceContext from './components/uneroServiceContext';
 import store from './store';
 
+import './baseStyles/base.scss';
+import './baseStyles/absoluteWrapper.scss';
+import './baseStyles/mainWrapper.scss';
+import './baseStyles/mixins.scss';
+import './baseStyles/variables.scss';
+
 const uneroService = new UneroService();
 
 ReactDOM.render(
