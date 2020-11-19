@@ -1,0 +1,52 @@
+.main-header__pages-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header__pages-icons a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+
+  &:not(:last-child) {
+      margin-right: 10px;
+
+      @media #{$tablet-widths} {
+          margin-right: 20px;
+      }
+
+      @media #{$desktop-widths} {
+          margin-right: 30px;
+      }
+  }
+}
+
+.main-header__pages-icons svg {
+  vertical-align: middle;
+  transition: all .5s ease-out;
+  fill: #000;
+
+  @media #{$desktop-widths} {
+      fill: #a9a9a9;
+
+      &:hover {
+          fill: #000;
+      }
+  }
+}
+
+.main-header__pages-icons .main-header__search-page-link {
+  display: none;
+
+  @media #{$desktop-widths} {
+      display: flex;
+  }
+}
+
+.main-header__pages-icons .main-header__user-profile-link {
+  display: none;
+
+  @media #{$desktop-widths} {
+      display: flex;
+  }
+}

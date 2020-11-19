@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderNav from '../headerNav';
 import HeaderList from '../headerList';
+import './appHeader.scss';
 
 const AppHeader = () => {
   return (
