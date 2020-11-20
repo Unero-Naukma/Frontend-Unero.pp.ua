@@ -1,0 +1,16 @@
+@import 'assets/baseStyles/variables.scss';
+
+.main-header__main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header__store-logo {
+  margin-left: 42px;
+
+  @media (min-width: $desktop-width) {
+      margin-left: 0;
+      margin-right: 100px;
+  }
+}

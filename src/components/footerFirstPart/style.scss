@@ -1,0 +1,36 @@
+@import 'assets/baseStyles/variables.scss';
+
+.main-footer__first-part {
+  margin-bottom: 60px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+      flex-direction: row;
+      margin-bottom: 40px;
+  }
+}
+
+.social-list__instagram-logo {
+  width: 27px;
+  height: 27px;
+}
+
+.social-list__twitter-logo {
+  width: 33px;
+  height: 27px;
+}
+
+.social-list__facebook-logo {
+  width: 15px;
+  height: 27px;
+}
+
+.social-list__youtube-logo {
+  width: 39px;
+  height: 27px;
+}

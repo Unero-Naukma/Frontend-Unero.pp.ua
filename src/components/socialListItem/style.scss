@@ -1,0 +1,14 @@
+.social-list__item {
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.social-list__item svg {
+  transition: all .5s ease-out;
+  fill: #ccc;
+
+  &:hover {
+    fill: #000;
+  }
+}

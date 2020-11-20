@@ -1,0 +1,19 @@
+@import '~normalize-scss/sass/normalize';
+
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  min-width: 360px;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  outline: none;
+}

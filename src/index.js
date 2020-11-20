@@ -6,7 +6,10 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import ErrorBoundry from './components/errorBoundry';
 import UneroService from './services/UneroService';
 import UneroServiceContext from './components/uneroServiceContext';
-import store from './store';
+import store from './redux/store';
+
+import 'normalize.css';
+import './assets/baseStyles/base.scss';
 
 const uneroService = new UneroService();
 
