@@ -165,7 +165,7 @@ gulp.task("watch", function () {
       browsersync.reload()
     );
   });
-  gulp.watch("./markup/src/assets/less/*.less", gulp.parallel("build-styles"));
+  gulp.watch("./markup/src/assets/less/**/*.less", gulp.parallel("build-styles"));
   gulp.watch("./markup/src/js/**/*.js", gulp.parallel("build-js"));
 });
 

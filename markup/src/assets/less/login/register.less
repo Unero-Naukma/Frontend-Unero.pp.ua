@@ -1,0 +1,88 @@
+@import "variables.less";
+
+.register { //register
+    width: 100%;
+    text-align: center;
+    margin-top: 95px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+.register-wrapper {
+    @media @tablet-widths {
+        width: 60%;
+    }
+    @media @desktop-widths {
+        width: 30%;
+    }
+}
+
+
+.register__form { //form
+    display: flex;
+    flex-direction: column;
+}
+
+.register__form-username { //username
+    // margin-top: 21px;
+    padding: 15px;
+    padding-left: 25px;
+    font-size: 14px;
+    border-radius: 0;
+    border: 1px @border-color solid;
+   
+    &::placeholder {
+        color: #999;
+    }
+
+    &:hover {
+        border-color: @border-hover-color;
+    }
+
+    &:focus {
+        border-color: @border-focus-color;
+    }
+
+    @media @tablet-widths {
+        height: 35px;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}
+
+.register__form-password { //password
+    margin-top: 12px;
+    .register__form-username;
+    @media @tablet-widths {
+        margin-top: 20px;
+    }
+}
+
+.register__form-repeat-password {//repeat password
+    .register__form-password;
+}
+
+.register__form-submit { //button
+    margin-top: 32px;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    background-color: #000;
+    margin-bottom: 200px;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+    @media @tablet-widths {
+        height: 70px;
+        font-size: 23px;
+    }
+}
+
+.register--hidden {
+    visibility: hidden;
+    opacity: 0;
+ }
