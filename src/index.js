@@ -8,6 +8,7 @@ import UneroService from './services/UneroService';
 import UneroServiceContext from './components/uneroServiceContext';
 import store from './redux/store';
 
+import 'normalize.css';
 import './assets/baseStyles/base.scss';
 
 const uneroService = new UneroService();

@@ -1,16 +1,21 @@
 import React from 'react';
 import HeaderSearchForm from '../headerSearchForm';
 import {NavLink} from 'react-router-dom';
+import {connect} from 'react-redux';
 import './style.scss';
 
-const HeaderList = ({device}) => {
+const HeaderList = ({device, menuOpened}) => {
   let ulClassList = `main-header__list`;
   const desktopClass = `main-header__list--desktop-list`;
   const mobileClass = `main-header__list--mob-tab-list`;
+  const listMenuOpenedClass = `main-header__list--opened-menu`;
   if (device === `desktop`) {
-    ulClassList += ` ${desktopClass}`;
+    ulClassList += `  ${desktopClass}`;
   } else {
-    ulClassList += ` ${mobileClass}`;
+    ulClassList += `  ${mobileClass}`;
+    if (menuOpened) {
+      ulClassList += `  ${listMenuOpenedClass}`;
+    }
   }
 
   return (
@@ -40,4 +45,10 @@ const HeaderList = ({device}) => {
   );
 };
 
-export default HeaderList;
+const mapStateToProps = (state) =>{
+  return {
+    menuOpened: state.menuOpened,
+  };
+};
+
+export default connect(mapStateToProps)(HeaderList);

@@ -1,15 +1,27 @@
 import React from 'react';
 import HeaderNav from '../headerNav';
 import HeaderList from '../headerList';
+import {connect} from 'react-redux';
 import './style.scss';
 
-const AppHeader = () => {
+const AppHeader = ({menuOpened}) => {
+  let headerClassName = `main-header`;
+  let lineSepClassName = `main-header__line-separator`;
+
+  const headerOpenedMenuClass = `main-header--opened-menu`;
+  const lineSepOpenedMenuClass = `main-header__line-separator--opened-menu`;
+
+  if (menuOpened) {
+    headerClassName += `  ${headerOpenedMenuClass}`;
+    lineSepClassName += `  ${lineSepOpenedMenuClass}`;
+  }
+
   return (
-    <header className="main-header">
+    <header className={headerClassName}>
       <div className="main-wrapper  main-header__wrapper">
         <HeaderNav/>
       </div>
-      <hr className="main-header__line-separator"/>
+      <hr className={lineSepClassName}/>
       <div className="main-wrapper  main-header__nav-wrapper">
         <HeaderList device="mobile"/>
       </div>
@@ -17,4 +29,10 @@ const AppHeader = () => {
   );
 };
 
-export default AppHeader;
+const mapStateToProps = (state) =>{
+  return {
+    menuOpened: state.menuOpened,
+  };
+};
+
+export default connect(mapStateToProps)(AppHeader);
