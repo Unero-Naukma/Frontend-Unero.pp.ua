@@ -1,0 +1,41 @@
+.sign-up-in-wrapper {
+    position: relative;
+    margin-top: 150px;
+}
+
+.wrapper__title { //title wrapper
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper__title-login { //title login
+    font-weight: 400;
+    color: @login-unactive-color;
+    font-size: 24px;
+
+    &--active {
+        color: #000;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    @media @tablet-widths {
+        font-size: 34px;
+    }
+}
+
+.wrapper__title-register { //title register
+    margin-left: 45px;
+    font-weight: 400;
+    font-size: 24px;
+    color: @login-unactive-color;
+    &--active {
+        color: #000;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    @media @tablet-widths {
+        font-size: 34px;
+    }
+}
