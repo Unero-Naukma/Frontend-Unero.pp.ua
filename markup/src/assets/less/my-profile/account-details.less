@@ -1,0 +1,61 @@
+@account-details__delete-photo-button-color: #a7a7a7; 
+@account-details__line-color: #d9d9d9;
+
+.account-details {
+    margin-top: 70px;
+    margin-bottom: 100px;
+    @media @tablet-widths {
+        margin-top: 95px;
+        margin-bottom: 210px;
+    }
+    @media @desktop-widths {
+        margin-top: 100px;
+        margin-bottom: 250px;
+    }
+}
+
+.account-details__greeting {
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.account-details__line {
+    width: 100%;
+    border: none;
+    margin: 0;
+    border-bottom: solid @account-details__line-color 1px;
+}
+
+.account-details__profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.account-details__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.account-details__button {
+    padding: 0;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.account-details__upload-photo-button {
+    font-weight: 600;
+}
+
+.account-details__delete-photo-button {
+    color: @account-details__delete-photo-button-color;
+}

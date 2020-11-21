@@ -15,8 +15,9 @@ const browsersync = require("browser-sync");
 const dist = "./markup/dist/";
 
 gulp.task("copy-html", () => {
-  return gulp.src("./markup/src/pages/*.html")
+  return gulp.src("./markup/src/pages/**/*.html")
     .pipe(gulp.dest(dist + "pages"))
+
     .on("end", browsersync.reload);
 });
 
@@ -156,7 +157,7 @@ gulp.task("watch", function () {
     notify: true
   });
 
-  gulp.watch("./markup/src/pages/*.html", gulp.parallel("copy-html"));
+  gulp.watch("./markup/src/pages/**/*.html", gulp.parallel("copy-html"));
   gulp.watch(["./markup/src/assets/fonts/**/*.{woff,woff2}", "./src/assets/img/**"], () => {
     gulp.series(
       "copy-assets",
