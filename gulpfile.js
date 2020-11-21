@@ -166,15 +166,7 @@ gulp.task("watch", function () {
       browsersync.reload()
     );
   });
-<<<<<<< HEAD
-  gulp.watch("./markup/src/assets/less/*.less", gulp.parallel("build-styles"));
-  gulp.watch("./markup/src/assets/less/home/*.less", gulp.parallel("build-styles"));
-  gulp.watch("./markup/src/assets/less/my-profile/*.less", gulp.parallel("build-styles"));
-  gulp.watch("./markup/src/assets/less/shopping-cart/*.less", gulp.parallel("build-styles"));
-  gulp.watch("./markup/src/assets/less/wishlist/*.less", gulp.parallel("build-styles"));
-=======
   gulp.watch("./markup/src/assets/less/**/*.less", gulp.parallel("build-styles"));
->>>>>>> eb7083989332698b5aa3b7b32874907d726d5a33
   gulp.watch("./markup/src/js/**/*.js", gulp.parallel("build-js"));
 });
 
