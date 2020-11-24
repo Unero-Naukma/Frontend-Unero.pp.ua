@@ -44,6 +44,13 @@
     margin-left: 3.2%;
   }
 }
+@media @desktop-widths {
+  .products-small-cards__item:last-child:not(:nth-child(3n)):not(:nth-child(3n-2)) {
+    //fixing space-between
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
 
 @media @desktop-widths {
   .products-small-cards__item:last-child:not(:nth-child(4n)):not(:nth-child(4n-3)) {
