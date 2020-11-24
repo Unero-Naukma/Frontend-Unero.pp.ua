@@ -1,0 +1,228 @@
+@orders-line-color: #d9d9d9;
+@orders-date-color: #999999;
+@orders-qty-color: #999999;
+@orders-qty-number-color: black;
+@orders-status-pending-color: #4ea7d3;
+@orders-status-delivered-color: #999999;
+@orders-status-cancel-color: #d32222;
+@orders-link-bg-color: white;
+@orders-link-color: #0099cc;
+
+.orders {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    @media @tablet-widths {
+        margin-top: 0;
+        margin-left: 70px;
+    }
+} 
+
+.orders__header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+.orders__line {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: @orders-line-color;
+    border-color: @orders-line-color;
+    color: @orders-line-color;
+    margin: 0;
+}
+
+.orders__column-headers {
+    margin: 45px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.orders__column-header-date {
+    display: flex;
+    width: 17.2%;
+    @media @desktop-widths {
+        width: 8.5%;
+    }
+}
+
+.orders__upper-column-header-date {
+    @media @desktop-widths {
+        width: 16.25%;
+    }
+}
+
+.orders__column-header-item {
+    display: flex;
+    width: 53.5%; 
+    @media @desktop-widths {
+        width: 30.8%;
+    }
+}
+
+.orders__upper-column-header-item {
+    @media @desktop-widths {
+        width: 32.5%;
+    }
+}
+
+.orders__column-header-status {
+    display: flex;
+    width: 12%;
+    justify-content: flex-end;
+    @media @desktop-widths {
+        width: 31.6%;
+        justify-content: flex-start;
+    }
+}
+
+.orders__upper-column-header-status {
+    @media @desktop-widths {
+        width: 33.75%;
+    }
+}
+
+.orders__line-list-start {
+    margin: 0 0 6px;
+}
+
+.orders__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.orders__item {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 110px;
+}
+
+.orders__item-date {
+    width: 17.2%;
+    margin: 32px 0 0;
+    color: @orders-date-color;
+    @media @desktop-widths {
+        width: 8.5%;
+    }
+}
+
+.orders__upper-item-date {
+    @media @desktop-widths {
+        width: 16.25%;
+    }
+}
+
+.orders__item-body {
+    display: flex;
+    width: 53.5%;
+    margin: 25px 0 0;
+    @media @desktop-widths {
+        width: 30.8%;
+        min-width: 260px;
+    }
+}
+
+.orders__upper-item-body {
+    @media @desktop-widths {
+        width: 32.5%;
+    }
+}
+
+.orders__item-image {
+    min-width: 61px;
+}
+
+.orders__item-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+    flex-grow: 1;
+}
+
+.orders__item-name {
+    line-height: 15px;
+    font-weight: 500;
+}
+
+.orders__item-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.orders__item-qty-wrapper {
+    margin-top: 10px;
+}
+
+.orders__item-qty {
+    color: @orders-qty-color;
+}
+
+.orders__item-qty-number {
+    color: @orders-qty-number-color;
+    font-weight: 600;
+}
+
+.orders__item-status {
+    display: flex;
+    width: 12%;
+    justify-content: flex-end;
+    margin: 35px 0 0;
+    @media @desktop-widths {
+        width: 31.6%;
+        justify-content: flex-start;
+    }
+}
+
+.orders__upper-item-status {
+    @media @desktop-widths {
+        width: 33.75%;
+    }
+}
+
+.orders__item-status-pending {
+    color: @orders-status-pending-color;
+}
+
+.orders__item-status-delivered {
+    color: @orders-status-delivered-color;
+}
+
+.orders__item-status-cancel {
+    color: @orders-status-cancel-color;
+}
+
+.orders__link-wrapper {
+    display: flex;
+    justify-content: center;
+    @media @tablet-widths {
+        justify-content: flex-end;
+    }
+}
+
+.orders__all-orders-link {
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+    cursor: pointer;
+    background-color: @orders-link-bg-color;
+    color: @orders-link-color;
+    
+    &:hover {
+        color: @orders-link-color;
+    }
+    &:visited {
+        color: @orders-link-color;
+    }
+}
