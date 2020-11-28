@@ -91,6 +91,7 @@ $calculate-shipping-select-arrow-color: #999999;
   cursor: pointer;
   appearance: none;
   color: $calculate-shipping-input-color;
+  background-color: #fff;
 
   &:focus {
     color: black;
@@ -165,6 +166,10 @@ $calculate-shipping-select-arrow-color: #999999;
 
 .calculate-shipping__proceed-button {
   cursor: pointer;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
   height: 60px;
   font-size: 16px;

@@ -5,6 +5,7 @@ $cart-items-column-headers-color: #666666;
 $cart-quantity-border-color: #cccccc;
 $cart-items-headers-border-color: #d7d7d7;
 $cart-items-item-border-color: #e1e1e1;
+$cart-items-delete-button-color: #a7a7a7;
 
 .cart-items {
   margin: 0;
@@ -20,6 +21,16 @@ $cart-items-item-border-color: #e1e1e1;
   font-size: 18px;
   height: 55px;
   vertical-align: top;
+}
+
+.cart-items__header-empty {
+  display: flex;
+  font-size: 18px;
+  color: #999;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  margin-top: 70px;
 }
 
 .cart-items__columns {
@@ -309,4 +320,9 @@ $cart-items-item-border-color: #e1e1e1;
   border:none;
   height: 14px;
   transform: rotate(45deg);
+  transition: all 0.3s;
+  color: $cart-items-delete-button-color;
+  &:hover {
+    color: black;
+  }
 }

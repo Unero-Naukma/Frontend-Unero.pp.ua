@@ -1,2 +1,2 @@
-import Orders from './orders';
-export default Orders;
+import OrdersList from './orders';
+export default OrdersList;

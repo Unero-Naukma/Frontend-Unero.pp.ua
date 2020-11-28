@@ -1,9 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import './calculateShipping.scss';
 import '../cart/shoppingCartLine.scss';
 
-const CalculateShipping = ({subtotal, isExpress, setShipping}) => {
+const CalculateShipping = ({subtotal, isExpress, setShipping, proceed, hidden}) => {
+
+  if (hidden) {
+    return (<></>);
+  }
 
   const shipping = isExpress ? 19 : 10;
   const total = (shipping + subtotal).toFixed(2);
@@ -89,7 +94,10 @@ const CalculateShipping = ({subtotal, isExpress, setShipping}) => {
                 <div className="calculate-shipping__total-value">${total}</div>
               </div>
             </div>
-            <button className="calculate-shipping__proceed-button">Proceed To Checkout</button>
+            <Link
+              to="/checkout"
+              onClick={() => proceed(total)}
+              className="calculate-shipping__proceed-button">Proceed To Checkout</Link>
           </div>
         </div>
       </div>

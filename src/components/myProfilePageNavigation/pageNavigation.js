@@ -6,7 +6,7 @@ import './pageNavigation.scss';
 const PageNavigation = ({activeItem}) => {
 
   let menuItems = [`Dashboard`, `Orders`, `Shipping Address`, `Account Details`, `Logout`];
-  const itemsLinks = [`/my-profile`, `/my-profile-orders-history`, `/my-profile-shipping-address`, `/my-profile-account-details`, `link logout`];
+  const itemsLinks = [`/my-profile`, `/my-profile-orders-history`, `/my-profile-shipping-address`, `/my-profile-account-details`, `/logout`];
 
   menuItems = menuItems.map((item, index) => {
 
@@ -19,7 +19,7 @@ const PageNavigation = ({activeItem}) => {
     }
 
     return (
-      <li className={itemClass}>
+      <li key={index} className={itemClass}>
         <Link to={itemsLinks[index]} className={itemLinkClass}>{item}</Link>
       </li>
     );

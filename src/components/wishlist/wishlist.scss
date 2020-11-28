@@ -24,6 +24,16 @@ $wishlish-delete-icon-unactive-color: #a0a0a0;
   }
 }
 
+.wishlist__header-empty {
+  display: flex;
+  font-size: 18px;
+  color: #999;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  margin-top: 70px;
+}
+
 .wishlist__column-headers-wrapper {
   display: flex;
   justify-content: space-between;

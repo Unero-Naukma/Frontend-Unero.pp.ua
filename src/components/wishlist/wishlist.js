@@ -1,92 +1,43 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-// import {ReactComponent as ProductIcon} from '../../assets/images/wishlist/productIcon100x100.svg';
-import {ReactComponent as NotAllowedIcon} from '../../assets/images/wishlist/notAllowed.svg';
-// import {ReactComponent as DeleteIcon} from '../../assets/images/wishlist/deleteIcon.svg';
+import WishlistList from '../wishlistList';
+import WishlistHeader from '../wishlistHeader';
 
 import './wishlist.scss';
 
-const WishlistPage = () => {
+class WishlistPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [
+        {itemName: `B&O Play Wireless SPeaker`, price: 75, inStock: true},
+        {itemName: `Liquid Unero Ginger Lily`, price: 205, discount: 35, inStock: false},
+        {itemName: `Simple Fabric Bag`, price: 47, inStock: true},
+        {itemName: `Wood Simple Chair`, price: 205, inStock: true}
+      ]
+    };
 
-  let wishlist = [
-    {name: `B&O Play Wireless SPeaker`, price: 75, inStock: true},
-    {name: `Liquid Unero Ginger Lily`, price: 205, discount: 35, inStock: false},
-    {name: `Simple Fabric Bag`, price: 47, inStock: true},
-    {name: `Wood Simple Chair`, price: 205, inStock: true}
-  ];
+    this.deleteItem = this.deleteItem.bind(this);
+  }
 
-  wishlist = wishlist.map(({name, price, discount = 0, inStock}) => {
+  deleteItem(id) {
+    this.setState(({items}) => {
+      const newItems = [...items.slice(0, id), ...items.slice(id + 1, items.length)];
+      console.log(id);
+      return {
+        items: newItems
+      };
+    });
+  }
 
-    const discountClass = `wishlist__product-price-discount` + (discount ? `  wishlist__product-price-discount--active` : ``);
-    const priceClass = `wishlist__product-price-value` + (discount ? `  wishlist__product-price-value--discount` : ``);
-
-    price = price.toFixed(2);
-    discount = discount.toFixed(2);
-
-    const statusClass = `wishlist__status  wishlist__status-` + (inStock ? `in-stock` : `out-of-stock`);
-    const status = inStock ? `In Stock` : `Out Of Stock`;
-
-    const addToCartClass = `wishlist__button  wishlist__add-to-card-button` + (!inStock ? `  wishlist__add-to-card-button--unactive` : ``);
-    const addToCartPlusClass = `wishlist__add-to-card-button-plus` + (!inStock ? `  wishlist__add-to-card-button-plus--unactive` : ``);
-    const addToCartIconClass = `wishlist__add-to-card-button-not-icon` + (!inStock ? `  wishlist__add-to-card-button-not-icon--active` : ``);
-
-    //  icon!!
-    //  rewrite!!!
-
+  render() {
     return (
-      <li>
-        <div className="wishlist__item">
-          <button className="wishlist__delete-icon-button">+</button>
-          <div className="wishlist__item-info">
-            <div classNameName="wishlist__product">
-              <div className="wishlist__product-info">
-                <div className="wishlist__product-name">{name}</div>
-              </div>
-              <div className="wishlist__product-price">
-                <span className="wishlist__product-price-header">Price:</span>
-                <span className={discountClass}>${discount}</span>
-                <span className={priceClass}>${price}</span>
-              </div>
-            </div>
-            <div className={statusClass}>{status}</div>
-          </div>
-          <div className="wishlist__buttons-wrapper">
-            <button className={addToCartClass}>
-              <NotAllowedIcon className={addToCartIconClass}/>
-              <span className={addToCartPlusClass}>+</span>
-              <span className="wishlist__add-to-card-button-text">Add to cart</span>
-            </button>
-            <button className="wishlist__button  wishlist__delete-button">Delete</button>
-          </div>
-        </div>
-        <hr className="wishlist__line"/>
-      </li>
+      <>
+        <WishlistHeader/>
+        <WishlistList items={this.state.items} deleteItem={this.deleteItem}/>
+      </>
     );
-  });
-
-  return (
-    <section className="wishlist">
-      <div className="main-wrapper">
-        <div className="wishlist__column-headers-wrapper">
-          <div className="wishlist__column-header-begin"></div>
-          <div className="wishlist__column-headers">
-            <div className="wishlist__column-product-price-wrapper">
-              <div className="wishlist__column-header  wishlist__column-header-product">Product</div>
-              <div className="wishlist__column-header  wishlist__column-header-price">Unit Price</div>
-            </div>
-            <div className="wishlist__column-header  wishlist__column-header-status">Stock Status</div>
-          </div>
-          <div className="wishlist__column-header-end"></div>
-        </div>
-        <hr className="wishlist__line"/>
-        <ul className="wishlist__list">
-
-          {wishlist}
-
-        </ul>
-      </div>
-    </section>
-  );
-};
+  }
+}
 
 export default WishlistPage;

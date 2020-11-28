@@ -1,11 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import './saveChanges.scss';
 
-const SaveChanges = () => {
+const SaveChanges = ({saveChanges, savePage}) => {
   return (
     <div className="save-changes">
-      <button className="save-changes__button">Save Changes</button>
+      <Link to={savePage} onClick={saveChanges} className="save-changes__link">Save Changes</Link>
     </div>
   );
 };

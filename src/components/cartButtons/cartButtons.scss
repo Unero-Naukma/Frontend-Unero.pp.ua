@@ -1,5 +1,8 @@
 @import '../../assets/baseStyles/variables.scss';
 
+$cart-clear-all-button-unactive-color: #999999;
+$cart-clear-all-button-unactive-border-color: #d9d9d9;
+
 .cart-buttons {
   margin-top: 45px;
   @media (min-width: $tablet-width) {
@@ -20,6 +23,7 @@
   height: 60px;
   border: solid black 1px;
   background-color: black;
+  text-decoration: none;
   color: white;
   transition: all 0.4s;
   display: flex;
@@ -35,7 +39,6 @@
   cursor: pointer;
   background-color: white;
   color: black;
-  font-size: 15px;
 }
 
 .cart-buttons__icon {
@@ -45,6 +48,17 @@
 .cart-buttons__clear-all-button {
   @media (min-width: $tablet-width) {
     width: 140px;
+  }
+  &--unactive {
+    border-color: $cart-clear-all-button-unactive-border-color;
+    color: $cart-clear-all-button-unactive-color;
+    background-color: white;
+    margin-bottom: 150px;
+
+    &:hover {
+      color: $cart-clear-all-button-unactive-color;
+      cursor: default;
+    }
   }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import PageNavigation from "../myProfilePageNavigation";
 import Dashboard from '../myProfileDashboard';
-import Orders from '../myProfileOrdersList';
+import OrdersList from '../myProfileOrdersList';
 import ShippingAddress from '../myProfileShippingAddress';
 import ProfileHeader from '../myProfileHeader';
 
@@ -10,37 +10,22 @@ import './ordersAddressWrapper.scss';
 import './dashboardOrdersAddressWrapper.scss';
 import '../../assets/baseStyles/mainWrapper.scss';
 
+import data from './data.json';
+
 const MyProfile = () => {
-  const userData = {
-    firstName: `Logan`,
-    lastName: `Cee`,
-    email: `martist1639@gmail.com`,
-    phone: `(+84) 943 123 456`
-  };
 
-  const ordersData = [
-    {date: new Date(2017, 1, 25), name: `B&O Play Wireless SPeaker`, qty: `01`, status: `Pending`},
-    {date: new Date(2017, 1, 18), name: `Liquid Unero Ginger Lily`, qty: `02`, status: `Delieved`},
-    {date: new Date(2016, 12, 24), name: `Simple Fabric Bag`, qty: `01`, status: `Cancel`}
-  ];
-
-  const shippingAddressData = {
-    fullName: `Logan Cee`,
-    country: `Vietnam`,
-    address: `789 Orchard St, Melbourne, Vic 1020`,
-    postalCode: `10000`
-  };
+  const {userData, ordersData, shippingAddressData} = data;
 
   return (
     <div>
-      <ProfileHeader/>
-      <PageNavigation activeItem={`Dashboard`}/>
+      <ProfileHeader />
+      <PageNavigation activeItem={`Dashboard`} />
       <div className="main-wrapper">
         <div className="dashboard-orders-address-wrapper">
-          <Dashboard userData={userData}/>
+          <Dashboard userData={userData} />
           <div className="orders-address-wrapper">
-            <Orders ordersData={ordersData}/>
-            <ShippingAddress shippingAddressData={shippingAddressData}/>
+            <OrdersList ordersData={ordersData} upper={true}/>
+            <ShippingAddress shippingAddressData={shippingAddressData} />
           </div>
         </div>
       </div>

@@ -2,9 +2,11 @@ import React from 'react';
 
 import PageNavigation from '../myProfilePageNavigation';
 import ProfileHeader from '../myProfileHeader';
-import OrdersItem from '../myProfileOrdersItem';
+import OrdersList from '../myProfileOrdersList';
 
 import './ordersHistory.scss';
+import '../myProfileOrdersList/orders.scss';
+import '../../assets/baseStyles/mainWrapper.scss';
 
 const OrdersHistory = () => {
 
@@ -14,7 +16,10 @@ const OrdersHistory = () => {
     {date: new Date(2016, 12, 24), name: `Simple Fabric Bag`, qty: `01`, status: `Cancel`}
   ];
 
-  const orders = ordersData.map((item) => <OrdersItem item={item}/>);
+  const orders =
+    <OrdersList
+      ordersData={ordersData}
+      history={true}/>;
 
   return (
     <div>
@@ -22,17 +27,7 @@ const OrdersHistory = () => {
       <PageNavigation activeItem={`Orders`}/>
       <section className="orders-history">
         <div className="main-wrapper">
-          <div className="orders__header">Orders History</div>
-          <hr className="orders__line"/>
-          <div className="orders__column-headers">
-            <div className="orders__column-header  orders__column-header-date">DATE</div>
-            <div className="orders__column-header  orders__column-header-item">ITEMS</div>
-            <div className="orders__column-header  orders__column-header-status">STATUS</div>
-          </div>
-          <ul className="orders__list">
-            <hr className="orders__line  orders__line-list-start"/>
-            {orders}
-          </ul>
+          {orders}
         </div>
       </section>
     </div>

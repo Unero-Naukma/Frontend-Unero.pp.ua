@@ -1,0 +1,34 @@
+{
+  "userData": {
+    "firstName": "Logan",
+    "lastName": "Cee",
+    "email": "martist1639@gmail.com",
+    "phone": "(+84) 943 123 456"
+  },
+  "ordersData": [
+    {
+      "date": "2017-02-24T22:00:00.000Z",
+      "name": "B&O Play Wireless SPeaker",
+      "qty": "01",
+      "status": "Pending"
+    },
+    {
+      "date": "2017-02-17T22:00:00.000Z",
+      "name": "Liquid Unero Ginger Lily",
+      "qty": "02",
+      "status": "Delieved"
+    },
+    {
+      "date": "2017-01-23T22:00:00.000Z",
+      "name": "Simple Fabric Bag",
+      "qty": "01",
+      "status": "Cancel"
+    }
+  ],
+  "shippingAddressData": {
+    "fullName": "Logan Cee",
+    "country": "Vietnam",
+    "address": "789 Orchard St, Melbourne, Vic 1020",
+    "postalCode": "10000"
+  }
+}

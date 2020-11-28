@@ -1,17 +1,18 @@
 import React from 'react';
 
-import './cartItems.scss';
+import {ReactComponent as ProductImage} from '../../assets/images/wishlist/productIcon100x100.svg';
 
-const CartItem = ({item: {name, price, qty, id}, increaseQty, decreaseQty, deleteItem}) => {
+const CartItem = ({item: {itemName, price, qty, id}, increaseQty, decreaseQty, deleteItem}) => {
 
   const totalPrice = (price * qty).toFixed(2);
   price = price.toFixed(2);
 
+
   return (
     <li className="cart-items__item">
       <div className="cart-items__cell  cart-items__product-info">
-        <image src="../assets/img/wishlist/product-icon-100x100.png" alt="img" className="cart-items__product-image"/>
-        <div className="cart-items__product-info-name">{name}</div>
+        <ProductImage className="cart-items__product-image"/>
+        <div className="cart-items__product-info-name">{itemName}</div>
         <div className="cart-items__product-info-price-wrapper">
           <div className="cart-items__product-info-price">
             <span className="cart-items__product-info-title">Price:</span>
@@ -23,7 +24,7 @@ const CartItem = ({item: {name, price, qty, id}, increaseQty, decreaseQty, delet
           </div>
         </div>
       </div>
-      <div className="cart-items__cell  cart-items__name">Simple Fabric Chair</div>
+      <div className="cart-items__cell  cart-items__name">{itemName}</div>
       <div className="cart-items__cell  cart-items__price">${price}</div>
       <div className="cart-items__cell  cart-items__quantity-wrapper">
         <div className="cart-items__quantity">
