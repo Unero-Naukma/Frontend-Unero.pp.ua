@@ -1,0 +1,64 @@
+@import '../../assets/baseStyles/variables.scss';
+
+.cart-buttons {
+  margin-top: 45px;
+  @media (min-width: $tablet-width) {
+    margin-top: 55px;
+  }
+}
+
+.cart-buttons__wrapper {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $tablet-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.cart-buttons__button {
+  height: 60px;
+  border: solid black 1px;
+  background-color: black;
+  color: white;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  @media (min-width: $tablet-width) {
+    height: 48px;
+  }
+}
+
+.cart-buttons__button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+}
+
+.cart-buttons__icon {
+  margin-right: 15px;
+}
+
+.cart-buttons__clear-all-button {
+  @media (min-width: $tablet-width) {
+    width: 140px;
+  }
+}
+
+.cart-buttons__clear-all-icon {
+  transform: rotate(45deg);
+  font-size: 25px;
+  font-weight: 200;
+  margin-right: 10px;
+}
+
+.cart-buttons__back-to-shop-button {
+  margin-top: 25px;
+  @media (min-width: $tablet-width) {
+    width: 170px;
+    margin-top: 0;
+  }
+}

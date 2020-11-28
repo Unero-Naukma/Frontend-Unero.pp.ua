@@ -1,0 +1,10 @@
+@import '../../assets/baseStyles/variables.scss';
+
+.dashboard-orders-address-wrapper {
+  margin-top: 75px;
+  @media (min-width: $tablet-width) {
+      display: flex;
+      margin-top: 70px;
+      max-width: 1170px;
+  }
+}

@@ -1,0 +1,11 @@
+$shopping-cart-line-color: #d7d7d7;
+
+.shopping-cart-line {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: $shopping-cart-line-color;
+  background-color: $shopping-cart-line-color;
+  color: $shopping-cart-line-color;
+  margin: 0;
+}

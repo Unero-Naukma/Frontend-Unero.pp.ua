@@ -1,0 +1,36 @@
+
+$save-changes-button-bg-color: black;
+$save-changes-button-bg-color-hover: white;
+$save-changes-button-border-color: black;
+$save-changes-button-color-hover: black;
+$save-changes-button-color: white;
+
+.save-changes {
+  display: flex;
+  justify-content: center;
+}
+
+.save-changes__button {
+  padding: 0;
+  box-sizing: border-box;
+  border: solid $save-changes-button-border-color 1px;
+  background-color: $save-changes-button-bg-color;
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  cursor: pointer;
+  color: $save-changes-button-color;
+  max-width: 630px;
+  transition:
+  background-color 0.4s,
+  color 0.4s;
+}
+
+.save-changes__button:hover {
+  background-color: $save-changes-button-bg-color-hover;
+  color: $save-changes-button-color-hover;
+}
+
+.save-changes__button:focus {
+  border-color: $save-changes-button-border-color;
+}

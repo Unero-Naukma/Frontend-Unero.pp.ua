@@ -1,0 +1,17 @@
+@import '../../assets/baseStyles/variables.scss';;
+
+.orders-history {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+
+  margin: 70px auto 185px;
+  @media (min-width: $tablet-width) {
+      margin-top: 60px;
+      margin-bottom: 190px;
+  }
+  @media (min-width: $desktop-width) {
+      margin-top: 80px;
+      margin-bottom: 210px;
+  }
+}

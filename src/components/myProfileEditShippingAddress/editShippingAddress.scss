@@ -1,0 +1,40 @@
+@import '../../assets/baseStyles/variables.scss';
+
+$edit-shipping-address-item-name-color: #999999;
+$edit-shipping-address-input-border-color: #cccccc;
+$edit-shipping-address-star-color: #ff4e4e;
+$edit-shipping-address-button-bg-color: black;
+$edit-shipping-address-button-bg-color-hover: white;
+$edit-shipping-address-button-border-color: black;
+$edit-shipping-address-button-color-hover: black;
+$edit-shipping-address-button-color: white;
+$edit-shipping-address-line-color: #d9d9d9;
+$account-details__line-color: #d9d9d9;
+
+.edit-shipping-address {
+    margin-top: 70px;
+    margin-bottom: 180px;
+    @media (min-width: $tablet-width) {
+        margin-top: 100px;
+        margin-bottom: 190px;
+    }
+    @media (min-width: $desktop-width) {
+        margin-top: 100px;
+        margin-bottom: 195px;
+    }
+}
+
+.edit-shipping-address__header {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.edit-shipping-address__line {
+    width: 100%;
+    border: none;
+    margin: 0;
+    border-bottom: solid $account-details__line-color 1px;
+}
