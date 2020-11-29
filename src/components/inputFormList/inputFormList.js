@@ -48,15 +48,15 @@ export default class InputFormList extends Component {
   }
 
   render() {
-    const items = this.state.items.map((item, index) =>
-      <InputFormItem onChange={this.onChange} id={index} key={index} item={item}/>
-    );
+    const items = this.state.items.map((item, index) => {
+      return <InputFormItem onChange={this.onChange} id={index} key={index} item={item}/>;
+    });
 
     return (
       <div className="main-wrapper">
         <form className="profile-list" onSubmit={(e) => this.onSubmit(e)}>
           {items}
-          <input type="submit" className="save-changes  save-changes__link"></input>
+          <input value="Save Changes" type="submit" className="save-changes  save-changes__button"/>
         </form>
       </div>
     );

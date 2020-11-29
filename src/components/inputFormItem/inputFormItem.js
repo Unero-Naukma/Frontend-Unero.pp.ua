@@ -5,11 +5,23 @@ import InputSelect from '../inputSelect';
 
 const InputFormItem = ({item: {header, isNecessary, fields}, id, onChange}) => {
 
-  let className = `profile-list__multiple-items`;
+  let labelClass = `profile-list__item`;
 
+  let star = <></>;
+  if (isNecessary === `true`) {
+    star = <span className="profile-list__star">*</span>;
+  }
+
+  const inputNames = Object.keys(fields);
+
+  const multiple = inputNames.length > 1;
+
+  if (multiple) {
+    labelClass += `  profile-list__item-multiple`;
+  }
 
   let inputFields = [];
-  Object.keys(fields).map((key, index) => {
+  inputNames.map((key, index) => {
     switch (fields[key].type) {
       case `text`:
         inputFields.push(
@@ -20,6 +32,7 @@ const InputFormItem = ({item: {header, isNecessary, fields}, id, onChange}) => {
               value={fields[key].value}
               name={key}
               placeholder={fields[key].placeholder}
+              multiple={multiple}
             />
         );
         break;
@@ -32,6 +45,7 @@ const InputFormItem = ({item: {header, isNecessary, fields}, id, onChange}) => {
               name={key}
               value={fields[key].value}
               options={fields[key].options}
+              multiple={fields.length > 1}
             />
         );
         break;
@@ -41,8 +55,8 @@ const InputFormItem = ({item: {header, isNecessary, fields}, id, onChange}) => {
   });
 
   return (
-    <label className="profile-list__item">
-      <div className="profile-list__item-name">{header}{isNecessary && <span className="profile-list__star">*</span>}</div>
+    <label className={labelClass}>
+      <div className="profile-list__item-name">{header}{star}</div>
       {inputFields}
     </label>
   );

@@ -10,8 +10,10 @@ $save-changes-button-color: white;
   justify-content: center;
 }
 
-.save-changes__link {
+.save-changes__button {
   padding: 0;
+  margin-top: 40px;
+  margin-bottom: 100px;
   box-sizing: border-box;
   border: solid $save-changes-button-border-color 1px;
   background-color: $save-changes-button-bg-color;
@@ -30,11 +32,11 @@ $save-changes-button-color: white;
   color 0.4s;
 }
 
-.save-changes__link:hover {
+.save-changes__button:hover {
   background-color: $save-changes-button-bg-color-hover;
   color: $save-changes-button-color-hover;
 }
 
-.save-changes__link:focus {
+.save-changes__button:focus {
   border-color: $save-changes-button-border-color;
 }

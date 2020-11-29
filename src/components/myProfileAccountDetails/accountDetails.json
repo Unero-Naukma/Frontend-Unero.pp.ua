@@ -1,0 +1,78 @@
+[
+  {
+    "header": "First Name",
+    "isNecessary": "false",
+    "fields": {
+      "last name": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Last Name",
+    "isNecessary": "false",
+    "fields": {
+      "last name": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Display Name",
+    "isNecessary": "false",
+    "fields": {
+      "country": {
+        "type": "text",
+        "value": ""
+      }
+    }
+  },
+  {
+    "header": "Email",
+    "isNecessary": "false",
+    "fields": {
+      "email": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Current Password",
+    "isNecessary": "false",
+    "fields": {
+      "city": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "New Password",
+    "isNecessary": "false",
+    "fields": {
+      "new password": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Confirm New Password",
+    "isNecessary": "false",
+    "fields": {
+      "confirm new password": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  }
+]
