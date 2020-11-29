@@ -7,7 +7,6 @@ import './style.scss';
 const AppHeader = ({menuOpened}) => {
   let headerClassName = `main-header`;
   let lineSepClassName = `main-header__line-separator`;
-
   const headerOpenedMenuClass = `main-header--opened-menu`;
   const lineSepOpenedMenuClass = `main-header__line-separator--opened-menu`;
 

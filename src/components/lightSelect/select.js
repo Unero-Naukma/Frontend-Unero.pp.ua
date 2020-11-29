@@ -18,7 +18,7 @@ class Select extends React.Component {
     const maxWord = Math.max.apply(Math, lengths);
     const countOfSpaces = maxWord - items[activePos].length;
     let spaces = "";
-    console.log(activePos);
+    console.log(countOfSpaces);
     for (let i = 0; i < countOfSpaces; i++) {
       spaces += "  ";
     }

@@ -22,9 +22,9 @@ const Filter = (props) => {
         <Plus className="filter-plus" plusToggle={props.filterOpened} />
       </div>
       <ul className="filter-list">
-        <FilterItem name="Categories" items={categoriesItems} />
-        <FilterItem name="Price" items={priceItems} />
-        <FilterItem name="Sort by" items={sortByItems} />
+        <FilterItem active={0} name="Categories" items={categoriesItems} />
+        <FilterItem active={-1} name="Price" items={priceItems} />
+        <FilterItem active={-1} name="Sort by" items={sortByItems} />
       </ul>
       <p className="products-found"><span className="products-found-number">{numberOfProducts}</span> products found</p>
     </div>
