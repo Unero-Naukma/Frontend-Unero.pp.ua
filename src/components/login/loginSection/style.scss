@@ -1,0 +1,199 @@
+@import 'assets/baseStyles/variables.scss';
+@import '../variables.scss';
+
+.login { //login
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.login-wrapper {
+    @media (min-width: $tablet-width) {
+        width: 60%;
+    }
+    @media (min-width: $desktop-width) {
+        width: 30% !important;
+    }
+}
+
+.login__form { //form
+    display: flex;
+    flex-direction: column;
+}
+
+.login__form-username { //username
+    margin-top: 28px;
+    padding: 15px;
+    padding-left: 25px;
+    font-size: 14px;
+    border-radius: 0;
+    border: 1px $border-color solid;
+   
+    &::placeholder {
+        color: #999;
+    }
+
+    &:hover {
+        border-color: $border-hover-color;
+    }
+
+    &:focus {
+        border-color: $border-focus-color;
+    }
+
+    @media (min-width: $tablet-width) {
+        height: 35px;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+}
+
+.login__form-password { //password wrapper
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12px;
+    @media (min-width: $tablet-width) {
+        margin-top: 20px;
+    }
+}
+
+.login__form-password-input { //password
+    font-size: 14px;
+    padding: 15px;
+    padding-left: 25px;
+    border-radius: 0;
+    border: 1px $border-color solid;
+    &:hover {
+        border-color: $border-hover-color;
+    }
+
+    &:focus {
+        border-color: $border-focus-color;
+    }
+
+    &::placeholder {
+        color: #999;
+    }
+    @media (min-width: $tablet-width) {
+        height: 35px;
+        font-size: 20px;
+    }
+}
+
+.login__form-password-lost { //forgot
+    text-decoration: none;
+    position: absolute;
+    align-self: flex-end;
+    font-size: 14px;
+    margin-right: 25px;
+    color: #c00;
+    font-weight: 700;
+    &:hover {
+        text-decoration: underline;
+    }
+    @media (min-width: $tablet-width) {
+        font-size: 19px;
+    }
+}
+
+.login__form-remember { //checkbox wrapper
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    @media (min-width: $tablet-width) {
+        margin-top: 25px;
+    }
+}
+
+.login__form-remember-checkbox { //checkbox
+    display: none;
+    &:checked ~ .login__form-remember-label::before {
+        background-color: $checkbox-checked-color;
+        border-color: $border-color
+    }
+    &:checked ~ .login__form-remember-label::after {
+        opacity: 1;
+        transform: scale(0.6) rotate(-45deg);
+        border-color: #fff;
+    }
+    &:active ~ .login__form-remember-label::before {
+        background-color: $checkbox-active-color;
+    }
+}
+
+.login__form-remember-label { //label
+    color: #999;
+    position: relative;
+    font-size: 14px;
+    &::before {//box
+        content: '';
+        position: relative;
+        top: 10px;
+        transition-duration: 150ms;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        top: 3px;
+        border-radius: 0.25em;
+        border: 1px solid $border-color;
+        margin-right: 0.5em;
+    }
+    &::after {//tick
+        content: '';
+        transition: all 200ms ease;
+        display: inline-block;
+        opacity: 0;
+        position: absolute;
+        right: 64px;
+        bottom: 5px;
+        border-left: #fff solid 3px;
+        border-bottom: #fff solid 3px;
+        transform: rotate(-45deg) scale(5);
+        width: 8px;
+        height: 3.5px;
+        @media (min-width: $tablet-width) {
+            bottom: 17px;
+            width: 15px;
+            height: 7px;
+            right: 90px;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        &::before {
+            border-color: $border-focus-color;
+        }
+    }
+    @media (min-width: $tablet-width) {
+        height: 35px;
+        font-size: 20px;
+    }
+}
+
+.login__form-submit { //button
+    margin-top: 32px;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    background-color: #000;
+    margin-bottom: 200px;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+    @media (min-width: $tablet-width) {
+        height: 70px;
+        font-size: 23px;
+    }
+}
+
+.login--hidden {
+    visibility: hidden;
+    opacity: 0;
+    // transform: translateY(350px);
+}

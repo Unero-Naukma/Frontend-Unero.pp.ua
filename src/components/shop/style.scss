@@ -1,0 +1,122 @@
+@import 'assets/baseStyles/variables.scss';
+@import './variables.scss';
+
+@media(min-width: $desktop-width) {
+  .standard {
+    display: none;
+  }
+}
+
+@media(max-width: $desktop-width) {
+  .desktop {
+    display: none;
+  }
+}
+
+.desktop {
+  margin-top: 100px !important;
+}
+
+.desktop__name {
+  text-align: center;
+}
+
+.desktop__first {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.desktop__first-categories {
+  position: relative;
+  margin-right: 200px;
+  font-weight: 500;
+  bottom: 5px;
+}
+
+.desktop__first-right {
+  display: flex;
+}
+
+.desktop__first-right-found-number {
+  color: $red;
+}
+
+.desktop__first-right-found {
+  margin-right: 100px;
+  font-size: 18px;
+}
+
+.desktop__second {
+  display: flex;
+}
+
+.desktop__second-filters {
+  margin-right: 50px;
+  width: 300px
+}
+
+.desktop__second-filters-categories {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  list-style: none;
+}
+
+.desktop__second-filters-categories-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 10px; 
+  font-weight: 400;
+  color: $greyText;
+  &:hover {
+    color: $greyHover;
+    cursor: pointer;
+  }
+  &--active {
+    color:$red;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+hr {
+  margin-top: 25px;
+  border: none;
+  border-bottom: 1px solid $grey;
+}
+
+.desktop__second-filters-price-name {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.desktop__second-filters-price-values {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.desktop__second-filters-price-values-item {
+  flex-basis: 100%;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: $greyText;
+  &:hover {
+    color: $greyHover;
+    cursor: pointer;
+  }
+  &--active {
+    color:$red;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+

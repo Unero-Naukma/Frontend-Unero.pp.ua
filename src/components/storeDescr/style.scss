@@ -1,0 +1,51 @@
+@import 'assets/baseStyles/variables.scss';
+@import 'assets/baseStyles/visually-hidden.scss';
+
+
+.store-descr{
+  margin: 80px 0;
+}
+
+.store-descr__content-wrapper {
+  max-width: 470px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+      max-width: 600px;
+  }
+}
+
+.store-descr__title {
+  margin-bottom: 18px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+
+  @media (min-width: $tablet-width) {
+      margin-top: 70px;
+      margin-bottom: 30px;
+      font-size: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+      margin-top: 200px;
+      margin-bottom: 40px;
+      font-size: 40px;
+  }
+}
+
+.store-descr__text {
+  padding: 0 8.6%;
+  text-align: center;
+  color: #a0a0a0;
+  line-height: 25px;
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+      font-size: 15px;
+      padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+      font-size: 18px;
+  }
+}

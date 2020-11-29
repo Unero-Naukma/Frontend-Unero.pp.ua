@@ -1,0 +1,123 @@
+@import 'assets/baseStyles/variables.scss';
+@import 'assets/baseStyles/mainWrapper.scss';
+@import "./variables.scss";
+
+.filter {
+  margin-top: 100px !important;
+  margin-bottom: 50px !important;
+}
+
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.filter-wrapper--active + .filter-list  {
+  display: block;
+}
+
+.filter-name {
+  font-weight: 400;
+  color: $red;
+  font-size: 17px;
+  margin-right: 10px;
+}
+
+.plus {
+  .horizontal,
+  .vertical {
+    background-color: $red;
+    height: 1px;
+  }
+}
+
+.products-found {
+  color: $greyText;
+  &-number {
+    color: $red;
+  }
+}
+
+.filter-list {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-list__item-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.filter-list__item-name {
+  font-weight: 400;
+  font-size: 16px;
+  color: $greyText;
+}
+
+.filter-list__item-state--active {
+  .filter-list__item-state-vertical {
+    transform: rotate(0deg);
+  }
+}
+
+.filter-list__item-state-horizontal {
+  background-color: $greyState;
+  width: 15px;
+  display: block;
+  height: 1px;
+}
+
+.filter-list__item-state-vertical {
+  transition: 0.2s ease-in-out all;
+  background-color: $greyState;
+  width: 15px;
+  display: block;
+  height: 1px;
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+.filter-list__item {
+  border-bottom: 1px $grey solid;
+
+  &--active {
+    .filter-list__item-name {
+      color: #000;
+    }
+
+    .filter-list__item-list {
+      display: block;
+      height: 100%;
+    }
+
+    border-bottom: none;
+  }
+}
+
+.filter-list__item-list {
+  transition: all ease 0.2s;
+  overflow: hidden;
+  display: none;
+  height: 1%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-list__item-list-item {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: $greyText;
+
+  &--active {
+    color: red;
+  }
+}
+
+.filter-list__item-list-item--active {
+  color: $red;
+}
