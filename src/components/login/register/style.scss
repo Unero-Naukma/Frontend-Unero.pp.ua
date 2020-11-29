@@ -1,0 +1,139 @@
+@import '../variables.scss';
+@import 'assets/baseStyles/variables.scss';
+
+.register { //register
+    width: 100%;
+    text-align: center;
+    margin-top: 95px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+.register-wrapper {
+    @media (min-width: $tablet-width) {
+        width: 60%;
+    }
+    @media (min-width: $desktop-width) {
+        width: 30% !important;
+    }
+}
+
+
+.register__form { //form
+    display: flex;
+    flex-direction: column;
+}
+
+.register__form-username { //username
+    // margin-top: 21px;
+    padding: 15px;
+    padding-left: 25px;
+    font-size: 14px;
+    border-radius: 0;
+    border: 1px $border-color solid;
+   
+    &::placeholder {
+        color: #999;
+    }
+
+    &:hover {
+        border-color: $border-hover-color;
+    }
+
+    &:focus {
+        border-color: $border-focus-color;
+    }
+
+    @media (min-width: $tablet-width) {
+        height: 35px;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+}
+
+.register__form-password { //password
+    margin-top: 12px;
+       // margin-top: 21px;
+       padding: 15px;
+       padding-left: 25px;
+       font-size: 14px;
+       border-radius: 0;
+       border: 1px $border-color solid;
+      
+       &::placeholder {
+           color: #999;
+       }
+   
+       &:hover {
+           border-color: $border-hover-color;
+       }
+   
+       &:focus {
+           border-color: $border-focus-color;
+       }
+   
+       @media (min-width: $tablet-width) {
+           height: 35px;
+           font-size: 20px;
+           margin-top: 50px;
+       }
+    @media (min-width: $tablet-width) {
+        margin-top: 20px;
+    }
+}
+
+.register__form-repeat-password {//repeat password
+  margin-top: 12px;
+  // margin-top: 21px;
+  padding: 15px;
+  padding-left: 25px;
+  font-size: 14px;
+  border-radius: 0;
+  border: 1px $border-color solid;
+ 
+  &::placeholder {
+      color: #999;
+  }
+
+  &:hover {
+      border-color: $border-hover-color;
+  }
+
+  &:focus {
+      border-color: $border-focus-color;
+  }
+
+  @media (min-width: $tablet-width) {
+      height: 35px;
+      font-size: 20px;
+      margin-top: 50px;
+  }
+@media (min-width: $tablet-width) {
+   margin-top: 20px;
+}
+}
+
+.register__form-submit { //button
+    margin-top: 32px;
+    height: 40px;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+    background-color: #000;
+    margin-bottom: 200px;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+    @media (min-width: $tablet-width) {
+        height: 70px;
+        font-size: 23px;
+    }
+}
+
+.register--hidden {
+    visibility: hidden;
+    opacity: 0;
+ }

@@ -1,0 +1,71 @@
+@import "./variables.scss";
+
+.select {
+  display: flex;
+  flex-direction: column;
+}
+
+.select__wrapper {
+  display: flex;
+  align-items: center;
+  &:hover + .select__items{
+    display: block;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.select__name {
+  color: $grey;
+}
+
+.select__active-item {
+  margin-left: 8px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.select__arrow {
+  display: block;
+  height: 10px;
+  width: 10px;
+  margin-left: 20px;
+  transform: rotate(45deg);
+  border-bottom: 1px solid $arrow;
+  border-right: 1px solid $arrow;
+  margin-bottom: 5px;
+}
+
+.select__items {
+  display: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  padding: 0 20px;
+  margin-left: 60px;
+  margin-top: 50px;
+  list-style: none;
+  position: absolute;
+  border: 1px solid $border;
+  &:hover {
+    display: block;
+  }
+}
+
+.select__items-item {
+  margin: 15px 0;
+  font-weight: 400;
+  color: $grey;
+  
+  &:hover {
+    cursor: pointer;
+    color: $greyHover;
+  }
+  &--active {
+    color: #000;
+    &:hover {
+      color: #000;
+    }
+  }
+}
