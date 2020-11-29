@@ -2,11 +2,10 @@ import React from 'react';
 
 import {ReactComponent as ProductImage} from '../../assets/images/wishlist/productIcon100x100.svg';
 
-const CartItem = ({item: {itemName, price, qty, id}, increaseQty, decreaseQty, deleteItem}) => {
+const CartItem = ({item: {itemName, price, qty}, id, increaseQty, decreaseQty, deleteItem}) => {
 
   const totalPrice = (price * qty).toFixed(2);
   price = price.toFixed(2);
-
 
   return (
     <li className="cart-items__item">

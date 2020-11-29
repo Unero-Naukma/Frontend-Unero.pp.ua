@@ -15,6 +15,7 @@ import EditShippingAddress from '../myProfileEditShippingAddress';
 import AccountDetails from '../myProfileAccountDetails';
 import CartPage from '../cart';
 import WishlistPage from '../wishlist';
+import TestInputForm from '../inputTestForm';
 
 const App = () => {
 
@@ -29,6 +30,8 @@ const App = () => {
         <Route path="/my-profile-account-details" component={AccountDetails}/>
         <Route path="/cart" component={CartPage}/>
         <Route path="/wishlist" component={WishlistPage}/>
+        <Route path="/input-test-form" component={TestInputForm}/>
+
         {/* <Route path="/shop" exact component={ShopPage}/>
          <Route path="/shop/:id" component={ProductPage}/>
         <Route path="/collections" exact component={CollectionsPage}/>

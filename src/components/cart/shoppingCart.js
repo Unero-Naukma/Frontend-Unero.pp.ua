@@ -10,11 +10,11 @@ class CartPage extends Component {
     super(props);
     this.state = {
       items: [
-        {itemName: `B&O Play Wireless SPeaker`, price: 65, qty: 1, id: 0},
-        {itemName: `Liquid Unero Ginger Lily`, price: 40, qty: 2, id: 1},
-        {itemName: `Simple Fabric Bag`, price: 41, qty: 1, id: 2},
-        {itemName: `Incrediable good`, price: 55.55, qty: 2, id: 3},
-        {itemName: `Great imagination`, price: 110, qty: 3, id: 4}
+        {itemName: `B&O Play Wireless SPeaker`, price: 65, qty: 1},
+        {itemName: `Liquid Unero Ginger Lily`, price: 40, qty: 2},
+        {itemName: `Simple Fabric Bag`, price: 41, qty: 1},
+        {itemName: `Incrediable good`, price: 55.55, qty: 2},
+        {itemName: `Great imagination`, price: 110, qty: 3}
       ],
       isExpress: false
     };

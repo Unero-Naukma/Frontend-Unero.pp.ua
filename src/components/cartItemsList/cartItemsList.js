@@ -6,7 +6,7 @@ import './cartItems.scss';
 
 const CartItems = ({cartItems, ...props}) => {
 
-  cartItems = cartItems.map((item, index) => <CartItem key={index} item={item} {...props}/>);
+  cartItems = cartItems.map((item, index) => <CartItem id={index} key={index} item={item} {...props}/>);
 
   if (cartItems.length < 1) {
     return (
