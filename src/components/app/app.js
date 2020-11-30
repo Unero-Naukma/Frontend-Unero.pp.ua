@@ -3,7 +3,10 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 import {
-  HomePage
+  HomePage,
+  ShopPage,
+  LoginPage,
+  AboutUsPage
 } from '../pages';
 
 import AppHeader from '../appHeader';
@@ -35,14 +38,19 @@ const App = () => {
         <Route path="/wishlist" component={WishlistPage}/>
         <Route path="/checkout" component={Checkout}/>
         <Route path="/input-custom-select" component={InputCustomSelect}/>
-
-        {/* <Route path="/shop" exact component={ShopPage}/>
-         <Route path="/shop/:id" component={ProductPage}/>
+        <Route path="/shop" exact component={ShopPage}/>
+        <Route path="/shop/:id" component={ProductPage}/>
+        <Route path="/shop" exact component={ShopPage}/>
+        <Route path="/login" component={LoginPage}/>
+        <Route path="/about-us" component={AboutUsPage}/>
+         {/*<Route path="/shop/:id" component={ProductPage}/>
         <Route path="/collections" exact component={CollectionsPage}/>
         <Route path="/collections/:id" component={CollectionPage}/>
-        <Route path="/about-us" component={AboutUsPage}/>
         <Route path="/contacts" component={ContactsPage}/>
         <Route path="/login" component={LoginPage}/>
+        <Route path="/wishlist" component={WishlistPage}/>
+        <Route path="/cart" component={CartPage}/>
+        <Route path="/my-profile" component={MyProfilePage}/>
         <Route component={NotFoundPage}/> */}
       </Switch>
       <AppFooter/>

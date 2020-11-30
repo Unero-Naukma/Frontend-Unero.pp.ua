@@ -1,0 +1,23 @@
+.plus--active {
+  .vertical {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+
+ .horizontal {
+  background-color: black;
+  width: 10px;
+  display: block;
+  transform: scale(1.5);
+  height: 1px;
+}
+
+.vertical {
+  transition: 0.2s ease-in-out all;
+  background-color: black;
+  width: 10px;
+  display: block;
+  height: 1px;
+  transform: rotate(90deg) scale(1.5);
+  position: absolute;
+}

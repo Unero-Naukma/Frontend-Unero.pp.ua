@@ -4,6 +4,26 @@ const toggleMenu = () => {
   };
 };
 
+const toggleFilter = () => {
+  return {
+    type: `TOGGLE_FILTER`
+  };
+};
+
+const switchLogin = () => {
+  return {
+    type: `SWITCH_LOGIN`
+  };
+};
+
+const switchRegister = () => {
+  return {
+    type: `SWITCH_REGISTER`
+  }
+}
+
+
 export {
-  toggleMenu
+  toggleMenu,
+  toggleFilter
 };

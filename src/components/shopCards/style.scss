@@ -1,0 +1,14 @@
+@import 'assets/baseStyles/variables.scss';
+
+
+@media (min-width: $tablet-width) {
+  .small {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .big {
+    display: none;
+  }
+}
