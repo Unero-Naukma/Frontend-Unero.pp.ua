@@ -2,8 +2,9 @@ import React from 'react';
 
 import InputText from '../inputText';
 import InputSelect from '../inputSelect';
+import InputCustomSelect from '../inputSelect';
 
-const InputFormItem = ({item: {header, isNecessary, fields}, id, onChange}) => {
+const InputFormItem = ({item: {header, isNecessary, fields}, id, onChangeText, onChangeSelect}) => {
 
   let labelClass = `profile-list__item`;
 
@@ -28,7 +29,7 @@ const InputFormItem = ({item: {header, isNecessary, fields}, id, onChange}) => {
             <InputText
               key={index}
               parentId={id}
-              onChange={onChange}
+              onChange={onChangeText}
               value={fields[key].value}
               name={key}
               placeholder={fields[key].placeholder}
@@ -38,10 +39,10 @@ const InputFormItem = ({item: {header, isNecessary, fields}, id, onChange}) => {
         break;
       case `select`:
         inputFields.push(
-            <InputSelect
+            <InputCustomSelect
               key={index}
               parentId={id}
-              onChange={onChange}
+              onChange={onChangeSelect}
               name={key}
               value={fields[key].value}
               options={fields[key].options}

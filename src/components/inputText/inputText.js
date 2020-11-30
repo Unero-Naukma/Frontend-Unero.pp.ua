@@ -14,6 +14,7 @@ const InputText = ({placeholder, name, value, onChange, parentId, multiple}) => 
       value={value}
       name={name}
       placeholder={placeholder}
+      autoComplete="off"
       type="text"
       className={inputClass}
     />

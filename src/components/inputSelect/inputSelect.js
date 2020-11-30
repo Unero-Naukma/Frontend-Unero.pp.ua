@@ -15,7 +15,7 @@ const InputSelect = ({options, name, value, onChange, parentId, multiple}) => {
       <select
         value={value}
         name={name}
-        onChange={(e) => onChange(e, parentId)}
+        onChange={(e) => onChange(e.target.value, name, parentId)}
         className={selectClass}>
         {optionsList}
       </select>

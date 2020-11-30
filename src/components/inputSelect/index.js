@@ -1,2 +1,2 @@
-import InputSelect from './inputSelect';
-export default InputSelect;
+import InputCustomSelect from './inputCustomSelect';
+export default InputCustomSelect;

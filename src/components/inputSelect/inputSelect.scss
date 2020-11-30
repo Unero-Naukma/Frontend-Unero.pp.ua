@@ -1,0 +1,108 @@
+$input-select-item-hover-bg: #0073aa;
+$input-select-item-selected-bg: #dddddd;
+$input-select-item-hover-color: #f0f7fa;
+$input-select-item-selected-color: #9c9c9c;
+$input-select-search-border: #aaaaaa;
+$input-select-header-border: #cccccc;
+
+.input-select {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: white;
+  &:after {
+    border-top: 5px solid gray;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid gray;
+    border-right: 5px solid transparent;
+    transform: rotate(45deg);
+    right: 18px;
+    top: 23px;
+    cursor: pointer;
+    content: ' ';
+    position: absolute;
+  }
+  &--toggle:after {
+    top: 17px;
+    border-bottom: 5px solid gray;
+    border-top: 5px solid transparent;
+    border-right: 5px solid gray;
+    border-left: 5px solid transparent;
+    z-index: 10;
+  }
+}
+
+.input-select__header {
+  height: 50px;
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-sizing: border-box;
+  border: solid $input-select-header-border 1px;
+  &--toggle {
+    border: solid $input-select-header-border 1px;
+    border-bottom: none;
+    height: 49px;
+  }
+}
+
+.input-select__toggle {
+  position: absolute;
+  box-sizing: border-box;
+  top: 49px;
+  display: flex;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid $input-select-header-border 1px;
+  border-top: none;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.input-select__search-input {
+  width: 90%;
+  height: 30px;
+  margin-top: 5px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.input-select__options-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  height: 200px;
+}
+
+.input-select__options-item {
+  width: 100%;
+  height: 35px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  &:hover {
+    background-color: $input-select-item-hover-bg;
+    color: $input-select-item-hover-color;
+  }
+  &--selected {
+    background-color: $input-select-item-selected-bg;
+    color: $input-select-item-selected-color;
+  }
+}

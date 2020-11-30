@@ -22,18 +22,27 @@ export default class InputFormList extends Component {
     this.state.inputsData = inputsData;
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.onChangeText = this.onChangeText.bind(this);
+    this.onChangeSelect = this.onChangeSelect.bind(this);
   }
 
-  onChange(e, itemId) {
-    this.setState((state) => {
-      const newValue = e.target.value;
+  onChangeText(e, itemId) {
+    this.onChange(e.target.value, e.target.name, itemId);
+  }
 
-      state.inputsData[e.target.name] = newValue;
+  onChangeSelect(newValue, name, itemId) {
+    this.onChange(newValue, name, itemId);
+  }
+
+  onChange(newValue, targetName, itemId) {
+    this.setState((state) => {
+
+      state.inputsData[targetName] = newValue;
 
       const oldItems = state.items;
       let newItem = oldItems[itemId];
 
-      newItem.fields[e.target.name].value = newValue;
+      newItem.fields[targetName].value = newValue;
 
       const newItems = [...oldItems.slice(0, itemId), newItem, ...oldItems.slice(itemId + 1)];
       return {
@@ -49,7 +58,7 @@ export default class InputFormList extends Component {
 
   render() {
     const items = this.state.items.map((item, index) => {
-      return <InputFormItem onChange={this.onChange} id={index} key={index} item={item}/>;
+      return <InputFormItem onChangeText={this.onChangeText} onChangeSelect={this.onChangeSelect} id={index} key={index} item={item}/>;
     });
 
     return (

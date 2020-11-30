@@ -17,6 +17,9 @@ import CartPage from '../cart';
 import WishlistPage from '../wishlist';
 import Checkout from '../checkout';
 
+
+import InputCustomSelect from '../inputSelect/inputCustomSelect';
+
 const App = () => {
 
   return (
@@ -31,6 +34,7 @@ const App = () => {
         <Route path="/cart" component={CartPage}/>
         <Route path="/wishlist" component={WishlistPage}/>
         <Route path="/checkout" component={Checkout}/>
+        <Route path="/input-custom-select" component={InputCustomSelect}/>
 
         {/* <Route path="/shop" exact component={ShopPage}/>
          <Route path="/shop/:id" component={ProductPage}/>
