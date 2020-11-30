@@ -24,6 +24,7 @@ export default class InputFormList extends Component {
     this.onSubmit = this.onSubmit.bind(this);
     this.onChangeText = this.onChangeText.bind(this);
     this.onChangeSelect = this.onChangeSelect.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   onChangeText(e, itemId) {

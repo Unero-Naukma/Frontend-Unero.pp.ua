@@ -9,7 +9,7 @@ export default class InputCustomSelect extends Component {
       searchValue: ``,
       toggleHidden: true,
       searchFocus: false,
-      searchResult: [`USA`, `UK`, `UA`]
+      searchResult: this.getMatches(``)
     };
     this.getMatches = this.getMatches.bind(this);
     this.onToggleFocus = this.onToggleFocus.bind(this);
@@ -65,21 +65,23 @@ export default class InputCustomSelect extends Component {
   }
 
   onOptionSelected(newValue) {
-    this.setState({
-      searchValue: ``
-    });
+
     this.props.onChange(newValue, this.props.name, this.props.parentId);
+    this.setState({
+      searchValue: ``,
+      toggleHidden: false
+    });
   }
 
   render() {
     const toggleClass = `input-select__toggle` + (this.state.toggleHidden ? `   input-select__toggle--hidden` : ``);
     const inputSelectClass = `input-select` + (!this.state.toggleHidden ? `  input-select--toggle` : ``);
     const headerClass = `input-select__header` + (!this.state.toggleHidden ? `   input-select__header--toggle` : ``);
-    const value = (this.props.value !== undefined) ? this.props.value : (`Enter your ${this.props.name}`);
+    const value = (this.props.value !== ``) ? this.props.value : (`Enter your ${this.props.name}`);
 
     const optionsList = this.state.searchResult.map((item, index) => (
       <li
-        onClick={() => this.onOptionSelected(item)}
+        onMouseDown={() => this.onOptionSelected(item)}
         key={index}
         className="input-select__options-item">{item}
       </li>

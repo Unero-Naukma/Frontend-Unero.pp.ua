@@ -23,7 +23,6 @@ class WishlistPage extends Component {
   deleteItem(id) {
     this.setState(({items}) => {
       const newItems = [...items.slice(0, id), ...items.slice(id + 1, items.length)];
-      console.log(id);
       return {
         items: newItems
       };

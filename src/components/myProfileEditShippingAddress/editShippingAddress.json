@@ -31,6 +31,10 @@
         "options": [
           "USA",
           "Ukraine",
+          "Finland",
+          "Ukraine",
+          "Finland",
+          "Ukraine",
           "Finland"
         ]
       }
@@ -46,6 +50,10 @@
         "placeholder": "",
         "options": [
           "Nevada",
+          "Texas",
+          "Others",
+          "Texas",
+          "Others",
           "Texas",
           "Others"
         ]
