@@ -15,6 +15,7 @@ import EditShippingAddress from '../myProfileEditShippingAddress';
 import AccountDetails from '../myProfileAccountDetails';
 import CartPage from '../cart';
 import WishlistPage from '../wishlist';
+import Checkout from '../checkout';
 
 const App = () => {
 
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/my-profile-account-details" component={AccountDetails}/>
         <Route path="/cart" component={CartPage}/>
         <Route path="/wishlist" component={WishlistPage}/>
+        <Route path="/checkout" component={Checkout}/>
 
         {/* <Route path="/shop" exact component={ShopPage}/>
          <Route path="/shop/:id" component={ProductPage}/>

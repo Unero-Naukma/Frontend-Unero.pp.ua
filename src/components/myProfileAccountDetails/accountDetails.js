@@ -21,6 +21,7 @@ class AccountDetails extends Component {
   }
 
   saveChanges(data) {
+    console.log(data);
     console.log(`Saved acccount changes! (nope)`);
   }
 
@@ -41,7 +42,11 @@ class AccountDetails extends Component {
               <button className="account-details__button  account-details__upload-photo-button">Upload new picture</button>
               <button className="account-details__button  account-details__delete-photo-button">Delete</button>
             </div>
-            <InputFormList items={items}/>
+            <div className="account-details__inputs-wrapper-wrapper">
+              <div className="account-details__inputs-wrapper">
+                <InputFormList items={items} save={true}/>
+              </div>
+            </div>
           </div>
         </section>
       </div>

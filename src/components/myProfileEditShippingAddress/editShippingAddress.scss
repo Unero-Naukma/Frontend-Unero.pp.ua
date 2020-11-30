@@ -38,3 +38,15 @@ $account-details__line-color: #d9d9d9;
     margin: 0;
     border-bottom: solid $account-details__line-color 1px;
 }
+
+.edit-shipping-address__inputs-wrapper-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-shipping-address__inputs-wrapper {
+    width: 100%;
+    max-width: 630px;
+    display: flex;
+    justify-content: center;
+}

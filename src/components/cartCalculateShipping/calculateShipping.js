@@ -4,6 +4,8 @@ import {Link} from 'react-router-dom';
 import './calculateShipping.scss';
 import '../cart/shoppingCartLine.scss';
 
+import ShippingRadio from '../shippingRadio';
+
 const CalculateShipping = ({subtotal, isExpress, setShipping, proceed, hidden}) => {
 
   if (hidden) {
@@ -13,19 +15,6 @@ const CalculateShipping = ({subtotal, isExpress, setShipping, proceed, hidden}) 
   const shipping = isExpress ? 19 : 10;
   const total = (shipping + subtotal).toFixed(2);
   subtotal = subtotal.toFixed(2);
-
-  let standardTypeClass = `calculate-shipping__shipping-type`;
-  let standardPriceClass = `calculate-shipping__shipping-type-price`;
-  let expressTypeClass = `calculate-shipping__shipping-type`;
-  let expressPriceClass = `calculate-shipping__shipping-type-price`;
-
-  if (isExpress) {
-    standardTypeClass += `  calculate-shipping__shipping-type--unactive`;
-    standardPriceClass += `    calculate-shipping__shipping-type-price--unactive`;
-  } else {
-    expressTypeClass += `  calculate-shipping__shipping-type--unactive`;
-    expressPriceClass += `    calculate-shipping__shipping-type-price--unactive`;
-  }
 
   return (
     <div className="calculate-shipping">
@@ -59,35 +48,7 @@ const CalculateShipping = ({subtotal, isExpress, setShipping, proceed, hidden}) 
                 <div className="calculate-shipping__subtotal-value">${subtotal}</div>
               </div>
               <hr className="shopping-cart-line"/>
-              <div className="calculate-shipping__shipping">
-                <div className="calculate-shipping__shipping-title">Shipping</div>
-                <div className={standardTypeClass}>
-                  <label className="calculate-shipping__shipping-type-header">
-                    <input
-                      className="calculate-shipping__shipping-radio"
-                      type="radio"
-                      name="shipping-type"
-                      value="standard"
-                      onChange={setShipping}
-                      checked={!isExpress}/>
-                     &nbsp;Standard
-                  </label>
-                  <div className={standardPriceClass}>+ $10.00</div>
-                </div>
-                <div className={expressTypeClass}>
-                  <label className="calculate-shipping__shipping-type-header">
-                    <input
-                      className="calculate-shipping__radio"
-                      type="radio"
-                      name="shipping-type"
-                      value="standard"
-                      onChange={setShipping}
-                      checked={isExpress}/>
-                    &nbsp;Express
-                  </label>
-                  <div className={expressPriceClass}>+ $19.00</div>
-                </div>
-              </div>
+              <ShippingRadio setShipping={setShipping} isExpress={isExpress}/>
               <hr className="shopping-cart-line"/>
               <div className="calculate-shipping__total">
                 <div className="calculate-shipping__total-header">Total</div>

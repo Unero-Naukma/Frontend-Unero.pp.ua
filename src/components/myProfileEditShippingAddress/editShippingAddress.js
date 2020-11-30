@@ -10,11 +10,17 @@ import items from './editShippingAddress.json';
 
 const EditShippingAddress = () => {
   return (
-    <>
+    <div className="edit-shipping-address">
       <ProfileHeader/>
       <PageNavigation activeItem={`Shipping Address`}/>
-      <InputFormList items={items}/>
-    </>
+      <div className="main-wrapper">
+        <div className="edit-shipping-address__inputs-wrapper-wrapper">
+          <div className="edit-shipping-address__inputs-wrapper">
+            <InputFormList items={items} save={true}/>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

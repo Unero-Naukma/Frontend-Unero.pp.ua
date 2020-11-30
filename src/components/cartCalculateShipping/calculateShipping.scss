@@ -111,6 +111,10 @@ $calculate-shipping-select-arrow-color: #999999;
   padding: 0 30px;
   background-color: $calculate-shipping-output-bg-color;
   font-weight: 500;
+  &-checkout{
+    padding-top: 19px;
+    padding-bottom: 50px;
+  }
 }
 
 .calculate-shipping__subtotal {
@@ -118,6 +122,22 @@ $calculate-shipping-select-arrow-color: #999999;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.calculate-shipping__order-items-list {
+  margin-top: 20px;
+}
+
+.calculate-shipping__order-items-item {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculate-shipping__order-items-item-header {
+  color: #9f9f9f;
+  margin-bottom: 20px;
 }
 
 .calculate-shipping__shipping {
@@ -143,13 +163,21 @@ $calculate-shipping-select-arrow-color: #999999;
   }
 }
 
+.calculate-shipping__shipping-type-header {
+  cursor: pointer;
+  margin-top: 0;
+}
+
 
 .calculate-shipping__radio {
+  cursor: pointer;
   color: black;
+  background-color: black;
+  border-color: black;
 }
 
 .calculate-shipping__shipping-type-price {
-  color: red;
+  color: #cc0000;
   &--unactive {
     color: $calculate-shipping-shipping-type-unactive-color;
   }
@@ -162,6 +190,10 @@ $calculate-shipping-select-arrow-color: #999999;
   height: 90px;
   font-size: 18px;
   font-weight: 500;
+}
+
+.calculate-shipping__total-value-red {
+  color: #cc3333;
 }
 
 .calculate-shipping__proceed-button {

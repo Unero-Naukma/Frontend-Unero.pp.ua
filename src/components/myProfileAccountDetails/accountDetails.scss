@@ -61,3 +61,15 @@ $account-details__line-color: #d9d9d9;
 .account-details__delete-photo-button {
     color: $account-details__delete-photo-button-color;
 }
+
+.account-details__inputs-wrapper {
+    width: 100%;
+    max-width: 630px;
+    display: flex;
+    justify-content: center;
+}
+
+.account-details__inputs-wrapper-wrapper {
+    display: flex;
+    justify-content: center;
+}

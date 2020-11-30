@@ -53,12 +53,13 @@ export default class InputFormList extends Component {
     });
 
     return (
-      <div className="main-wrapper">
-        <form className="profile-list" onSubmit={(e) => this.onSubmit(e)}>
-          {items}
+      <form className="profile-list" onSubmit={(e) => this.onSubmit(e)}>
+        {items}
+        {
+          this.props.save &&
           <input value="Save Changes" type="submit" className="save-changes  save-changes__button"/>
-        </form>
-      </div>
+        }
+      </form>
     );
   }
 }
