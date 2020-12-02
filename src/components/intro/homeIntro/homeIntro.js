@@ -1,6 +1,6 @@
 import React from 'react';
 import "./style.scss";
-import Slider from "../../slider/";
+import PhotoSlider from "../../slider/";
 import pic1 from "../../../assets/images/collection.png";
 import pic2 from "../../../assets/images/collection.png";
 import pic3 from "../../../assets/images/collection.png";
@@ -17,7 +17,7 @@ const HomeIntro = () => {
       <input type="radio" className="intro__radio-button" id="btn-2" name="field" />
       <input type="radio" className="intro__radio-button" id="btn-3" name="field" />
       <div className="intro__collection-wrapper">
-        <Slider/>
+        <PhotoSlider/>
         <ul className="intro__collection-list">
           <li className="intro__collection-item">
             <a href="#"><img src={pic1} alt={pic1Alt}></img></a>

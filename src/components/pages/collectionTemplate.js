@@ -1,8 +1,12 @@
 import React from 'react';
 import CollectionTemplatePhotos from '../collectionTemplate';
+import ProductsSmallCards from '../productsSmallCards';
 const CollectionTemplate = () => {
   return (
-    <CollectionTemplatePhotos/>
+    <main>
+      <CollectionTemplatePhotos />
+      <ProductsSmallCards />
+    </main>
   );
 };
 

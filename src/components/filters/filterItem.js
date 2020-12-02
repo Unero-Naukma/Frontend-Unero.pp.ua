@@ -9,6 +9,10 @@ class FilterItem extends React.Component {
     activeItem: this.active
   }
 
+  getActive() {
+    return this.state.filterToggle;
+  }
+
   toggleFilter = () => {
     this.setState((state) => ({ filterToggle: !state.filterToggle }));
   }

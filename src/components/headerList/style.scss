@@ -75,10 +75,11 @@
   flex-direction: column;
   height: 100%;
   visibility: hidden;
-      opacity: 0;
+  opacity: 0;
 
   &--desktop-list {
     display: none;
+    visibility: visible;
   }
 
   &--opened-menu {
