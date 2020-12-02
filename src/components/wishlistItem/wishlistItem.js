@@ -5,7 +5,7 @@ import {ReactComponent as NotAllowedIcon} from '../../assets/images/wishlist/not
 
 import '../wishlist/wishlist.scss';
 
-const WishlistItem = ({item: {itemName, price, discount = 0, inStock}, id, deleteItem}) => {
+const WishlistItem = ({item: {itemName, price, discount = 0, inStock}, id, addToCart, deleteItem}) => {
   const discountClass = `wishlist__product-price-discount` + (discount ? `  wishlist__product-price-discount--active` : ``);
   const priceClass = `wishlist__product-price-value` + (discount ? `  wishlist__product-price-value--discount` : ``);
 
@@ -38,12 +38,12 @@ const WishlistItem = ({item: {itemName, price, discount = 0, inStock}, id, delet
           <div className={statusClass}>{status}</div>
         </div>
         <div className="wishlist__buttons-wrapper">
-          <button className={addToCartClass}>
+          <button onClick={() => addToCart(id)} className={addToCartClass}>
             <NotAllowedIcon width={16} height={16} className={addToCartIconClass}/>
             <span className={addToCartPlusClass}>+</span>
             <span className="wishlist__add-to-card-button-text">Add to cart</span>
           </button>
-          <button className="wishlist__button  wishlist__delete-button">Delete</button>
+          <button onClick={() => deleteItem(id)} className="wishlist__button  wishlist__delete-button">Delete</button>
         </div>
       </div>
       <hr className="wishlist__line"/>

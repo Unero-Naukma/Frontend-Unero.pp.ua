@@ -79,13 +79,16 @@ export default class InputCustomSelect extends Component {
     const headerClass = `input-select__header` + (!this.state.toggleHidden ? `   input-select__header--toggle` : ``);
     const value = (this.props.value !== ``) ? this.props.value : (`Enter your ${this.props.name}`);
 
-    const optionsList = this.state.searchResult.map((item, index) => (
-      <li
-        onMouseDown={() => this.onOptionSelected(item)}
-        key={index}
-        className="input-select__options-item">{item}
-      </li>
-    ));
+    const optionsList = this.state.searchResult.map((item, index) => {
+      const itemClass = `input-select__options-item` + (item === value ? `  input-select__options-item--selected` : ``);
+      return (
+        <li
+          onMouseDown={() => this.onOptionSelected(item)}
+          key={index}
+          className={itemClass}>{item}
+        </li>
+      )
+    });
 
     return (
       <div

@@ -39,13 +39,13 @@ export default class Checkout extends Component {
   }
 
   placeOrder() {
-
+    console.log("Your order is proceeded!");
   }
 
   render() {
 
     const orderItems = this.state.items.map((item, index) => (
-      <div id={index} className="calculate-shipping__order-items-item">
+      <div key={index} id={index} className="calculate-shipping__order-items-item">
         <span className="calculate-shipping__subtotal-header">{item.name}</span>
         <span className="calculate-shipping__subtotal-value">${item.price}</span>
       </div>

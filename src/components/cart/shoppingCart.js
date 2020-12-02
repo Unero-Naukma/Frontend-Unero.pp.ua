@@ -5,17 +5,14 @@ import CartItemsList from '../cartItemsList';
 import CalculateShipping from '../cartCalculateShipping';
 import CartButtons from '../cartButtons';
 
-class CartPage extends Component {
+import itemsData from './itemsData.json';
+
+export default class Cart extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      items: [
-        {itemName: `B&O Play Wireless SPeaker`, price: 65, qty: 1},
-        {itemName: `Liquid Unero Ginger Lily`, price: 40, qty: 2},
-        {itemName: `Simple Fabric Bag`, price: 41, qty: 1},
-        {itemName: `Incrediable good`, price: 55.55, qty: 2},
-        {itemName: `Great imagination`, price: 110, qty: 3}
-      ],
+      items: itemsData,
       isExpress: false
     };
 
@@ -77,6 +74,13 @@ class CartPage extends Component {
 
   proceed(total) {
     console.log(`Proceeded, total is: ${total}`);
+
+    const checkoutData = this.state.items.map((item) => ({
+      itemName: item.itemName,
+      totalPrice: item.qty * item.price
+    }));
+
+    console.log(checkoutData);
   }
 
   render() {
@@ -104,5 +108,3 @@ class CartPage extends Component {
     );
   }
 }
-
-export default CartPage;

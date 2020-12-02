@@ -5,19 +5,21 @@ import WishlistHeader from '../wishlistHeader';
 
 import './wishlist.scss';
 
-class WishlistPage extends Component {
+import itemsData from './itemsData.json';
+
+export default class Wishlist extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [
-        {itemName: `B&O Play Wireless SPeaker`, price: 75, inStock: true},
-        {itemName: `Liquid Unero Ginger Lily`, price: 205, discount: 35, inStock: false},
-        {itemName: `Simple Fabric Bag`, price: 47, inStock: true},
-        {itemName: `Wood Simple Chair`, price: 205, inStock: true}
-      ]
+      items: itemsData
     };
 
+    this.addToCart = this.addToCart.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+  }
+
+  addToCart(id) {
+    console.log("Added to cart " + this.state.items[id].itemName);
   }
 
   deleteItem(id) {
@@ -33,10 +35,8 @@ class WishlistPage extends Component {
     return (
       <>
         <WishlistHeader/>
-        <WishlistList items={this.state.items} deleteItem={this.deleteItem}/>
+        <WishlistList items={this.state.items} addToCart={this.addToCart} deleteItem={this.deleteItem}/>
       </>
     );
   }
 }
-
-export default WishlistPage;

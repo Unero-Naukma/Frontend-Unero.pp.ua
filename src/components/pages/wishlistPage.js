@@ -1,7 +1,9 @@
 import React from 'react';
 
-const WishlistPage = () => {
+import Wishlist from '../wishlist';
 
-};
+const WishlistPage = () => (
+  <Wishlist/>
+);
 
 export default WishlistPage;

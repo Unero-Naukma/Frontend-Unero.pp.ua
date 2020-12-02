@@ -6,22 +6,19 @@ import {
   HomePage,
   ShopPage,
   LoginPage,
-  AboutUsPage
+  CartPage,
+  MyProfilePage,
+  WishlistPage,
+  ProductPage,
+  MyProfileOrdersPage,
+  MyProfileShippingPage,
+  MyProfileAccountDetailsPage
 } from '../pages';
 
 import AppHeader from '../appHeader';
 import AppFooter from '../appFooter';
 
-import MyProfile from '../myProfile';
-import OrdersHistory from '../myProfileOrdersHistory';
-import EditShippingAddress from '../myProfileEditShippingAddress';
-import AccountDetails from '../myProfileAccountDetails';
-import CartPage from '../cart';
-import WishlistPage from '../wishlist';
 import Checkout from '../checkout';
-
-
-import InputCustomSelect from '../inputSelect/inputCustomSelect';
 
 const App = () => {
 
@@ -30,27 +27,21 @@ const App = () => {
       <AppHeader/>
       <Switch>
         <Route path="/" exact component={HomePage}/>
-        <Route path="/my-profile" component={MyProfile}/>
-        <Route path="/my-profile-orders-history" component={OrdersHistory}/>
-        <Route path="/my-profile-shipping-address" component={EditShippingAddress}/>
-        <Route path="/my-profile-account-details" component={AccountDetails}/>
+        <Route path="/my-profile" component={MyProfilePage}/>
+        <Route path="/my-profile-orders-history" component={MyProfileOrdersPage}/>
+        <Route path="/my-profile-shipping-address" component={MyProfileShippingPage}/>
+        <Route path="/my-profile-account-details" component={MyProfileAccountDetailsPage}/>
         <Route path="/cart" component={CartPage}/>
         <Route path="/wishlist" component={WishlistPage}/>
         <Route path="/checkout" component={Checkout}/>
-        <Route path="/input-custom-select" component={InputCustomSelect}/>
-        <Route path="/shop" exact component={ShopPage}/>
-        <Route path="/shop/:id" component={ProductPage}/>
         <Route path="/shop" exact component={ShopPage}/>
         <Route path="/login" component={LoginPage}/>
+         {/*
+        <Route path="/shop/:id" component={ProductPage}/>
         <Route path="/about-us" component={AboutUsPage}/>
-         {/*<Route path="/shop/:id" component={ProductPage}/>
         <Route path="/collections" exact component={CollectionsPage}/>
         <Route path="/collections/:id" component={CollectionPage}/>
         <Route path="/contacts" component={ContactsPage}/>
-        <Route path="/login" component={LoginPage}/>
-        <Route path="/wishlist" component={WishlistPage}/>
-        <Route path="/cart" component={CartPage}/>
-        <Route path="/my-profile" component={MyProfilePage}/>
         <Route component={NotFoundPage}/> */}
       </Switch>
       <AppFooter/>

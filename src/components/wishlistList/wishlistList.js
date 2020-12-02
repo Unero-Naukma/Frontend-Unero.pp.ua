@@ -5,10 +5,10 @@ import WishlistItem from '../wishlistItem';
 import '../wishlist/wishlist.scss';
 import '../../assets/baseStyles/mainWrapper.scss';
 
-const WishlistList = ({items, deleteItem}) => {
+const WishlistList = ({items, addToCart, deleteItem}) => {
 
   items = items.map((item, index) => (
-    <WishlistItem id={index} key={index} item={item} deleteItem={deleteItem}/>
+    <WishlistItem id={index} key={index} item={item} addToCart={addToCart} deleteItem={deleteItem}/>
   ));
 
   if (items.length === 0) {

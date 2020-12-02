@@ -6,7 +6,8 @@ import PageNavigation from '../myProfilePageNavigation';
 
 import './editShippingAddress.scss';
 
-import items from './editShippingAddress.json';
+import items from './fields.json';
+import values from './fieldsValues.json';
 
 const EditShippingAddress = () => {
   return (
