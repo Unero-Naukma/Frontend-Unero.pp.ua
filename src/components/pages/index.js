@@ -8,6 +8,7 @@ import CartPage from './cartPage';
 import LoginPage from './loginPage';
 import MyProfilePage from './myProfilePage';
 import NotFoundPage from './notFoundPage';
+import CollectionTemplate from './collectionTemplate';
 
 export {
   HomePage,
@@ -19,5 +20,6 @@ export {
   CartPage,
   LoginPage,
   MyProfilePage,
-  NotFoundPage
+  NotFoundPage,
+  CollectionTemplate
 };

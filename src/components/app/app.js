@@ -3,7 +3,8 @@ import {
   HomePage,
   ShopPage,
   LoginPage,
-  AboutUsPage
+  CollectionsPage,
+  CollectionTemplate
 } from '../pages';
 import AppHeader from '../appHeader';
 import AppFooter from '../appFooter';
@@ -17,10 +18,9 @@ const App = () => {
         <Route path="/" exact component={HomePage}/>
         <Route path="/shop" exact component={ShopPage}/>
         <Route path="/login" component={LoginPage}/>
-        <Route path="/about-us" component={AboutUsPage}/>
-         {/*<Route path="/shop/:id" component={ProductPage}/>
         <Route path="/collections" exact component={CollectionsPage}/>
-        <Route path="/collections/:id" component={CollectionPage}/>
+        <Route path="/collections/:id" component={CollectionTemplate}/>
+         {/*<Route path="/shop/:id" component={ProductPage}/>
         <Route path="/contacts" component={ContactsPage}/>
         <Route path="/wishlist" component={WishlistPage}/>
         <Route path="/cart" component={CartPage}/>

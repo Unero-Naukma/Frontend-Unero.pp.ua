@@ -1,50 +1,82 @@
 @import 'assets/baseStyles/variables.scss';
 
+.slick-track {
+  display: flex;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.item {
+  // width: 1920px !important;
+  overflow-x: hidden;
+}
+
 .slider {
-  display:none;
+  display: none;
   height: 100%;
   width: 100%;
   position: absolute;
   align-items: center;
+  min-width: 0;
   justify-content: space-between;
+  display: flex;
+
   @media (min-width: $desktop-width) {
-      display: flex;
+
   }
 }
 
-.slider__arrow {
+.slick-arrow {
   border: solid gray 3px;
   width: 30px;
   height: 30px;
-  display: none;
+  display: none !important;
   position: relative;
   border-top-style: none;
   border-left-style: none;
+  background-color: #00000000;
   cursor: pointer;
 
   @media (min-width: $desktop-width) {
-      display: flex;
-      position: absolute;
-      z-index: 1500;
+    display: flex !important;
+    position: absolute;
+    z-index: 1500;
   }
 }
 
-.slider__arrow-left {
+.slick-prev {
   transition: all .3s ease-out;
   transform: rotate(135deg);
   left: 5%;
 
   &:hover {
-      border-color: black;
+    border-color: black;
   }
 }
 
-.slider__arrow-right {
+.slick-next {
   transition: all .3s ease-out;
   transform: rotate(-45deg);
   right: 5%;
 
   &:hover {
-      border-color: black;
+    border-color: black;
+  }
+}
+
+.slick-dots {
+  display: flex !important;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 800px;
+  @media (min-width: $desktop-width) {
+      display: none!important;
   }
 }

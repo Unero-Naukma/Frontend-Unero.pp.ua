@@ -1,18 +1,32 @@
 import React from "react";
 import "./style.scss";
+import FilterItemsElem from './filterItemsElem';
 import Plus from "./plus.js";
 
 class FilterItem extends React.Component {
   state = {
-    filterToggle: false
+    filterToggle: false,
+    activeItem: this.active
+  }
+
+  getActive() {
+    return this.state.filterToggle;
   }
 
   toggleFilter = () => {
     this.setState((state) => ({ filterToggle: !state.filterToggle }));
   }
 
+  changeActive = (key) =>  {
+    this.setState(() => ({activeItem: key}));
+  }
+
   render() {
     const {name, items} = this.props;
+    const {activeItem} = this.state;
+    function checkForActive(key) {
+      return key == activeItem;
+    }
     let listClassName = "";
     if (this.state.filterToggle) {
       listClassName = "filter-list__item--active";
@@ -25,7 +39,7 @@ class FilterItem extends React.Component {
           <Plus plusToggle={this.state.filterToggle}/>
         </div>
         <ul className="filter-list__item-list">
-          {items.map((s) => <li className="filter-list__item-list-item" key={s + (key++)}>{s}</li>)}
+          {items.map((s) => <FilterItemsElem name={s} index={key} changeActive={this.changeActive} active={checkForActive(key)} key={s + (key++)}></FilterItemsElem>)}
         </ul>
       </li>
     );

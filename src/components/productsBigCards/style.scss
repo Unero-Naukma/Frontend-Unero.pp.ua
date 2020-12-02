@@ -68,6 +68,7 @@
     background-color: $btnHover;
     color: $btn;
     border: 1px solid $btn;
+    cursor: pointer;
   }
 
   &:active {
