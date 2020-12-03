@@ -23,7 +23,8 @@ class EditShippingAddress extends Component {
     this.state = {
       inputTypes: inputTypes,
       errors: [],
-      isValid: true
+      isValid: true,
+      saved: false
     }
   }
 
@@ -34,11 +35,13 @@ class EditShippingAddress extends Component {
 
     let newErrors = [];
     let newIsValid = true;
+    let newSaved = true;
 
     Object.keys(data).map((item) => {
       if (!data[item].match(this.state.inputTypes[item])) {
         newErrors.push("Field " + item + " is not valid!");
         newIsValid = false;
+        newSaved = false;
       }
     });
 
@@ -49,6 +52,7 @@ class EditShippingAddress extends Component {
     this.setState({
       errors: newErrors,
       isValid: newIsValid,
+      saved: newSaved
     })
 
   }
@@ -67,15 +71,21 @@ class EditShippingAddress extends Component {
         <ProfileHeader/>
         <PageNavigation activeItem={`Shipping Address`}/>
         <div className="main-wrapper">
-          {
-            !this.state.isValid &&
-            <div className="edit-shipping-address__error-list">
-              {errorMessages}
-            </div>
-          }
           <div className="edit-shipping-address__inputs-wrapper-wrapper">
             <div className="edit-shipping-address__inputs-wrapper">
-              <InputFormList onSubmit={this.saveChanges} items={fields} save={true}/>
+            {
+              !this.state.isValid &&
+              <div className="edit-shipping-address__error-list">
+                {errorMessages}
+              </div>
+            }
+            {
+              this.state.saved &&
+              <div className="edit-shipping-address__saved-message">
+                Your changes were saved!
+              </div>
+            }
+            <InputFormList onSubmit={this.saveChanges} items={fields} save={true}/>
             </div>
           </div>
         </div>
