@@ -1,0 +1,328 @@
+@import "../../assets/baseStyles/variables.scss";
+
+$cart-items-column-headers-bg-color: #f2f2f2;
+$cart-items-column-headers-color: #666666;
+$cart-quantity-border-color: #cccccc;
+$cart-items-headers-border-color: #d7d7d7;
+$cart-items-item-border-color: #e1e1e1;
+$cart-items-delete-button-color: #a7a7a7;
+
+.cart-items {
+  margin: 0;
+}
+
+.cart-items__table-wrapper {
+  display: table;
+  width: 100%;
+}
+
+.cart-items__header {
+  display: table-caption;
+  font-size: 18px;
+  height: 55px;
+  vertical-align: top;
+}
+
+.cart-items__header-empty {
+  display: flex;
+  font-size: 18px;
+  color: #999;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  margin-top: 70px;
+}
+
+.cart-items__columns {
+  display: table-column-group;
+}
+
+.cart-items__column {
+  display: table-column;
+}
+
+.cart-items__column-product-info {
+  width: 62.07%;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.cart-items__column-product-image {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-column;
+    width: 130px;
+    border-spacing: 50px;
+  }
+}
+
+.cart-items__column-product-name {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-column;
+    width: auto;
+  }
+}
+
+.cart-items__column-price {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-column;
+    width: 14%;
+  }
+  @media (min-width: $desktop-width) {
+    width: 11.11%;
+  }
+}
+
+.cart-items__column-quantity {
+  width: 31.03%;
+  @media (min-width: $tablet-width) {
+    width: 14%;
+  }
+  @media (min-width: $desktop-width) {
+    width: 12.39%;
+  }
+}
+
+.cart-items__column-total {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-column;
+    width: 15%;
+  }
+  @media (min-width: $desktop-width) {
+    width: 13.25%;
+  }
+}
+
+.cart-items__column-delete-button {
+  width: 44px;
+}
+
+
+.cart-items__column-headers {
+  display: table-row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $cart-items-column-headers-bg-color;
+  height: 45px;
+}
+
+.cart-items__column-header {
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0 15px;
+  font-size: 15px;
+  font-weight: 400;
+  border-bottom: solid $cart-items-headers-border-color 1px;
+  color: $cart-items-column-headers-color;
+}
+
+.cart-items__column-header-product-info {
+  padding-left: 15px;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.cart-items__column-header-product-image {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+
+  }
+  @media (min-width: $desktop-width) {
+
+  }
+}
+
+.cart-items__column-header-product-name {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+  }
+}
+
+.cart-items__column-header-price {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+  }
+  @media (min-width: $desktop-width) {
+
+  }
+}
+
+.cart-items__column-header-quantity {
+  display: table-cell;
+  @media (min-width: $tablet-width) {
+
+  }
+  @media (min-width: $desktop-width) {
+
+  }
+}
+
+.cart-items__column-header-total {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+  }
+  @media (min-width: $desktop-width) {
+
+  }
+}
+
+.cart-items__column-header-delete-button {
+  display: table-cell;
+}
+
+.cart-items__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: table-row-group;
+  flex-direction: column;
+}
+
+.cart-items__item {
+  margin: 0;
+  display: table-row;
+  justify-content: space-between;
+}
+
+.cart-items__cell {
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0 15px;
+  border-bottom: solid $cart-items-item-border-color 1px;
+}
+
+.cart-items__product-info {
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    padding-left: 30px;
+  }
+}
+
+.cart-items__product-info-image {
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.cart-items__product-info-name {
+  margin-top: 20px;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.cart-items__product-info-price-wrapper {
+  margin-top: 20px;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.cart-items__product-info-title {
+  font-weight: 700;
+}
+
+.cart-items__product-info-total-price {
+  margin-top: 12px;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.cart-items__name {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 50px;
+  }
+}
+
+.cart-items__price {
+  display: none;
+  @media (min-width: $tablet-width) {
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 50px;
+  }
+}
+
+.cart-items__quantity-wrapper {
+  vertical-align: top;
+  padding-top: 50px;
+  @media (min-width: $tablet-width) {
+    padding-top: 42px;
+  }
+}
+
+.cart-items__quantity {
+  margin-bottom: auto;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: solid $cart-quantity-border-color 1px;
+  padding: 0;
+  height: 75px;
+  size: border-box;
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    height: 35px;
+    width: 75px;
+  }
+}
+
+.cart-items__quantity-button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.cart-items__quantity-value {
+  font-size: 16px;
+}
+
+.cart-items__total-price {
+  display: none;
+  @media (min-width: $tablet-width) {
+    vertical-align: top;
+    padding-top: 50px;
+    display: table-cell;
+  }
+}
+
+.cart-items__delete-button-wrapper {
+  vertical-align: top;
+  padding-top: 44px;
+}
+
+.cart-items__delete-button {
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: 200;
+  padding: 0;
+  background-color: white;
+  border:none;
+  height: 14px;
+  transform: rotate(45deg);
+  transition: all 0.3s;
+  color: $cart-items-delete-button-color;
+  &:hover {
+    color: black;
+  }
+}

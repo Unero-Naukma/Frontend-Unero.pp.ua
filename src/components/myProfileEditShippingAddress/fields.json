@@ -1,0 +1,131 @@
+[
+  {
+    "header": "First Name",
+    "isNecessary": "true",
+    "fields": {
+      "first name": {
+        "inputType": "\\w+",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Last Name",
+    "isNecessary": "true",
+    "fields": {
+      "last name": {
+        "inputType": "\\w+",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Country",
+    "isNecessary": "true",
+    "fields": {
+      "country": {
+        "type": "select",
+        "value": "USA",
+        "options": [
+          "USA",
+          "Ukraine",
+          "Finland",
+          "Ukraine",
+          "Finland",
+          "Ukraine",
+          "Finland"
+        ]
+      }
+    }
+  },
+  {
+    "header": "State",
+    "isNecessary": "true",
+    "fields": {
+      "state": {
+        "type": "select",
+        "value": "",
+        "placeholder": "",
+        "options": [
+          "Nevada",
+          "Texas",
+          "Others",
+          "Texas",
+          "Others",
+          "Texas",
+          "Others"
+        ]
+      }
+    }
+  },
+  {
+    "header": "City / Town",
+    "isNecessary": "true",
+    "fields": {
+      "city": {
+        "inputType": "\\w+",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Address",
+    "isNecessary": "true",
+    "fields": {
+      "house number street": {
+        "inputType": "\\w+",
+        "type": "text",
+        "value": "",
+        "placeholder": "House number and street number"
+      },
+      "appartment": {
+        "inputType": "\\w+",
+        "type": "text",
+        "value": "",
+        "placeholder": "Appartment, suite, unit, etc (optional)"
+      }
+    }
+  },
+  {
+    "header": "PostCode / ZIP",
+    "isNecessary": "true",
+    "fields": {
+      "postcode": {
+        "inputType": "\\w+",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Email",
+    "isNecessary": "true",
+    "fields": {
+      "email": {
+        "inputType": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Phone",
+    "isNecessary": "true",
+    "fields": {
+      "phone": {
+        "inputType": "[\\d]{8,12}",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  }
+]

@@ -1,7 +1,9 @@
 import React from 'react';
 
-const CartPage = () => {
+import Cart from '../cart';
 
-};
+const CartPage = () => (
+  <Cart/>
+);
 
 export default CartPage;

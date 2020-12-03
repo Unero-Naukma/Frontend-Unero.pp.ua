@@ -1,0 +1,126 @@
+[
+  {
+    "header": "First Name",
+    "isNecessary": "true",
+    "fields": {
+      "last name": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Last Name",
+    "isNecessary": "true",
+    "fields": {
+      "last name": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Country",
+    "isNecessary": "true",
+    "fields": {
+      "country": {
+        "type": "select",
+        "value": "USA",
+        "options": [
+          "USA",
+          "Ukraine",
+          "Finland"
+        ]
+      }
+    }
+  },
+  {
+    "header": "State",
+    "isNecessary": "true",
+    "fields": {
+      "state": {
+        "type": "select",
+        "value": "",
+        "placeholder": "",
+        "options": [
+          "Nevada",
+          "Texas",
+          "Others"
+        ]
+      }
+    }
+  },
+  {
+    "header": "City / Town",
+    "isNecessary": "true",
+    "fields": {
+      "city": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Address",
+    "isNecessary": "true",
+    "fields": {
+      "house number street": {
+        "type": "text",
+        "value": "",
+        "placeholder": "House number and street number"
+      },
+      "appartment": {
+        "type": "text",
+        "value": "",
+        "placeholder": "Appartment, suite, unit, etc (optional)"
+      }
+    }
+  },
+  {
+    "header": "PostCode / ZIP",
+    "isNecessary": "true",
+    "fields": {
+      "postcode": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Email",
+    "isNecessary": "true",
+    "fields": {
+      "email": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Phone",
+    "isNecessary": "true",
+    "fields": {
+      "phone": {
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Order Notes",
+    "isNecessary": "true",
+    "fields": {
+      "order notes": {
+        "type": "text",
+        "value": "",
+        "placeholder": "Notes about your order, e.g. special notes for delivery"
+      }
+    }
+  }
+]

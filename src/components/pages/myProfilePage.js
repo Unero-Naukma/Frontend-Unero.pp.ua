@@ -1,7 +1,9 @@
 import React from 'react';
 
-const MyProfilePage = () => {
+import MyProfile from '../myProfile';
 
-};
+const MyProfilePage = () => (
+  <MyProfile/>
+);
 
 export default MyProfilePage;

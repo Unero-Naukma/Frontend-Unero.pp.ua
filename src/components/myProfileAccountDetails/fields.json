@@ -1,0 +1,85 @@
+[
+  {
+    "header": "First Name",
+    "isNecessary": "false",
+    "fields": {
+      "first name": {
+        "inputType": "\\w+",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Last Name",
+    "isNecessary": "false",
+    "fields": {
+      "last name": {
+        "inputType": "\\w+",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Display Name",
+    "isNecessary": "false",
+    "fields": {
+      "display name": {
+        "inputType": "\\w+",
+        "type": "text",
+        "value": ""
+      }
+    }
+  },
+  {
+    "header": "Email",
+    "isNecessary": "false",
+    "fields": {
+      "email": {
+        "inputType": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Current Password",
+    "isNecessary": "false",
+    "fields": {
+      "current password": {
+        "inputType": ".+",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "New Password",
+    "isNecessary": "false",
+    "fields": {
+      "new password": {
+        "inputType": ".+",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  },
+  {
+    "header": "Confirm New Password",
+    "isNecessary": "false",
+    "fields": {
+      "confirm new password": {
+        "inputType": ".+",
+        "type": "text",
+        "value": "",
+        "placeholder": ""
+      }
+    }
+  }
+]

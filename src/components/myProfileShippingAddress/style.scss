@@ -1,0 +1,82 @@
+@import '../../assets/baseStyles/variables.scss';
+
+
+$shipping-address-info-color: #999999;
+$shipping-address-item-name-color: #999999;
+$shipping-address-button-background-color: white;
+$shipping-address-button-color: #0099cc;
+
+.shipping-address {
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 145px;
+    flex-direction: column;
+    flex-grow: 1;
+    @media (min-width: $tablet-width) {
+        margin-top: 85px;
+        margin-bottom: 190px;
+    }
+}
+
+.shipping-address__header {
+    margin: 0 0 15px;
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.shipping-address__info {
+    margin: 35px 0 0;
+    font-size: 15px;
+    color: $shipping-address-info-color;
+}
+
+.shipping-address__list {
+    margin: 42px 0 0;
+    list-style: none;
+    padding: 0;
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shipping-address__item {
+    font-size: 15px;
+}
+
+.shipping-address__item-name {
+    color: $shipping-address-item-name-color;
+}
+
+.shipping-address__item-value {
+    font-weight: 600;
+}
+
+.shipping-address__edit-link-wrapper {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    @media (min-width: $tablet-width) {
+        justify-content: flex-start;
+    }
+}
+
+.shipping-address__edit-link {
+    border: none;
+    background-color: $shipping-address-button-background-color;
+    padding: 0;
+    color: $shipping-address-button-color;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        color: $shipping-address-button-color;
+    }
+    &:visited {
+        color: $shipping-address-button-color;
+    }
+}

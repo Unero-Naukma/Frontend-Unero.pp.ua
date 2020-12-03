@@ -7,8 +7,12 @@ import WishlistPage from './wishlistPage';
 import CartPage from './cartPage';
 import LoginPage from './loginPage';
 import MyProfilePage from './myProfilePage';
+import MyProfileOrdersPage from './myProfileOrdersPage';
+import MyProfileShippingPage from './myProfileShippingPage';
+import MyProfileAccountDetailsPage from './myProfileAccountDetailsPage';
 import NotFoundPage from './notFoundPage';
 import CollectionTemplate from './collectionTemplate';
+
 
 export {
   HomePage,
@@ -20,6 +24,9 @@ export {
   CartPage,
   LoginPage,
   MyProfilePage,
+  MyProfileOrdersPage,
+  MyProfileShippingPage,
+  MyProfileAccountDetailsPage,
   NotFoundPage,
   CollectionTemplate
 };

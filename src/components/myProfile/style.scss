@@ -1,0 +1,16 @@
+@import '../../assets/baseStyles/variables.scss';
+
+.orders-address-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dashboard-orders-address-wrapper {
+  margin-top: 75px;
+  @media (min-width: $tablet-width) {
+      display: flex;
+      margin-top: 70px;
+      max-width: 1170px;
+  }
+}

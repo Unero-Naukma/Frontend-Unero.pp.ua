@@ -1,0 +1,18 @@
+[
+  {
+    "itemName": "B&O Play Wireless SPeaker",
+    "price": 75,
+    "inStock": true},
+  {"itemName": "Liquid Unero Ginger Lily",
+    "price": 205,
+    "discount": 35,
+    "inStock": false},
+  {
+    "itemName": "Simple Fabric Bag",
+    "price": 47,
+    "inStock": true},
+  {
+    "itemName": "Wood Simple Chair",
+    "price": 205,
+    "inStock": true}
+]
