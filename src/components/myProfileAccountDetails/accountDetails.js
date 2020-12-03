@@ -29,8 +29,7 @@ class AccountDetails extends Component {
   // main submit function
   saveChanges(e, data) {
     e.preventDefault();
-    console.log(data);
-    console.log(`Saved acccount changes! (nope)`);
+
   }
 
   render() {

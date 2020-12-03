@@ -6,6 +6,7 @@ import Heart from './heart';
 import './style.scss';
 
 import {ReactComponent as ProductImage} from '../../assets/images/product600x600.svg';
+
 import {ReactComponent as InstagramIcon} from '../../assets/images/instagram-icon.svg';
 import {ReactComponent as TwitterIcon} from '../../assets/images/twitter-icon.svg';
 import {ReactComponent as FacebookIcon} from '../../assets/images/facebook-icon.svg';

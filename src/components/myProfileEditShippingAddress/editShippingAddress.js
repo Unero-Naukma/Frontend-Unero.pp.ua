@@ -9,17 +9,25 @@ import './style.scss';
 import fields from './fields.json';
 import values from './values.json';
 
+const countryList = require('country-list');
+const UsaStates = require('usa-states').UsaStates;
+
 class EditShippingAddress extends Component {
   constructor(props) {
     super(props);
     this.saveChanges = this.saveChanges.bind(this);
     const inputTypes = {};
+
+    fields[2].fields.country.options = countryList.getNames();
+    fields[3].fields.state.options = new UsaStates().arrayOf('names');
+
     fields.forEach((item) => {
       Object.keys(item.fields).forEach((itemField) => {
         item.fields[itemField].value = values[itemField];
         inputTypes[itemField] = item.isNecessary && item.fields[itemField].type !== `select` ? item.fields[itemField].inputType : ".*";
       });
     });
+
     this.state = {
       inputTypes: inputTypes,
       errors: [],
@@ -31,7 +39,6 @@ class EditShippingAddress extends Component {
   saveChanges(e, data) {
     e.preventDefault();
     window.scrollTo(0, 0);
-    console.log(data);
 
     let newErrors = [];
     let newIsValid = true;

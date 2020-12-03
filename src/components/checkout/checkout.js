@@ -4,25 +4,56 @@ import {Link} from 'react-router-dom';
 import InputFormList from '../inputFormList';
 import ShippingRadio from '../shippingRadio';
 
-import inputs from './checkoutInputs.json';
-
-import itemsInput from './items.json';
-
 import './style.scss';
+import '../myProfileEditShippingAddress/style.scss';
 import '../../assets/baseStyles/mainWrapper.scss';
 import '../cartCalculateShipping/style.scss';
 import '../cart/style.scss';
 
+import fields from './fields.json';
+import values from './values.json';
+
+import itemsInput from './items.json';
+
+const countryList = require('country-list');
+const UsaStates = require('usa-states').UsaStates;
+
 export default class Checkout extends Component {
   constructor(props) {
     super(props);
+    const inputTypes = {};
+
+    fields[2].fields.country.options = countryList.getNames();
+    fields[3].fields.state.options = new UsaStates().arrayOf('names');
+
+    fields.forEach((item) => {
+      Object.keys(item.fields).forEach((itemField) => {
+        item.fields[itemField].value = values[itemField];
+        inputTypes[itemField] = item.isNecessary && item.fields[itemField].type !== `select` ? item.fields[itemField].inputType : ".*";
+      });
+    });
+    let inputsData = {};
+
+    fields.map((item) => {
+      Object.keys(item.fields).map((key) => {
+        inputsData[key] = item.fields[key].value;
+      });
+    });
+
     this.state = {
       items: itemsInput,
+      inputsData: inputsData,
       isExpress: false,
-      cash: true
+      cash: true,
+      inputTypes: inputTypes,
+      errors: [],
+      isValid: true,
+      saved: false
     };
+
     this.setShipping = this.setShipping.bind(this);
     this.changePayType = this.changePayType.bind(this);
+    this.onChange = this.onChange.bind(this);
     this.placeOrder = this.placeOrder.bind(this);
   }
 
@@ -38,12 +69,48 @@ export default class Checkout extends Component {
     }));
   }
 
+  onChange(inputsData) {
+    this.setState({inputsData: inputsData});
+    console.log(inputsData);
+  }
+
   // main submit function
-  placeOrder() {
-    console.log("Your order is proceeded!");
+  placeOrder(e) {
+    e.preventDefault();
+
+    window.scrollTo(0, 0);
+
+    let newErrors = [];
+    let newIsValid = true;
+    let newSaved = true;
+
+    Object.keys(this.state.inputsData).map((item) => {
+      if (!this.state.inputsData[item].match(this.state.inputTypes[item])) {
+        newErrors.push("Field " + item + " is not valid!");
+        newIsValid = false;
+        newSaved = false;
+      }
+    });
+
+    if (this.state.isValid) {
+      //  save
+    }
+
+    this.setState({
+      errors: newErrors,
+      isValid: newIsValid,
+      saved: newSaved
+    })
   }
 
   render() {
+
+    let errorMessages = <></>;
+    if (!this.state.isValid) {
+      errorMessages = this.state.errors.map((item, index) => (
+        <div className="checkout__error-item" key={index}>{item}</div>
+      ));
+    }
 
     const orderItems = this.state.items.map((item, index) => (
       <div key={index} id={index} className="calculate-shipping__order-items-item">
@@ -66,8 +133,20 @@ export default class Checkout extends Component {
         <div className="main-wrapper">
           <div className="checkout__inputs-output-wrapper">
             <div className="checkout__inputs-wrapper">
+              {
+                !this.state.isValid &&
+                <div className="checkout__error-list">
+                  {errorMessages}
+                </div>
+              }
+              {
+                this.state.saved &&
+                <div className="checkout__saved-message">
+                  Your changes were saved!
+                </div>
+              }
               <div className="checkout__input-header">Billing detail</div>
-              <InputFormList items={inputs} save={false}/>
+              <InputFormList onChange={this.onChange} onSubmit={this.placeOrder} items={fields} save={false}/>
             </div>
             <div className="checkout__header-output-wrapper">
               <div className="checkout__your-order-header">Your order</div>
@@ -111,7 +190,7 @@ export default class Checkout extends Component {
                   </label>
                 </div>
               </div>
-              <button onClick={this.placeOrder()} className="checkout__place-order-button">Place Order</button>
+              <button onClick={this.placeOrder} className="checkout__place-order-button">Place Order</button>
             </div>
           </div>
         </div>

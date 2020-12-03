@@ -4,6 +4,7 @@
     "isNecessary": "true",
     "fields": {
       "last name": {
+        "inputType": "\\w+",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -15,6 +16,7 @@
     "isNecessary": "true",
     "fields": {
       "last name": {
+        "inputType": "\\w+",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -27,7 +29,7 @@
     "fields": {
       "country": {
         "type": "select",
-        "value": "USA",
+        "value": "Ukraine",
         "options": [
           "USA",
           "Ukraine",
@@ -57,6 +59,7 @@
     "isNecessary": "true",
     "fields": {
       "city": {
+        "inputType": "\\w+",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -68,11 +71,13 @@
     "isNecessary": "true",
     "fields": {
       "house number street": {
+        "inputType": "\\w+",
         "type": "text",
         "value": "",
         "placeholder": "House number and street number"
       },
       "appartment": {
+        "inputType": "\\w+",
         "type": "text",
         "value": "",
         "placeholder": "Appartment, suite, unit, etc (optional)"
@@ -84,6 +89,7 @@
     "isNecessary": "true",
     "fields": {
       "postcode": {
+        "inputType": "\\w+",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -95,6 +101,7 @@
     "isNecessary": "true",
     "fields": {
       "email": {
+        "inputType": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -106,6 +113,7 @@
     "isNecessary": "true",
     "fields": {
       "phone": {
+        "inputType": "[\\d]{8,12}",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -117,6 +125,7 @@
     "isNecessary": "true",
     "fields": {
       "order notes": {
+        "inputType": "\\w+",
         "type": "text",
         "value": "",
         "placeholder": "Notes about your order, e.g. special notes for delivery"

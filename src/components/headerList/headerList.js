@@ -24,7 +24,7 @@ const HeaderList = ({device, menuOpened}) => {
         <HeaderSearchForm/>
       </li>
       <li className="main-header__item">
-        <NavLink to="/" activeClassName="main-header__item-link--active" className="main-header__item-link">Home</NavLink>
+        <NavLink to="/home" activeClassName="main-header__item-link--active" className="main-header__item-link">Home</NavLink>
       </li>
       <li className="main-header__item">
         <NavLink to="/shop" activeClassName="main-header__item-link--active" className="main-header__item-link">Shop</NavLink>

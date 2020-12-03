@@ -10,7 +10,7 @@ class PageNavigation extends Component {
   }
 
   logout() {
-    console.log("LOGOUT!!!");
+
   }
 
   render() {
@@ -18,7 +18,7 @@ class PageNavigation extends Component {
     const {activeItem} = this.props;
 
     let menuItems = [`Dashboard`, `Orders`, `Shipping Address`, `Account Details`, `Logout`];
-    const itemsLinks = [`/my-profile`, `/my-profile-orders-history`, `/my-profile-shipping-address`, `/my-profile-account-details`, `/`];
+    const itemsLinks = [`/my-profile`, `/my-profile-orders-history`, `/my-profile-shipping-address`, `/my-profile-account-details`, `/home`];
     const itemsOnClick = [undefined, undefined, undefined, undefined, this.logout];
 
     menuItems = menuItems.map((item, index) => {
