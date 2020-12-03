@@ -10,17 +10,6 @@ const toggleFilter = () => {
   };
 };
 
-const switchLogin = () => {
-  return {
-    type: `SWITCH_LOGIN`
-  };
-};
-
-const switchRegister = () => {
-  return {
-    type: `SWITCH_REGISTER`
-  }
-}
 
 
 export {

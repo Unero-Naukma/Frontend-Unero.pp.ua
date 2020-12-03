@@ -2,7 +2,8 @@ const initialState = {
   menuOpened: false,
   filterOpened: false,
   loginSwitched: true,
-  registerSwitched: false
+  registerSwitched: false,
+  loading: true
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,19 +17,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         filterOpened: !state.filterOpened
-      };
-    case `SWITCH_LOGIN`:
-      return {
-        ...state,
-        loginSwitched: true,
-        registerSwitched: false
-      }
-    case `SWITCH_REGISTER`:
-      return {
-        ...state,
-        loginSwitched: false,
-        registerSwitched: true
-      }
+      }; 
+      case `CONTENT_LOADED`:
+        return {
+          ...state,
+          menu: action.payload
+        }
     default:
       return state;
   }

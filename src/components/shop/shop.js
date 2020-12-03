@@ -5,6 +5,7 @@ import Select from "../lightSelect";
 import Categories from "./categories";
 import Price from './price';
 import ProductsBigCards from "../productsBigCards";
+import Spinner from '../spinner';
 
 const Shop = () => {
   const numberOfProducts = 3;
@@ -12,6 +13,7 @@ const Shop = () => {
   const selectElements = ["Default", "Popularity", "Average rating", "Newness"];
   return (
     <main>
+    {/* <Spinner/> */}
       <div className="standard">
         <Filter numberOfProducts={numberOfProducts} />
         <Cards />

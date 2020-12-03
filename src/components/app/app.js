@@ -23,11 +23,14 @@ import AppFooter from '../appFooter';
 
 import Checkout from '../checkout';
 import Product from '../product';
+import Spinner from '../spinner';
+
 
 const App = () => {
 
   return (
     <div className="app">
+    <Spinner/>
       <AppHeader/>
       <Switch>
         <Route path="/" exact component={HomePage}/>
