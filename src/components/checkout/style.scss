@@ -102,3 +102,21 @@ $checkout__returning-customer-bg-color: #f6f6f6;
     cursor: pointer;
   }
 }
+
+.checkout__error-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+.checkout__error-item {
+  display: flex;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.checkout__saved-message {
+  margin-top: 70px;
+}
