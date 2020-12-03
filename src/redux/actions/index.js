@@ -30,6 +30,7 @@ const toggleFilter = () => {
   };
 };
 
+
 const switchLogin = () => {
   return {
     type: constants.SWITCH_LOGIN

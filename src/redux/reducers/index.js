@@ -5,6 +5,7 @@ const initialState = {
   filterOpened: false,
   loginSwitched: true,
   registerSwitched: false,
+
   loading: false,
   user: {
     id: '',
@@ -14,6 +15,7 @@ const initialState = {
     password: '',
     token: ''
   }
+
 };
 
 const reducer = (state = initialState, action) => {
@@ -27,6 +29,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         filterOpened: !state.filterOpened
+
       };
     case constants.SWITCH_LOGIN:
       return {
@@ -66,6 +69,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         user: initialState.user
       }
+
     default:
       return state;
   }
