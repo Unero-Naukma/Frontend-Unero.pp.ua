@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './profileHeader.scss';
+import './style.scss';
 
 const ProfileHeader = () => {
   return (

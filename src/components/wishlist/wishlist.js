@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import WishlistList from '../wishlistList';
 import WishlistHeader from '../wishlistHeader';
 
-import './wishlist.scss';
+import './style.scss';
 
 import itemsData from './itemsData.json';
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import WishlistItem from '../wishlistItem';
 
-import '../wishlist/wishlist.scss';
+import '../wishlist/style.scss';
 import '../../assets/baseStyles/mainWrapper.scss';
 
 const WishlistList = ({items, addToCart, deleteItem}) => {

@@ -8,10 +8,10 @@ import inputs from './checkoutInputs.json';
 
 import itemsInput from './items.json';
 
-import './checkout.scss';
+import './style.scss';
 import '../../assets/baseStyles/mainWrapper.scss';
-import '../cartCalculateShipping/calculateShipping.scss';
-import '../cart/shoppingCartLine.scss';
+import '../cartCalculateShipping/style.scss';
+import '../cart/style.scss';
 
 export default class Checkout extends Component {
   constructor(props) {

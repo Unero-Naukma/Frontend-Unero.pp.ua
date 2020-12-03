@@ -6,8 +6,7 @@ import OrdersList from '../myProfileOrdersList';
 import ShippingAddress from '../myProfileShippingAddress';
 import ProfileHeader from '../myProfileHeader';
 
-import './ordersAddressWrapper.scss';
-import './dashboardOrdersAddressWrapper.scss';
+import './style.scss';
 import '../../assets/baseStyles/mainWrapper.scss';
 
 import data from './data.json';

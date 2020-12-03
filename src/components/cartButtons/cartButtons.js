@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import './cartButtons.scss';
+import './style.scss';
 
 import {ReactComponent as ArrowLeft} from '../../assets/images/cart/left-arrow.svg';
 

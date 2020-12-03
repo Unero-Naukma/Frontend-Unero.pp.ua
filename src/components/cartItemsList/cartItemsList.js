@@ -2,7 +2,7 @@ import React from 'react';
 
 import CartItem from '../cartItem/cartItem';
 
-import './cartItems.scss';
+import './style.scss';
 
 const CartItems = ({cartItems, ...props}) => {
 

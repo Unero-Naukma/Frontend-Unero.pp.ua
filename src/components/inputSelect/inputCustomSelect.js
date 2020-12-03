@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import './inputSelect.scss';
+import './style.scss';
 
 export default class InputCustomSelect extends Component {
   constructor(props) {

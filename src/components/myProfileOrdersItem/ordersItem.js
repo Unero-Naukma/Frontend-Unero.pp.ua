@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../myProfileOrdersList/orders.scss';
+import '../myProfileOrdersList/style.scss';
 
 import {ReactComponent as ItemImage} from '../../assets/images/my-profile/item.svg';
 

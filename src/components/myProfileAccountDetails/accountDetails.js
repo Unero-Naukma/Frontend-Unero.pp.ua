@@ -8,7 +8,7 @@ import {ReactComponent as ProfileImage} from '../../assets/images/my-profile/use
 
 import InputFormList from '../inputFormList';
 
-import './accountDetails.scss';
+import './style.scss';
 
 import fields from './fields.json';
 import values from './values.json';

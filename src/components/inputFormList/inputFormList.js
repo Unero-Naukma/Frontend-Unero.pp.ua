@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-import '../myProfileList/profileList.scss';
-import '../myProfileSaveChanges/saveChanges.scss';
+import '../myProfileList/style.scss';
+import '../myProfileSaveChanges/style.scss';
 
 import InputFormItem from '../inputFormItem';
 

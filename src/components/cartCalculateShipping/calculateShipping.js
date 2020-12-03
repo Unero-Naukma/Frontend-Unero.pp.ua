@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import './calculateShipping.scss';
-import '../cart/shoppingCartLine.scss';
+import './style.scss';
+import '../cart/style.scss';
 
 import ShippingRadio from '../shippingRadio';
 

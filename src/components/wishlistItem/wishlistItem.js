@@ -3,7 +3,7 @@ import React from 'react';
 import {ReactComponent as ProductIcon} from '../../assets/images/wishlist/productIcon100x100.svg';
 import {ReactComponent as NotAllowedIcon} from '../../assets/images/wishlist/notAllowed.svg';
 
-import '../wishlist/wishlist.scss';
+import '../wishlist/style.scss';
 
 const WishlistItem = ({item: {itemName, price, discount = 0, inStock}, id, addToCart, deleteItem}) => {
   const discountClass = `wishlist__product-price-discount` + (discount ? `  wishlist__product-price-discount--active` : ``);

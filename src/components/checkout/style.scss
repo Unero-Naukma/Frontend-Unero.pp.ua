@@ -72,6 +72,11 @@ $checkout__returning-customer-bg-color: #f6f6f6;
 
 .checkout__pay-type-header {
   margin-top: 25px;
+  cursor: pointer;
+}
+
+.checkout__pay-type-radio {
+  cursor: pointer;
 }
 
 .checkout__pay-type-cash-tip {

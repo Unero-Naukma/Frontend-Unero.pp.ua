@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Link} from 'react-router-dom';
 
-import './shippingAddress.scss';
+import './style.scss';
 
 const ShippingAddress = ({shippingAddressData: {fullName, country, address, postalCode}}) => {
 

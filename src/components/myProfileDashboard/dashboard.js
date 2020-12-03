@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Link} from 'react-router-dom';
 
-import './dashboard.scss';
+import './style.scss';
 
 import {ReactComponent as UserPhoto} from '../../assets/images/my-profile/user-photo.svg';
 import {ReactComponent as PencilIcon} from '../../assets/images/my-profile/pencil.svg';

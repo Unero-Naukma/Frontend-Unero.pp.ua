@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import './saveChanges.scss';
+import './style.scss';
 
 const SaveChanges = ({saveChanges, savePage}) => {
   return (

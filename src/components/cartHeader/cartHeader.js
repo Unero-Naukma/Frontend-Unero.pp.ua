@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './cartHeader.scss';
+import './style.scss';
 
 const CartHeader = () => {
   return (

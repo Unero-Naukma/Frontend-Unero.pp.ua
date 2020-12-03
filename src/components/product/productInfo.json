@@ -1,0 +1,16 @@
+{
+  "name": "Military Backpact",
+  "grade": 5,
+  "reviews": 3,
+  "price": 36,
+  "description": "Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern look",
+  "details": "With ultralight, quality cotton canvas, the JanSport Houston backpack is ideal for a life-on-the-go. This backpack features premium faux leather bottom and trim details, padded 15 in laptop sleeve and tricotlined tablet sleeve",
+  "features":
+    [
+      "Fully padded back panel, web hauded handle",
+      "Internal padded sleeve fits 15\" laptop & unique fabric application",
+      "Internal tricot lined tablet sleeve",
+      "One large main compartment and zippered",
+      "Premium cottom canvas fabric"
+    ]
+}

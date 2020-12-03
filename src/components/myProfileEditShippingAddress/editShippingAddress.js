@@ -4,7 +4,7 @@ import InputFormList from '../inputFormList';
 import ProfileHeader from '../myProfileHeader';
 import PageNavigation from '../myProfilePageNavigation';
 
-import './editShippingAddress.scss';
+import './style.scss';
 
 import fields from './fields.json';
 import values from './values.json';

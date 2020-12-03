@@ -9,7 +9,6 @@ import {
   CartPage,
   MyProfilePage,
   WishlistPage,
-  ProductPage,
   MyProfileOrdersPage,
   MyProfileShippingPage,
   MyProfileAccountDetailsPage
@@ -19,6 +18,7 @@ import AppHeader from '../appHeader';
 import AppFooter from '../appFooter';
 
 import Checkout from '../checkout';
+import Product from '../product';
 
 const App = () => {
 
@@ -36,6 +36,7 @@ const App = () => {
         <Route path="/checkout" component={Checkout}/>
         <Route path="/shop" exact component={ShopPage}/>
         <Route path="/login" component={LoginPage}/>
+        <Route path="/product-test" component={Product}/>
          {/*
         <Route path="/shop/:id" component={ProductPage}/>
         <Route path="/about-us" component={AboutUsPage}/>

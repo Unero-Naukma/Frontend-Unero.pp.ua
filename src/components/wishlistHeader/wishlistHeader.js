@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './wishlistHeader.scss';
+import './style.scss';
 
 const WishlistHeader = () => {
   return (

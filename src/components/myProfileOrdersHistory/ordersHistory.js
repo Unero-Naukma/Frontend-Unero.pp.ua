@@ -4,8 +4,8 @@ import PageNavigation from '../myProfilePageNavigation';
 import ProfileHeader from '../myProfileHeader';
 import OrdersList from '../myProfileOrdersList';
 
-import './ordersHistory.scss';
-import '../myProfileOrdersList/orders.scss';
+import './style.scss';
+import '../myProfileOrdersList/style.scss';
 import '../../assets/baseStyles/mainWrapper.scss';
 
 const OrdersHistory = () => {

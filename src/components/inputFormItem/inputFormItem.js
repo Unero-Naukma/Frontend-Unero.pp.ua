@@ -1,7 +1,6 @@
 import React from 'react';
 
 import InputText from '../inputText';
-import InputSelect from '../inputSelect';
 import InputCustomSelect from '../inputSelect';
 
 const InputFormItem = ({item: {header, isNecessary, fields}, id, onChangeText, onChangeSelect}) => {
