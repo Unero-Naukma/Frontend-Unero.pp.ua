@@ -1,6 +1,7 @@
 import "./style.scss";
 
 const BestProducts = ({ selected, setOption }) => {
+  console.log(selected)
   const getClass = option => option === selected ? 
     "best-products__categories-item best-products__categories-item--active" :
     "best-products__categories-item";

@@ -6,14 +6,14 @@ import { getOptionalProducts } from '../../services/http-client';
 
 const ProductsSmallCards = ({option}) => {
   const [ products, setProducts ] = useState([]);
-  console.log(option)
+
   useEffect(() => {
-    getOptionalProducts(option.toLowerCase()).then(res => setProducts(res))
+    getOptionalProducts(option.toLowerCase()).then(res => setProducts(res.data))
   }, [option]);
 
   return (
     <ul className="products-small-cards  main-wrapper">
-      {products.map(value => 
+      {products.slice(0, 3).map(value => 
         <Product key={value.title}
           imageSrc={tempProduct} 
           imageAlt="no image"
