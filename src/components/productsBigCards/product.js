@@ -3,8 +3,10 @@ import "./style.scss";
 import Heart from "../productsSmallCards/heart";
 import Stars from "../productsSmallCards/stars";
 import Price from "../productsSmallCards/price";
+import image from "../../assets/images/TempProduct.png";
 
-const Product = ({ imageSrc, imageAlt, productName, productGrade, countOfComments, productPrice, discountPrice, description }) => {
+const Product = ({ imageAlt, productName, productGrade, countOfComments, productPrice, discountPrice, description, ...props }) => {
+  const {imageSrc} = props;
   if (productGrade > 5) {
     throw new Error(`Product grade can't be more than 5`);
   } else if (productGrade < 0) {
@@ -12,7 +14,7 @@ const Product = ({ imageSrc, imageAlt, productName, productGrade, countOfComment
   }
   return (
     <li className="products-big-cards__item">
-      <img src={imageSrc} alt={imageAlt} className="products-big-cards__item-image" />
+      <img src={image} alt={imageAlt} className="products-big-cards__item-image" />
       <div className="products-big-cards__item-all-info">
         <div className="products-big-cards__item-text-block">
           <a className="products-big-cards__item-title">{productName}</a>
