@@ -3,7 +3,8 @@
     "header": "First Name",
     "isNecessary": "false",
     "fields": {
-      "last name": {
+      "first name": {
+        "inputType": "\\w+",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -15,6 +16,7 @@
     "isNecessary": "false",
     "fields": {
       "last name": {
+        "inputType": "\\w+",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -25,7 +27,8 @@
     "header": "Display Name",
     "isNecessary": "false",
     "fields": {
-      "country": {
+      "display name": {
+        "inputType": "\\w+",
         "type": "text",
         "value": ""
       }
@@ -36,6 +39,7 @@
     "isNecessary": "false",
     "fields": {
       "email": {
+        "inputType": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -46,7 +50,8 @@
     "header": "Current Password",
     "isNecessary": "false",
     "fields": {
-      "city": {
+      "current password": {
+        "inputType": ".+",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -58,6 +63,7 @@
     "isNecessary": "false",
     "fields": {
       "new password": {
+        "inputType": ".+",
         "type": "text",
         "value": "",
         "placeholder": ""
@@ -69,6 +75,7 @@
     "isNecessary": "false",
     "fields": {
       "confirm new password": {
+        "inputType": ".+",
         "type": "text",
         "value": "",
         "placeholder": ""

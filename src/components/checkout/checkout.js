@@ -38,6 +38,7 @@ export default class Checkout extends Component {
     }));
   }
 
+  // main submit function
   placeOrder() {
     console.log("Your order is proceeded!");
   }

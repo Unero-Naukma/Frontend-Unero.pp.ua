@@ -10,17 +10,25 @@ import InputFormList from '../inputFormList';
 
 import './accountDetails.scss';
 
-import items from './accountDetails.json';
+import fields from './fields.json';
+import values from './values.json';
 
 class AccountDetails extends Component {
 
   constructor(props) {
     super(props);
+    fields.map((item) => {
+      Object.keys(item.fields).map((itemField) => {
+        item.fields[itemField].value = values[itemField];
+      });
+    });
 
     this.saveChanges = this.saveChanges.bind(this);
   }
 
-  saveChanges(data) {
+  // main submit function
+  saveChanges(e, data) {
+    e.preventDefault();
     console.log(data);
     console.log(`Saved acccount changes! (nope)`);
   }
@@ -44,7 +52,7 @@ class AccountDetails extends Component {
             </div>
             <div className="account-details__inputs-wrapper-wrapper">
               <div className="account-details__inputs-wrapper">
-                <InputFormList items={items} save={true}/>
+                <InputFormList onSubmit={this.saveChanges} items={fields} save={true}/>
               </div>
             </div>
           </div>

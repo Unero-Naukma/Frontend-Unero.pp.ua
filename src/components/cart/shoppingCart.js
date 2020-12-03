@@ -72,6 +72,7 @@ export default class Cart extends Component {
     });
   }
 
+  // main submit function
   proceed(total) {
     console.log(`Proceeded, total is: ${total}`);
 

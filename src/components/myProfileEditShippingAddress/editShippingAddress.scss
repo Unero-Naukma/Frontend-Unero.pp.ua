@@ -50,3 +50,16 @@ $account-details__line-color: #d9d9d9;
     display: flex;
     justify-content: center;
 }
+
+.edit-shipping-address__error-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.edit-shipping-address__error-item {
+    display: flex;
+    font-size: 13px;
+}

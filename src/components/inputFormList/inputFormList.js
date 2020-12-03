@@ -21,7 +21,6 @@ export default class InputFormList extends Component {
 
     this.state.inputsData = inputsData;
     this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
     this.onChangeText = this.onChangeText.bind(this);
     this.onChangeSelect = this.onChangeSelect.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -52,18 +51,13 @@ export default class InputFormList extends Component {
     });
   }
 
-  onSubmit(e) {
-    e.preventDefault();
-    console.log(this.state.inputsData);
-  }
-
   render() {
     const items = this.state.items.map((item, index) => {
       return <InputFormItem onChangeText={this.onChangeText} onChangeSelect={this.onChangeSelect} id={index} key={index} item={item}/>;
     });
 
     return (
-      <form className="profile-list" onSubmit={(e) => this.onSubmit(e)}>
+      <form className="profile-list" onSubmit={(e) => this.props.onSubmit(e, this.state.inputsData)}>
         {items}
         {
           this.props.save &&
