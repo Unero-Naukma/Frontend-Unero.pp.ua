@@ -5,7 +5,7 @@ import BestProducts from "../bestProducts";
 import ProductSmallCards from '../productsSmallCards';
 
 const HomePage = () => {
-  const [state, setState] = useState('All');
+  const [state, setState] = useState('');
   return (
     <main>
       <Intro/>

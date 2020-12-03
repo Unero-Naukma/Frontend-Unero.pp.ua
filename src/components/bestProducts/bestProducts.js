@@ -12,12 +12,12 @@ const BestProducts = ({ selected, setOption }) => {
       <ul className="best-products__categories-list">
         <li className={getClass('All')}
           onClick={() => setOption('All')}>All</li>
-        <li className={getClass('Furnitures')}
-          onClick={() => setOption('Furnitures')}>Furnitures</li>
+        <li className={getClass('Furniture')}
+          onClick={() => setOption('Furniture')}>Furniture</li>
         <li className={getClass('Bags')}
           onClick={() => setOption('Bags')}>Bags</li>
-        <li className={getClass('Shoes')}
-          onClick={() => setOption('Shoes')}>Shoes</li>
+        <li className={getClass('Accessories')}
+          onClick={() => setOption('Accessories')}>Accessories</li>
         <li className={getClass('Decoration')} 
           onClick={() => setOption('Decoration')}>Decoration</li>
       </ul>
