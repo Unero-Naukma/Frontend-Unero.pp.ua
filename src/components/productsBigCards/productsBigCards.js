@@ -11,7 +11,7 @@ const ProductsBigCards = () => {
       <Product imageSrc={tempProduct} imageAlt="no image" productName="Military backpack" productGrade={4} countOfComments={5} productPrice={70} discountPrice={50} description={desc}/>
       <Product imageSrc={tempProduct} imageAlt="no image" productName="Military backpack" productGrade={4} countOfComments={5} productPrice={70} />
     </ul>
-  )
-}
+  );
+};
 
 export default ProductsBigCards;

@@ -13,7 +13,9 @@ import {
   MyProfileShippingPage,
   MyProfileAccountDetailsPage,
   CollectionsPage,
-  CollectionTemplate
+  CollectionTemplate,
+  AboutUsPage,
+  ContactsPage
 } from '../pages';
 
 import AppHeader from '../appHeader';
@@ -41,10 +43,11 @@ const App = () => {
         <Route path="/product-test" component={Product}/>
         <Route path="/collections" exact component={CollectionsPage}/>
         <Route path="/collections/:id" component={CollectionTemplate}/>
-         {/*
-        <Route path="/shop/:id" component={ProductPage}/>
         <Route path="/about-us" component={AboutUsPage}/>
         <Route path="/contacts" component={ContactsPage}/>
+         {/*
+        <Route path="/shop/:id" component={ProductPage}/>
+        
         <Route component={NotFoundPage}/> */}
       </Switch>
       <AppFooter/>

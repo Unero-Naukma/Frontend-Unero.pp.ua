@@ -1,0 +1,147 @@
+@import 'assets/baseStyles/variables.scss';
+@import './variables.scss';
+
+.page-container{
+  width: 90.6%;
+  margin: 0 auto;
+  max-width: 1170px;
+  text-align: center;
+  padding: 150px 0 100px;
+}
+.main_text{
+  font-weight: 400;
+  font-size: 36px;
+}
+.all_text{
+  color: #a0a0a0;
+  line-height: 25px;
+  font-size: 14px;
+  word-spacing: 0.1em;
+  margin:100px 0 50px;
+}
+.three-item-container{
+  display: block;
+}
+@media (min-width: $tablet-width) {
+  .three-item-container{
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.three-item_item{
+  padding: 50px 90px 35px 50px;
+  text-align: left;
+}
+.three-item_main_text{
+  font-weight: 400;
+  font-size: 24px;
+}
+.three-item_all_text{
+  color: #a0a0a0;
+  line-height: 25px;
+  font-size: 14px;
+  word-spacing: 0.1em;
+}
+.three-item_space{
+  border: 1px solid #d9d9d9;
+  &:not(:last-child){
+    margin-bottom: 30px;
+  }
+ 
+}
+@media (min-width: $tablet-width) {
+  .three-item_space{
+  &:not(:last-child){
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+}
+
+.question-container{
+  padding: 100px 0;
+}
+.title{
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.form-container{
+  display: block;
+}
+@media (min-width: $tablet-width) {
+  .form-container{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.form{
+  margin: 15px 0;
+  text-align: left;
+  line-height: 25px;
+  font-size: 14px;
+  word-spacing: .1em;
+}
+
+.form-input-text{
+  width: 95%;
+  border: .8px solid #ccc;
+  background-color: transparent;
+  padding: 12px 10px;
+  color: #a0a0a0;
+  line-height: 25px;
+  font-size: 14px;
+  word-spacing: .1em;
+}
+@media (min-width: $tablet-width) {
+  .form-input-text{
+    width: 85%;
+  }
+}
+
+
+.dot{
+  color: #c00;
+}
+.form-input-text-big{
+  width: 95%;
+  border: .8px solid #ccc;
+  background-color: transparent;
+  padding: 12px 10px;
+  color: #a0a0a0;
+  line-height: 25px;
+  font-size: 14px;
+  word-spacing: .1em;
+  height: 150px;
+  resize: none;
+}
+@media (min-width: $tablet-width) {
+  .form-input-text-big{
+    width: 95%;
+  }
+}
+.button-send{
+  padding: 0 25px;
+  height: 50px;
+  line-height: 51px;
+  background-color: #c00;
+  transition: all .5s;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  width: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  min-width: 170px;
+  font-size: 16px;
+  background-color: #000;
+  margin-top: 25px;
+}
+.map-frame{
+  margin-bottom: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  border: none;
+}
