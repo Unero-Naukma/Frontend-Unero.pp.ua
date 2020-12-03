@@ -11,7 +11,7 @@ class Heart extends React.Component {
   toggleHeart = () => {
     this.setState((state) => ({ isFilled: !state.isFilled }));
   }
-  
+
   bigger = "";
   constructor(props) {
     super(props);

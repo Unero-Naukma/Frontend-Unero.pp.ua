@@ -8,13 +8,9 @@ import './style.scss';
 import '../myProfileOrdersList/style.scss';
 import '../../assets/baseStyles/mainWrapper.scss';
 
-const OrdersHistory = () => {
+import ordersData from './ordersData.json';
 
-  const ordersData = [
-    {date: new Date(2017, 1, 25), name: `B&O Play Wireless SPeaker`, qty: `01`, status: `Pending`},
-    {date: new Date(2017, 1, 18), name: `Liquid Unero Ginger Lily`, qty: `02`, status: `Delieved`},
-    {date: new Date(2016, 12, 24), name: `Simple Fabric Bag`, qty: `01`, status: `Cancel`}
-  ];
+const OrdersHistory = () => {
 
   const orders =
     <OrdersList

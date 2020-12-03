@@ -49,6 +49,7 @@ $account-details__line-color: #d9d9d9;
     max-width: 630px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .edit-shipping-address__error-list {
@@ -56,10 +57,14 @@ $account-details__line-color: #d9d9d9;
     flex-direction: column;
     justify-content: flex-start;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .edit-shipping-address__error-item {
     display: flex;
     font-size: 13px;
+}
+
+.edit-shipping-address__saved-message {
+    margin-top: 70px;
 }
