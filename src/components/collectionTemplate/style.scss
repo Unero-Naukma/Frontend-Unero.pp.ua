@@ -1,0 +1,82 @@
+@import 'assets/baseStyles/variables.scss';
+
+.page-header-portfolio {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  padding: 80px 50px;
+  background-position: 50% 0px;
+  background-color: #EAEAEA;
+  background-repeat: no-repeat;
+  @media(min-width: $tablet-width) {
+    padding: 160px 100px;
+  }
+
+  background-image: url(http://demo2.drfuri.com/unero/wp-content/uploads/sites/2/2017/04/f5.jpg);
+
+}
+.page-header-content-name {
+  font-weight: 400;
+}
+
+.page-header-text_item-title {
+  margin: 25px 0;
+  color: #000;
+  font-weight: 700;
+}
+.page-header-text_item-text {
+  margin: 25px 0;
+}
+
+.page-header-content {
+  display: inline-table;
+  background-color: #fff;
+  padding: 25px 40px 20px;
+
+  @media(min-width: $tablet-width) {
+    padding: 35px 50px 30px;
+  }
+
+  font-size: 12px;
+}
+
+.page-header-container {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media(min-width: $tablet-width) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+.page-header-text_item {
+  color: #a0a0a0;
+  line-height: 25px;
+  font-size: 14px;
+  word-spacing: 0.1em;
+
+  @media(min-width: $tablet-width) {
+    max-width: 670px;
+    margin: 0 auto;
+  }
+}
+
+.page-header-photo {
+  display: block;
+  transition-duration: .3s;
+
+  @media(min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.page-header-photo_item {
+  margin: 15px;
+}
+
+.page-header-space {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

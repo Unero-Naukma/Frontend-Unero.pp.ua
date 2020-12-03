@@ -11,6 +11,7 @@ import MyProfileOrdersPage from './myProfileOrdersPage';
 import MyProfileShippingPage from './myProfileShippingPage';
 import MyProfileAccountDetailsPage from './myProfileAccountDetailsPage';
 import NotFoundPage from './notFoundPage';
+import CollectionTemplate from './collectionTemplate';
 
 
 export {
@@ -26,5 +27,6 @@ export {
   MyProfileOrdersPage,
   MyProfileShippingPage,
   MyProfileAccountDetailsPage,
-  NotFoundPage
+  NotFoundPage,
+  CollectionTemplate
 };

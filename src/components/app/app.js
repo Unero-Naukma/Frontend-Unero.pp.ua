@@ -11,7 +11,9 @@ import {
   WishlistPage,
   MyProfileOrdersPage,
   MyProfileShippingPage,
-  MyProfileAccountDetailsPage
+  MyProfileAccountDetailsPage,
+  CollectionsPage,
+  CollectionTemplate
 } from '../pages';
 
 import AppHeader from '../appHeader';
@@ -37,11 +39,11 @@ const App = () => {
         <Route path="/shop" exact component={ShopPage}/>
         <Route path="/login" component={LoginPage}/>
         <Route path="/product-test" component={Product}/>
+        <Route path="/collections" exact component={CollectionsPage}/>
+        <Route path="/collections/:id" component={CollectionTemplate}/>
          {/*
         <Route path="/shop/:id" component={ProductPage}/>
         <Route path="/about-us" component={AboutUsPage}/>
-        <Route path="/collections" exact component={CollectionsPage}/>
-        <Route path="/collections/:id" component={CollectionPage}/>
         <Route path="/contacts" component={ContactsPage}/>
         <Route component={NotFoundPage}/> */}
       </Switch>
