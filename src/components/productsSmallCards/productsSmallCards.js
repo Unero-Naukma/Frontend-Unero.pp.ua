@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./style.scss";
 import Product from "./product";
 import tempProduct from "../../assets/images/TempProduct.png";
+import { getOptionalProducts } from '../../services/http-client';
 
-const ProductsSmallCards = () => {
+const ProductsSmallCards = ({option}) => {
+  const [ products, setProducts ] = useState([]);
+
+  useEffect(() => {
+    getOptionalProducts(option.toLowerCase()).then(res => setProducts(res.data))
+  }, [option]);
+
   return (
     <ul className="products-small-cards  main-wrapper">
-      <Product imageSrc={tempProduct} imageAlt="no image" productName="Military backpack" productGrade={4} countOfComments={5} productPrice={70} />
-      <Product imageSrc={tempProduct} imageAlt="no image" productName="Military backpack" productGrade={5} countOfComments={10} productPrice={50} discountPrice={40}/>
-      <Product imageSrc={tempProduct} imageAlt="no image" productName="Military backpack" productGrade={3} countOfComments={2} productPrice={45} />
+      {products.slice(0, 3).map(value => 
+        <Product key={value.title}
+          imageSrc={tempProduct} 
+          imageAlt="no image"
+          productName={value.title}
+          productGrade={4} 
+          countOfComments={5} 
+          productPrice={value.price} 
+        />)}
     </ul>
   );
 };
